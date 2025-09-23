@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:idioms/pages/home.dart';
 import 'package:idioms/providers/theme_provider.dart';
+import 'package:idioms/repositories/idiom_repository.dart';
 import 'package:idioms/theme.dart';
 import 'package:provider/provider.dart';
 
@@ -13,10 +14,17 @@ class IdiomsApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => ThemeProvider(),
-      child: Consumer<ThemeProvider>(
-        builder: (context, themeProvider, child) {
+    return MultiProvider(
+      providers: [
+        Provider<IdiomRepository>(
+          create: (_) => IdiomRepository(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => ThemeProvider(),
+        ),
+      ],
+      child: Consumer2<IdiomRepository, ThemeProvider>(
+        builder: (context, idiomRepo, themeProvider, child) {
           return MaterialApp(
             title: 'Idioms Learning App',
             theme: buildLightTheme(),

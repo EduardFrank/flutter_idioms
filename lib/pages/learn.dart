@@ -1,20 +1,41 @@
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:idioms/models/idiom.dart';
+import 'package:idioms/providers/theme_provider.dart';
+import 'package:idioms/repositories/idiom_repository.dart';
 import 'package:idioms/widgets/idiom_dialog.dart';
 
-// This will be passed from the parent widget
 class LearnPage extends StatelessWidget {
-  final List<Idiom> idioms;
-
-  const LearnPage({
-    super.key,
-    required this.idioms,
-  });
+  const LearnPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final idiomRepository = Provider.of<IdiomRepository>(context, listen: false);
+    final idioms = idiomRepository.getAllIdioms();
+
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Learn Idioms'),
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+        actions: [
+          Consumer<ThemeProvider>(
+            builder: (context, themeProvider, child) {
+              return IconButton(
+                icon: Icon(
+                  themeProvider.isDarkMode 
+                    ? Icons.light_mode 
+                    : Icons.dark_mode,
+                ),
+                onPressed: () {
+                  themeProvider.toggleTheme();
+                },
+              );
+            },
+          ),
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

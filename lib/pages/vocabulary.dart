@@ -1,5 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:idioms/pages/home.dart';
+import 'package:idioms/repositories/idiom_repository.dart';
+import 'package:idioms/widgets/idiom_dialog.dart';
 import 'package:provider/provider.dart';
 import 'package:idioms/main.dart';
 import 'package:idioms/models/idiom.dart';
@@ -202,6 +205,9 @@ class DifficultyLevelPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final idiomRepository = Provider.of<IdiomRepository>(context, listen: false);
+    final idioms = idiomRepository.getAllIdioms();
+
     return Scaffold(
       appBar: AppBar(
         title: Text('$level Idioms'),
@@ -248,13 +254,21 @@ class DifficultyLevelPage extends StatelessWidget {
             const SizedBox(height: 10),
             Expanded(
               child: ListView.builder(
-                itemCount: 5, // Placeholder count
+                itemCount: idioms.length, // Placeholder count
                 itemBuilder: (context, index) {
-                  return Card(
-                    child: ListTile(
-                      title: Text('Idiom $index'),
-                      subtitle: Text('Definition for this idiom'),
-                      trailing: const Icon(Icons.arrow_forward_ios),
+                  return InkWell(
+                    onTap: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) => IdiomDialog(idiom: idioms[index]),
+                      );
+                    },
+                    child: Card(
+                      child: ListTile(
+                        title: Text(idioms[index].idiom),
+                        subtitle: Text(idioms[index].definition),
+                        trailing: const Icon(Icons.arrow_forward_ios),
+                      ),
                     ),
                   );
                 },

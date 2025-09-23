@@ -1,9 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:idioms/models/idiom.dart';
+import 'package:idioms/repositories/idiom_repository.dart';
 import 'package:provider/provider.dart';
 import 'package:idioms/providers/theme_provider.dart';
 
-class SearchPage extends StatelessWidget {
+class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
+
+  @override
+  State<SearchPage> createState() => _SearchPageState();
+}
+
+class _SearchPageState extends State<SearchPage> {
+  final TextEditingController _searchController = TextEditingController();
+  List<Idiom> _searchResults = [];
+  late IdiomRepository _repository;
+
+  @override
+  void initState() {
+    super.initState();
+    _repository = Provider.of<IdiomRepository>(context, listen: false);
+
+    _searchController.addListener(_onSearchChanged);
+  }
+
+  @override
+  void dispose() {
+    _searchController.removeListener(_onSearchChanged);
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  void _onSearchChanged() {
+    final query = _searchController.text;
+    setState(() {
+      _searchResults = _repository.searchIdioms(query);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +62,8 @@ class SearchPage extends StatelessWidget {
                 color: Colors.grey[200],
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: const TextField(
+              child: TextField(
+                controller: _searchController,
                 decoration: InputDecoration(
                   hintText: 'Search idioms...',
                   border: InputBorder.none,
@@ -44,17 +78,21 @@ class SearchPage extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Expanded(
-              child: ListView.builder(
-                itemCount: 0, // Placeholder - would be populated with search results
-                itemBuilder: (context, index) {
-                  return const Card(
-                    child: ListTile(
-                      title: Text('No results found'),
-                      subtitle: Text('Try a different search term'),
-                    ),
-                  );
-                },
-              ),
+              child: _searchResults.isEmpty && _searchController.text.isNotEmpty ?
+                  const Center(
+                    child: Text('No results found for your search.'),
+                  ) : ListView.builder(
+                    itemCount: _searchResults.length,
+                  itemBuilder: (context, index) {
+                      final idiom = _searchResults[index];
+                      return Card(
+                        child: ListTile(
+                          title: Text(idiom.idiom),
+                          subtitle: Text(idiom.definition),
+                        ),
+                      );
+                  }
+              )
             ),
           ],
         ),

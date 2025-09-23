@@ -9,41 +9,7 @@ import 'package:idioms/pages/settings.dart';
 import 'package:idioms/pages/test.dart';
 import 'package:idioms/pages/vocabulary.dart';
 import 'package:idioms/providers/theme_provider.dart';
-
-final List<Idiom> idioms = [
-  Idiom(
-    idiom: "Break the ice",
-    definition: "To initiate conversation in a social setting.",
-    examples: ["He told a joke to break the ice at the party.", "He told a joke to break the ice at the party."],
-    translations: {
-      "de": "So das Eis brechen (German)"
-    },
-  ),
-  Idiom(
-    idiom: "Hit the sack",
-    definition: "To go to bed or go to sleep.",
-    examples: ["I'm really tired, so I'm going to hit the sack early tonight.", "I'm really tired, so I'm going to hit the sack early tonight."],
-    translations: {
-      "de": "Ins Bett gehen (German)"
-    },
-  ),
-  Idiom(
-    idiom: "Piece of cake",
-    definition: "Something very easy to do.",
-    examples: ["This math problem was a piece of cake.", "This math problem was a piece of cake."],
-    translations: {
-      "de": "Kinderspiel"
-    },
-  ),
-  Idiom(
-    idiom: "Under the weather",
-    definition: "Feeling ill or unwell.",
-    examples: ["I'm feeling a bit under the weather today.", "I'm feeling a bit under the weather today."],
-    translations: {
-      "de": "Sich unwohl fühlen"
-    },
-  ),
-];
+import 'package:idioms/repositories/idiom_repository.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -55,9 +21,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
-  // We'll create the pages with data here
   List<Widget> get _pages => <Widget>[
-    LearnPage(idioms: idioms),
+    LearnPage(),
     TestPage(),
     VocabularyPage(),
   ];
