@@ -216,11 +216,14 @@ class _QuizPageState extends State<QuizPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Definition:",
-                style: TextStyle(
+            Text(
+                "Definition:",
+                style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: Colors.blueAccent)),
+                    color: Colors.blueAccent
+                )
+            ),
             const SizedBox(height: 8),
             Text(idiom.definition, style: const TextStyle(fontSize: 18)),
             const SizedBox(height: 16),

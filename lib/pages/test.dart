@@ -1,8 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:idioms/pages/quiz.dart';
-import 'package:idioms/providers/theme_provider.dart';
 
 class TestPage extends StatelessWidget {
   const TestPage({super.key});
@@ -15,11 +13,6 @@ class TestPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Take a Quiz',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 20),
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(

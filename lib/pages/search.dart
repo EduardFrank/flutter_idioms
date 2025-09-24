@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:idioms/models/idiom.dart';
 import 'package:idioms/repositories/idiom_repository.dart';
+import 'package:idioms/widgets/idiom_dialog.dart';
 import 'package:provider/provider.dart';
-import 'package:idioms/providers/theme_provider.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -33,9 +33,16 @@ class _SearchPageState extends State<SearchPage> {
 
   void _onSearchChanged() {
     final query = _searchController.text;
-    setState(() {
-      _searchResults = _repository.searchIdioms(query);
-    });
+
+    if (query.length >= 3) {
+      setState(() {
+        _searchResults = _repository.searchIdioms(query);
+      });
+    } else {
+      setState(() {
+        _searchResults = [];
+      });
+    }
   }
 
   @override
@@ -85,10 +92,18 @@ class _SearchPageState extends State<SearchPage> {
                     itemCount: _searchResults.length,
                   itemBuilder: (context, index) {
                       final idiom = _searchResults[index];
-                      return Card(
-                        child: ListTile(
-                          title: Text(idiom.idiom),
-                          subtitle: Text(idiom.definition),
+                      return InkWell(
+                        onTap: () {
+                          showDialog(
+                            context: context,
+                            builder: (context) => IdiomDialog(idiom: idiom),
+                          );
+                        },
+                        child: Card(
+                          child: ListTile(
+                            title: Text(idiom.idiom),
+                            subtitle: Text(idiom.definition),
+                          ),
                         ),
                       );
                   }

@@ -261,6 +261,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.0"
+  sz_fancy_bottom_navigation:
+    dependency: "direct main"
+    description:
+      name: sz_fancy_bottom_navigation
+      sha256: "35c6b7943910cb3c8869a45eb091605b149bf88393eb349213ade5f5dafc01cf"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.1"
   term_glyph:
     dependency: transitive
     description:

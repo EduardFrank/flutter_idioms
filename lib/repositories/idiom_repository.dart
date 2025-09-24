@@ -8,6 +8,7 @@ class IdiomRepository {
 
   final List<Idiom> _idioms = [
     Idiom(
+      difficulty: Difficulty.basic,
       idiom: "Break the ice",
       definition: "To initiate conversation in a social setting.",
       examples: ["He told a joke to break the ice at the party.", "He told a joke to break the ice at the party."],
@@ -16,6 +17,7 @@ class IdiomRepository {
       },
     ),
     Idiom(
+      difficulty: Difficulty.intermediate,
       idiom: "Hit the sack",
       definition: "To go to bed or go to sleep.",
       examples: ["I'm really tired, so I'm going to hit the sack early tonight.", "I'm really tired, so I'm going to hit the sack early tonight."],
@@ -24,6 +26,7 @@ class IdiomRepository {
       },
     ),
     Idiom(
+      difficulty: Difficulty.advanced,
       idiom: "Piece of cake",
       definition: "Something very easy to do.",
       examples: ["This math problem was a piece of cake.", "This math problem was a piece of cake."],
@@ -32,6 +35,7 @@ class IdiomRepository {
       },
     ),
     Idiom(
+      difficulty: Difficulty.basic,
       idiom: "Under the weather",
       definition: "Feeling ill or unwell.",
       examples: ["I'm feeling a bit under the weather today.", "I'm feeling a bit under the weather today."],
@@ -45,10 +49,21 @@ class IdiomRepository {
     return List.from(_idioms);
   }
 
-  List<Idiom> getIdiomsByDifficulty(String difficulty) {
+  int countByDifficulty(Difficulty difficulty) {
+    return _idioms
+        .where((idiom) => idiom.difficulty == difficulty).length;
+  }
+
+  int learnedByDifficulty(Difficulty difficulty) {
+    return _idioms
+        .where((idiom) => idiom.difficulty == difficulty).length;
+  }
+
+  List<Idiom> getIdiomsByDifficulty(Difficulty difficulty) {
     // For now, we'll return all idioms and in the future we can implement
     // actual difficulty filtering
-    return List.from(_idioms);
+    return _idioms
+        .where((idiom) => idiom.difficulty == difficulty).toList();
   }
 
   Idiom? getIdiomById(int id) {

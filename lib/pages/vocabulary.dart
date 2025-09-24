@@ -25,16 +25,13 @@ class VocabularyPage extends StatelessWidget {
             _buildDifficultyCard(
               context: context,
               title: 'Basic',
-              color: Colors.green,
-              total: 20,
-              learned: 5,
+              difficulty: Difficulty.basic,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const DifficultyLevelPage(
-                      level: 'Basic',
-                      color: Colors.green,
+                      difficulty: Difficulty.basic,
                     ),
                   ),
                 );
@@ -43,16 +40,13 @@ class VocabularyPage extends StatelessWidget {
             _buildDifficultyCard(
               context: context,
               title: 'Intermediate',
-              color: Colors.orange,
-              total: 30,
-              learned: 12,
+              difficulty: Difficulty.intermediate,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const DifficultyLevelPage(
-                      level: 'Intermediate',
-                      color: Colors.orange,
+                      difficulty: Difficulty.intermediate,
                     ),
                   ),
                 );
@@ -61,16 +55,13 @@ class VocabularyPage extends StatelessWidget {
             _buildDifficultyCard(
               context: context,
               title: 'Advanced',
-              color: Colors.red,
-              total: 25,
-              learned: 3,
+              difficulty: Difficulty.advanced,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const DifficultyLevelPage(
-                      level: 'Advanced',
-                      color: Colors.red,
+                      difficulty: Difficulty.advanced,
                     ),
                   ),
                 );
@@ -84,27 +75,33 @@ class VocabularyPage extends StatelessWidget {
 
   Widget _buildDifficultyCard({
     required BuildContext context,
+    required Difficulty difficulty,
     required String title,
-    required Color color,
-    required int total,
-    required int learned,
     required VoidCallback onTap,
   }) {
-    Color startColor = color;
-    Color endColor = color.withOpacity(0.7);
-    
+    final idiomRepository = Provider.of<IdiomRepository>(context, listen: false);
+    final count = idiomRepository.countByDifficulty(difficulty);
+    final learned = idiomRepository.learnedByDifficulty(difficulty);
+
+    Color startColor = Colors.white;
+    Color endColor = Colors.white.withOpacity(0.7);
+
     // Define specific gradients for each difficulty level
-    if (color == Colors.green) {
-      startColor = Colors.green.shade600;
-      endColor = Colors.lightGreen.shade300;
-    } else if (color == Colors.orange) {
-      startColor = Colors.orange.shade600;
-      endColor = Colors.amber.shade300;
-    } else if (color == Colors.red) {
-      startColor = Colors.red.shade600;
-      endColor = Colors.pink.shade300;
+    switch (difficulty) {
+      case Difficulty.basic:
+        startColor = Colors.green.shade600;
+        endColor = Colors.lightGreen.shade300;
+        break;
+      case Difficulty.intermediate:
+        startColor = Colors.orange.shade600;
+        endColor = Colors.amber.shade300;
+        break;
+      case Difficulty.advanced:
+        startColor = Colors.red.shade600;
+        endColor = Colors.pink.shade300;
+        break;
     }
-    
+
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
@@ -137,7 +134,7 @@ class VocabularyPage extends StatelessWidget {
                   Expanded(
                     child: _buildStatCard(
                       label: 'Total',
-                      value: total.toString(),
+                      value: '$count',
                       color: Colors.white.withOpacity(0.3),
                     ),
                   ),
@@ -145,7 +142,7 @@ class VocabularyPage extends StatelessWidget {
                   Expanded(
                     child: _buildStatCard(
                       label: 'Learned',
-                      value: learned.toString(),
+                      value: '$learned',
                       color: Colors.white.withOpacity(0.3),
                     ),
                   ),
@@ -194,19 +191,41 @@ class VocabularyPage extends StatelessWidget {
 }
 
 class DifficultyLevelPage extends StatelessWidget {
-  final String level;
-  final Color color;
+  final Difficulty difficulty;
 
   const DifficultyLevelPage({
     super.key,
-    required this.level,
-    required this.color,
+    required this.difficulty,
   });
+
+  get level {
+    switch (difficulty) {
+      case Difficulty.basic:
+        return 'Basic';
+      case Difficulty.intermediate:
+        return 'Intermediate';
+      case Difficulty.advanced:
+        return 'Advanced';
+    }
+  }
+
+  get color {
+    switch (difficulty) {
+      case Difficulty.basic:
+        return Colors.green;
+      case Difficulty.intermediate:
+        return Colors.orange;
+      case Difficulty.advanced:
+        return Colors.red;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     final idiomRepository = Provider.of<IdiomRepository>(context, listen: false);
-    final idioms = idiomRepository.getAllIdioms();
+    final idioms = idiomRepository.getIdiomsByDifficulty(difficulty);
+    final count = idiomRepository.countByDifficulty(difficulty);
+    final learned = idiomRepository.learnedByDifficulty(difficulty);
 
     return Scaffold(
       appBar: AppBar(
@@ -239,8 +258,8 @@ class DifficultyLevelPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      _buildStatItem('Total', '20', color),
-                      _buildStatItem('Learned', '5', color),
+                      _buildStatItem('Total', '$count', color),
+                      _buildStatItem('Learned', '$learned', color),
                     ],
                   ),
                 ],

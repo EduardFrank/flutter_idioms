@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:package_info_plus/package_info_plus.dart';
-import 'package:provider/provider.dart';
-import 'package:idioms/models/idiom.dart';
 import 'package:idioms/pages/learn.dart';
 import 'package:idioms/pages/privacy.dart';
 import 'package:idioms/pages/search.dart';
 import 'package:idioms/pages/settings.dart';
 import 'package:idioms/pages/test.dart';
 import 'package:idioms/pages/vocabulary.dart';
-import 'package:idioms/providers/theme_provider.dart';
-import 'package:idioms/repositories/idiom_repository.dart';
+import 'package:package_info_plus/package_info_plus.dart';
+import 'package:sz_fancy_bottom_navigation/sz_fancy_bottom_navigation.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -19,20 +16,30 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final bottomNavigationKey = GlobalKey();
+
+  late PageController _pageController;
+
   int _selectedIndex = 0;
-
-  List<Widget> get _pages => <Widget>[
-    LearnPage(),
-    TestPage(),
-    VocabularyPage(),
-  ];
-
+  
   final List<String> _pageTitles = <String>[
     'Learn Idioms',
     'Test Your Knowledge',
     'My Vocabulary',
   ];
 
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController();
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+  
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -51,20 +58,33 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   const DrawerHeader(
                     decoration: BoxDecoration(
-                      color: Colors.blue,
-                    ),
-                    child: Text(
-                      'Idioms App',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
+                      gradient: LinearGradient(
+                        colors: [Colors.blue, Colors.lightBlueAccent],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
                       ),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Image(
+                            width: 90,
+                            image: AssetImage('assets/icon.png')
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          'English Idioms',
+                          style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold),
+                        ),
+                      ],
                     ),
                   ),
                   ListTile(
                     leading: const Icon(Icons.search),
                     title: const Text('Search'),
                     onTap: () {
+                      Navigator.pop(context);
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => const SearchPage()),
@@ -75,25 +95,33 @@ class _HomePageState extends State<HomePage> {
                     leading: const Icon(Icons.settings),
                     title: const Text('Settings'),
                     onTap: () {
+                      Navigator.pop(context);
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => const SettingsPage()),
                       );
                     },
                   ),
-                  const ListTile(
+                  ListTile(
                     leading: Icon(Icons.rate_review),
                     title: Text('Rate App'),
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                   ),
                   const Divider(height: 1),
-                  const ListTile(
+                  ListTile(
                     leading: Icon(Icons.info),
                     title: Text('About'),
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.privacy_tip),
                     title: const Text('Privacy'),
                     onTap: () {
+                      Navigator.pop(context);
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => const PrivacyPage()),
@@ -123,26 +151,39 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
       ),
-      body: Center(
-        child: _pages.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'Learn',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.quiz),
-            label: 'Test',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.menu_book),
-            label: 'Vocabulary',
-          ),
+      body: PageView(
+        controller: _pageController,
+        children: [
+          const LearnPage(),
+          const TestPage(),
+          const VocabularyPage(),
         ],
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
+        onPageChanged: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+      ),
+      bottomNavigationBar: FancyBottomNavigation(
+        pageController: _pageController,
+        initialSelection: 0,
+        key: bottomNavigationKey,
+        hidden: false,
+        shadowColor: Colors.black12,
+        tabs: [
+          TabData(
+            iconData: Icons.school,
+            title: 'Learn',
+          ),
+          TabData(
+            iconData: Icons.quiz,
+            title: 'Quiz',
+          ),
+          TabData(
+            iconData: Icons.menu_book,
+            title: 'Vocabulary',
+          )
+        ],
       ),
     );
   }
