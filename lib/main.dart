@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:idioms/pages/home.dart';
 import 'package:idioms/providers/theme_provider.dart';
-import 'package:idioms/repositories/idiom_repository.dart';
+import 'package:idioms/repositories/repository.dart';
 import 'package:idioms/theme.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final repo = Repository();
+  await repo.init();
+
   runApp(const IdiomsApp());
 }
 
@@ -16,14 +20,14 @@ class IdiomsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        Provider<IdiomRepository>(
-          create: (_) => IdiomRepository(),
+        Provider<Repository>(
+          create: (_) => Repository(),
         ),
         ChangeNotifierProvider(
           create: (context) => ThemeProvider(),
         ),
       ],
-      child: Consumer2<IdiomRepository, ThemeProvider>(
+      child: Consumer2<Repository, ThemeProvider>(
         builder: (context, idiomRepo, themeProvider, child) {
           return MaterialApp(
             title: 'Idioms Learning App',

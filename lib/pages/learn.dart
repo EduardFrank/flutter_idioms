@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:idioms/repositories/idiom_repository.dart';
+import 'package:idioms/repositories/repository.dart';
 import 'package:idioms/widgets/idiom_dialog.dart';
 import 'package:provider/provider.dart';
 
@@ -9,7 +9,7 @@ class LearnPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final idiomRepository = Provider.of<IdiomRepository>(context, listen: false);
+    final idiomRepository = Provider.of<Repository>(context, listen: false);
     final idioms = idiomRepository.getAllIdioms();
 
     return Scaffold(

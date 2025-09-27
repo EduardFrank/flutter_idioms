@@ -4,9 +4,12 @@ import 'package:idioms/models/idiom.dart';
 
 class IdiomDialog extends StatefulWidget {
   final Idiom idiom;
+  final VoidCallback? onLearnedPressed;
 
-  const IdiomDialog({super.key,
-    required this.idiom
+  const IdiomDialog({
+    super.key,
+    required this.idiom,
+    this.onLearnedPressed,
   });
 
   @override
@@ -253,7 +256,12 @@ class _IdiomDialogState extends State<IdiomDialog> with TickerProviderStateMixin
                     child: Align(
                       alignment: Alignment.centerRight,
                       child: ElevatedButton(
-                        onPressed: () => Navigator.of(context).pop(),
+                        onPressed: () {
+                          if (widget.onLearnedPressed != null) {
+                            widget.onLearnedPressed!();
+                          }
+                          Navigator.of(context).pop();
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Theme.of(context).primaryColor,
                           foregroundColor: Colors.white,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:idioms/models/idiom.dart';
-import 'package:idioms/repositories/idiom_repository.dart';
+import 'package:idioms/repositories/repository.dart';
 import 'package:idioms/widgets/idiom_dialog.dart';
 import 'package:provider/provider.dart';
 
@@ -14,12 +14,12 @@ class SearchPage extends StatefulWidget {
 class _SearchPageState extends State<SearchPage> {
   final TextEditingController _searchController = TextEditingController();
   List<Idiom> _searchResults = [];
-  late IdiomRepository _repository;
+  late Repository _repository;
 
   @override
   void initState() {
     super.initState();
-    _repository = Provider.of<IdiomRepository>(context, listen: false);
+    _repository = Provider.of<Repository>(context, listen: false);
 
     _searchController.addListener(_onSearchChanged);
   }

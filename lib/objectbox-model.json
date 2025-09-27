@@ -1,0 +1,91 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:3789809205061507047",
+      "lastPropertyId": "7:3181950640816437535",
+      "name": "Idiom",
+      "properties": [
+        {
+          "id": "1:1773898938926111289",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6955563135234674207",
+          "name": "idiom",
+          "type": 9
+        },
+        {
+          "id": "3:412833375862152387",
+          "name": "definition",
+          "type": 9
+        },
+        {
+          "id": "5:2193614465086245516",
+          "name": "difficultyValue",
+          "type": 6
+        },
+        {
+          "id": "6:6183149099256085786",
+          "name": "examplesJson",
+          "type": 9
+        },
+        {
+          "id": "7:3181950640816437535",
+          "name": "translationsJson",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:3533130332039032368",
+      "lastPropertyId": "4:2878833680484694317",
+      "name": "Progress",
+      "properties": [
+        {
+          "id": "1:538300944434195608",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4385157452503097252",
+          "name": "idiomId",
+          "indexId": "1:4121055704686731824",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Idiom"
+        },
+        {
+          "id": "3:3202333551150076163",
+          "name": "timesPracticed",
+          "type": 6
+        },
+        {
+          "id": "4:2878833680484694317",
+          "name": "lastPracticed",
+          "type": 10
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "2:3533130332039032368",
+  "lastIndexId": "1:4121055704686731824",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    7728149458038448356
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

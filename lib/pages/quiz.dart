@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:idioms/main.dart';
 import 'package:idioms/models/idiom.dart';
 import 'package:idioms/pages/home.dart';
-import 'package:idioms/repositories/idiom_repository.dart';
+import 'package:idioms/repositories/repository.dart';
 import 'package:idioms/widgets/tindercard.dart';
 import 'package:provider/provider.dart';
 
@@ -32,7 +32,7 @@ class _QuizPageState extends State<QuizPage> {
   @override
   void initState() {
     super.initState();
-    final idiomRepository = Provider.of<IdiomRepository>(context, listen: false);
+    final idiomRepository = Provider.of<Repository>(context, listen: false);
 
     quizIdioms = List.from(idiomRepository.getAllIdioms())..shuffle();
     controller = CardController();

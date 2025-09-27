@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:idioms/core/constants.dart';
 import 'package:idioms/pages/home.dart';
-import 'package:idioms/repositories/idiom_repository.dart';
+import 'package:idioms/repositories/repository.dart';
 import 'package:idioms/widgets/idiom_dialog.dart';
 import 'package:provider/provider.dart';
 import 'package:idioms/main.dart';
@@ -13,59 +14,81 @@ class VocabularyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final repo = Provider.of<Repository>(context, listen: false);
+    final countIdioms = repo.countIdioms();
+    final countLearned = repo.countLearned();
+    final countMastered = repo.countMastered();
+
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(4.0),
-        child: GridView.count(
-          crossAxisCount: 1,
-          crossAxisSpacing: 16,
-          mainAxisSpacing: 8,
-          childAspectRatio: 2.9, // Wider than tall
+        child: Column(
           children: [
-            _buildDifficultyCard(
-              context: context,
-              title: 'Basic',
-              difficulty: Difficulty.basic,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const DifficultyLevelPage(
-                      difficulty: Difficulty.basic,
-                    ),
-                  ),
-                );
-              },
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  _buildStatItem('Total', '$countIdioms', Colors.black),
+                  _buildStatItem('Learned', '$countLearned', Colors.black),
+                  _buildStatItem('Mastered', '$countMastered', Colors.black),
+                ],
+              ),
             ),
-            _buildDifficultyCard(
-              context: context,
-              title: 'Intermediate',
-              difficulty: Difficulty.intermediate,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const DifficultyLevelPage(
-                      difficulty: Difficulty.intermediate,
-                    ),
+            Expanded(
+              child: GridView.count(
+                crossAxisCount: 1,
+                crossAxisSpacing: 16,
+                mainAxisSpacing: 8,
+                childAspectRatio: 2.9, // Wider than tall
+                children: [
+                  _buildDifficultyCard(
+                    context: context,
+                    title: 'Basic',
+                    difficulty: Difficulty.basic,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const DifficultyLevelPage(
+                            difficulty: Difficulty.basic,
+                          ),
+                        ),
+                      );
+                    },
                   ),
-                );
-              },
-            ),
-            _buildDifficultyCard(
-              context: context,
-              title: 'Advanced',
-              difficulty: Difficulty.advanced,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const DifficultyLevelPage(
-                      difficulty: Difficulty.advanced,
-                    ),
+                  _buildDifficultyCard(
+                    context: context,
+                    title: 'Intermediate',
+                    difficulty: Difficulty.intermediate,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const DifficultyLevelPage(
+                            difficulty: Difficulty.intermediate,
+                          ),
+                        ),
+                      );
+                    },
                   ),
-                );
-              },
+                  _buildDifficultyCard(
+                    context: context,
+                    title: 'Advanced',
+                    difficulty: Difficulty.advanced,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const DifficultyLevelPage(
+                            difficulty: Difficulty.advanced,
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ),
             ),
           ],
         ),
@@ -79,12 +102,13 @@ class VocabularyPage extends StatelessWidget {
     required String title,
     required VoidCallback onTap,
   }) {
-    final idiomRepository = Provider.of<IdiomRepository>(context, listen: false);
-    final count = idiomRepository.countByDifficulty(difficulty);
-    final learned = idiomRepository.learnedByDifficulty(difficulty);
+    final repo = Provider.of<Repository>(context, listen: false);
+    final countIdioms = repo.countIdiomsByDifficulty(difficulty);
+    final countLearned = repo.countLearnedByDifficulty(difficulty);
+    final countMastered = repo.countMasteredByDifficulty(difficulty);
 
     Color startColor = Colors.white;
-    Color endColor = Colors.white.withOpacity(0.7);
+    Color endColor = Colors.white.withValues(alpha: 0.7);
 
     // Define specific gradients for each difficulty level
     switch (difficulty) {
@@ -134,16 +158,24 @@ class VocabularyPage extends StatelessWidget {
                   Expanded(
                     child: _buildStatCard(
                       label: 'Total',
-                      value: '$count',
-                      color: Colors.white.withOpacity(0.3),
+                      value: '$countIdioms',
+                      color: Colors.white.withValues(alpha: 0.3),
                     ),
                   ),
                   const SizedBox(width: 12),
                   Expanded(
                     child: _buildStatCard(
                       label: 'Learned',
-                      value: '$learned',
-                      color: Colors.white.withOpacity(0.3),
+                      value: '$countLearned',
+                      color: Colors.white.withValues(alpha: 0.3),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: _buildStatCard(
+                      label: 'Mastered',
+                      value: '$countMastered',
+                      color: Colors.white.withValues(alpha: 0.3),
                     ),
                   ),
                 ],
@@ -181,16 +213,38 @@ class VocabularyPage extends StatelessWidget {
             label,
             style: TextStyle(
               fontSize: 12,
-              color: Colors.white.withOpacity(0.8),
+              color: Colors.white.withValues(alpha: 0.8),
             ),
           ),
         ],
       ),
     );
   }
+
+  Widget _buildStatItem(String title, String value, Color color) {
+    return Column(
+      children: [
+        Text(
+          value,
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: color,
+          ),
+        ),
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: 14,
+            color: color.withValues(alpha: 0.7),
+          ),
+        ),
+      ],
+    );
+  }
 }
 
-class DifficultyLevelPage extends StatelessWidget {
+class DifficultyLevelPage extends StatefulWidget {
   final Difficulty difficulty;
 
   const DifficultyLevelPage({
@@ -198,8 +252,14 @@ class DifficultyLevelPage extends StatelessWidget {
     required this.difficulty,
   });
 
+  @override
+  State<DifficultyLevelPage> createState() => _DifficultyLevelPageState();
+}
+
+class _DifficultyLevelPageState extends State<DifficultyLevelPage> {
+
   get level {
-    switch (difficulty) {
+    switch (widget.difficulty) {
       case Difficulty.basic:
         return 'Basic';
       case Difficulty.intermediate:
@@ -210,7 +270,7 @@ class DifficultyLevelPage extends StatelessWidget {
   }
 
   get color {
-    switch (difficulty) {
+    switch (widget.difficulty) {
       case Difficulty.basic:
         return Colors.green;
       case Difficulty.intermediate:
@@ -222,10 +282,11 @@ class DifficultyLevelPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final idiomRepository = Provider.of<IdiomRepository>(context, listen: false);
-    final idioms = idiomRepository.getIdiomsByDifficulty(difficulty);
-    final count = idiomRepository.countByDifficulty(difficulty);
-    final learned = idiomRepository.learnedByDifficulty(difficulty);
+    final repo = Provider.of<Repository>(context, listen: false);
+    final idioms = repo.getIdiomsByDifficulty(widget.difficulty);
+    final countIdioms = repo.countIdiomsByDifficulty(widget.difficulty);
+    final countLearned = repo.countLearnedByDifficulty(widget.difficulty);
+    final countMastered = repo.countMasteredByDifficulty(widget.difficulty);
 
     return Scaffold(
       appBar: AppBar(
@@ -250,18 +311,15 @@ class DifficultyLevelPage extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: color.withOpacity(0.1),
+                color: color.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Column(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      _buildStatItem('Total', '$count', color),
-                      _buildStatItem('Learned', '$learned', color),
-                    ],
-                  ),
+                  _buildStatItem('Total', '$countIdioms', color),
+                  _buildStatItem('Learned', '$countLearned', color),
+                  _buildStatItem('Mastered', '$countMastered', color),
                 ],
               ),
             ),
@@ -275,18 +333,110 @@ class DifficultyLevelPage extends StatelessWidget {
               child: ListView.builder(
                 itemCount: idioms.length, // Placeholder count
                 itemBuilder: (context, index) {
-                  return InkWell(
-                    onTap: () {
-                      showDialog(
-                        context: context,
-                        builder: (context) => IdiomDialog(idiom: idioms[index]),
-                      );
-                    },
-                    child: Card(
-                      child: ListTile(
-                        title: Text(idioms[index].idiom),
-                        subtitle: Text(idioms[index].definition),
-                        trailing: const Icon(Icons.arrow_forward_ios),
+                  final idiom = idioms[index];
+                  final progress = repo.getProgressByIdiom(idiom);
+                  final isLearned = progress != null;
+                  final practiceCount = isLearned ? progress.timesPracticed : 0;
+                  // Calculate progress: max at 5 practices = 1.0, anything 5+ is full
+                  final progressValue = practiceCount >= MASTER_IDIOMS_COUNT ? 1.0 : practiceCount / (MASTER_IDIOMS_COUNT.toDouble());
+
+                  return Card(
+                    child: InkWell(
+                      onTap: () {
+                        showDialog(
+                          context: context,
+                          builder: (context) => IdiomDialog(
+                              idiom: idiom,
+                            onLearnedPressed: () {
+                                repo.markIdiomAsLearned(idiom);
+                                setState(() {});
+                            },
+                          ),
+                        );
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Stack(
+                              alignment: Alignment.center,
+                              children: practiceCount > 0 ? [
+                                GestureDetector(
+                                  onTap: () {
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                        title: const Text('Reset Progress'),
+                                        content: Text('Do you want to reset the learning progress for "${idiom.idiom}"?'),
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () => Navigator.of(context).pop(),
+                                            child: const Text('Cancel'),
+                                          ),
+                                          TextButton(
+                                            onPressed: () {
+                                              final repo = Provider.of<Repository>(context, listen: false);
+                                              repo.markIdiomAsUnlearned(idiom);
+                                              setState(() {});
+                                              Navigator.of(context).pop(); // Close dialog
+                                            },
+                                            child: const Text('Reset'),
+                                          ),
+                                        ],
+                                      ),
+                                    );
+                                  },
+                                  child: SizedBox(
+                                    width: 40,
+                                    height: 40,
+                                    child: CircularProgressIndicator(
+                                      value: progressValue,
+                                      strokeWidth: 4,
+                                      backgroundColor: Colors.grey.withValues(alpha: 0.3),
+                                      valueColor: AlwaysStoppedAnimation<Color>(
+                                        practiceCount >= MASTER_IDIOMS_COUNT
+                                            ? Colors.green
+                                            : practiceCount >= 3
+                                            ? Colors.orange
+                                            : Colors.blue,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  '$practiceCount',
+                                  style: const TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ] : [ const SizedBox(width: 40, height: 40)],
+                            ),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Expanded(
+                                        child: Text(
+                                          idiom.idiom,
+                                          style: const TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 4),
+                                  Text(idiom.definition),
+                                ],
+                              ),
+                            ),
+                            const Icon(Icons.arrow_forward_ios),
+                          ],
+                        ),
                       ),
                     ),
                   );
@@ -314,7 +464,7 @@ class DifficultyLevelPage extends StatelessWidget {
           title,
           style: TextStyle(
             fontSize: 14,
-            color: color.withOpacity(0.7),
+            color: color.withValues(alpha: 0.7),
           ),
         ),
       ],

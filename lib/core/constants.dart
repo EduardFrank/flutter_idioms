@@ -1,0 +1,2 @@
+
+const MASTER_IDIOMS_COUNT = 5;
