@@ -1,16 +1,16 @@
 
 import 'package:flutter/material.dart';
-import 'package:idioms/repositories/repository.dart';
+import 'package:idioms/repos/repo.dart';
 import 'package:idioms/widgets/idiom_dialog.dart';
 import 'package:provider/provider.dart';
 
-class LearnPage extends StatelessWidget {
-  const LearnPage({super.key});
+class OverviewPage extends StatelessWidget {
+  const OverviewPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final idiomRepository = Provider.of<Repository>(context, listen: false);
-    final idioms = idiomRepository.getAllIdioms();
+    final repo = Provider.of<Repo>(context, listen: false);
+    final idioms = repo.getIdiomsLearnedOnDate(DateTime.now());
 
     return Scaffold(
       body: Padding(

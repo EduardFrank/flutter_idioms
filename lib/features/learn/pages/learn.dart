@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
-import 'package:idioms/pages/quiz.dart';
+import 'package:idioms/features/learn/pages/quiz.dart';
 
-class TestPage extends StatelessWidget {
-  const TestPage({super.key});
+class LearnPage extends StatelessWidget {
+  const LearnPage({super.key});
 
   @override
   Widget build(BuildContext context) {

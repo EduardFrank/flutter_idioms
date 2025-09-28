@@ -3,10 +3,10 @@ import 'package:idioms/models/idiom.dart';
 import 'package:idioms/models/progress.dart';
 import 'package:idioms/objectbox.g.dart';
 
-class Repository {
-  static final Repository _instance = Repository._internal();
-  factory Repository() => _instance;
-  Repository._internal();
+class Repo {
+  static final Repo _instance = Repo._internal();
+  factory Repo() => _instance;
+  Repo._internal();
 
   late final Store _store;
   late final Box<Idiom> _idiomBox;
@@ -31,50 +31,7 @@ class Repository {
 
   /// Sample data to populate ObjectBox initially
   void _seedIdioms() {
-    final sampleIdioms = [
-      Idiom.create(
-        difficulty: Difficulty.basic,
-        idiom: "Break the ice",
-        definition: "To initiate conversation in a social setting.",
-        examples: [
-          "He told a joke to break the ice at the party.",
-          "He told a joke to break the ice at the party."
-        ],
-        translations: {"de": "So das Eis brechen (German)"},
-      ),
-      Idiom.create(
-        difficulty: Difficulty.intermediate,
-        idiom: "Hit the sack",
-        definition: "To go to bed or go to sleep.",
-        examples: [
-          "I'm really tired, so I'm going to hit the sack early tonight.",
-          "I'm really tired, so I'm going to hit the sack early tonight."
-        ],
-        translations: {"de": "Ins Bett gehen (German)"},
-      ),
-      Idiom.create(
-        difficulty: Difficulty.advanced,
-        idiom: "Piece of cake",
-        definition: "Something very easy to do.",
-        examples: [
-          "This math problem was a piece of cake.",
-          "This math problem was a piece of cake."
-        ],
-        translations: {"de": "Kinderspiel"},
-      ),
-      Idiom.create(
-        difficulty: Difficulty.basic,
-        idiom: "Under the weather",
-        definition: "Feeling ill or unwell.",
-        examples: [
-          "I'm feeling a bit under the weather today.",
-          "I'm feeling a bit under the weather today."
-        ],
-        translations: {"de": "Sich unwohl fühlen"},
-      ),
-    ];
-
-    _idiomBox.putMany(sampleIdioms);
+    _idiomBox.putMany(SAMPLE_IDIOMS);
   }
 
   /// CRUD Operations
@@ -206,7 +163,7 @@ class Repository {
 
   int countMastered() {
     final query = _progressBox
-        .query(Progress_.timesPracticed.greaterThan(MASTER_IDIOMS_COUNT))
+        .query(Progress_.timesPracticed.greaterOrEqual(MASTER_IDIOMS_COUNT))
         .build();
     final count = query.count();
     query.close();
@@ -215,7 +172,7 @@ class Repository {
 
   int countMasteredByDifficulty(Difficulty difficulty) {
     // Step 1: Query all progress where timesPracticed > 5
-    final query = _progressBox.query(Progress_.timesPracticed.greaterThan(MASTER_IDIOMS_COUNT)).build();
+    final query = _progressBox.query(Progress_.timesPracticed.greaterOrEqual(MASTER_IDIOMS_COUNT)).build();
     final results = query.find();
     query.close();
 
@@ -225,6 +182,23 @@ class Repository {
         .length;
 
     return count;
+  }
+
+  /// Returns all idioms that were practiced/learned on a specific day
+  List<Idiom> getIdiomsLearnedOnDate(DateTime date) {
+    // Normalize date to ignore time
+    final startOfDay = DateTime(date.year, date.month, date.day);
+    final endOfDay = startOfDay.add(const Duration(days: 1));
+
+    final query = _progressBox
+        .query(Progress_.lastPracticed.between(startOfDay.millisecondsSinceEpoch,
+        endOfDay.millisecondsSinceEpoch - 1))
+        .build();
+    final results = query.find();
+    query.close();
+
+    // Return linked idioms, filter out nulls just in case
+    return results.map((p) => p.idiom.target).whereType<Idiom>().toList();
   }
 
   void close() {

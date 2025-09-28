@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:idioms/pages/learn.dart';
-import 'package:idioms/pages/privacy.dart';
-import 'package:idioms/pages/search.dart';
-import 'package:idioms/pages/settings.dart';
-import 'package:idioms/pages/test.dart';
-import 'package:idioms/pages/vocabulary.dart';
+import 'package:idioms/features/overview/overview/overview.dart';
+import 'package:idioms/features/home/pages/privacy.dart';
+import 'package:idioms/features/home/pages/search.dart';
+import 'package:idioms/features/home/pages/settings.dart';
+import 'package:idioms/features/learn/pages/learn.dart';
+import 'package:idioms/features/vocabulary/pages/vocabularies.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:sz_fancy_bottom_navigation/sz_fancy_bottom_navigation.dart';
 
@@ -23,9 +23,9 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
   
   final List<String> _pageTitles = <String>[
-    'Learn Idioms',
-    'Test Your Knowledge',
-    'My Vocabulary',
+    'Overview',
+    'Learn',
+    'Vocabulary',
   ];
 
   @override
@@ -38,12 +38,6 @@ class _HomePageState extends State<HomePage> {
   void dispose() {
     _pageController.dispose();
     super.dispose();
-  }
-  
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
   }
 
   @override
@@ -154,9 +148,9 @@ class _HomePageState extends State<HomePage> {
       body: PageView(
         controller: _pageController,
         children: [
+          const OverviewPage(),
           const LearnPage(),
-          const TestPage(),
-          const VocabularyPage(),
+          const VocabulariesPage(),
         ],
         onPageChanged: (index) {
           setState(() {
@@ -173,11 +167,11 @@ class _HomePageState extends State<HomePage> {
         tabs: [
           TabData(
             iconData: Icons.school,
-            title: 'Learn',
+            title: 'Overview',
           ),
           TabData(
             iconData: Icons.quiz,
-            title: 'Quiz',
+            title: 'Learn',
           ),
           TabData(
             iconData: Icons.menu_book,
