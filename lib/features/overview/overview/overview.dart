@@ -75,7 +75,7 @@ class _OverviewPageState extends State<OverviewPage> with SingleTickerProviderSt
     return Scaffold(
       backgroundColor: Colors.grey[50],
       body: SafeArea(
-        child: Padding(
+        child: SingleChildScrollView(
           padding: const EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -102,7 +102,7 @@ class _OverviewPageState extends State<OverviewPage> with SingleTickerProviderSt
                 ),
               ),
               const SizedBox(height: 16),
-              
+
               // Idiom of the day section
               InkWell(
                 onTap: () {
@@ -166,7 +166,7 @@ class _OverviewPageState extends State<OverviewPage> with SingleTickerProviderSt
                 ),
               ),
               const SizedBox(height: 16),
-              
+
               // Top row: week navigation and selector
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -323,17 +323,13 @@ class _OverviewPageState extends State<OverviewPage> with SingleTickerProviderSt
               const SizedBox(height: 16),
 
               // Idioms list
-              Expanded(
-                child: ListView.builder(
-                  itemCount: idioms.length,
-                  itemBuilder: (context, index) {
-                    final idiom = idioms[index];
-                    return IdiomCard(
-                      idiom: idiom,
-                      progress: repo.getProgressByIdiom(idiom),
-                    );
-                  },
-                ),
+              Column(
+                children: idioms.map((idiom) {
+                  return IdiomCard(
+                    idiom: idiom,
+                    progress: repo.getProgressByIdiom(idiom),
+                  );
+                }).toList(),
               ),
             ],
           ),

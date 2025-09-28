@@ -36,7 +36,7 @@ class VocabulariesPage extends StatelessWidget {
                 crossAxisCount: 1,
                 crossAxisSpacing: 16,
                 mainAxisSpacing: 8,
-                childAspectRatio: 2.9, // Wider than tall
+                childAspectRatio: 2.6, // Wider than tall
                 children: [
                   _buildDifficultyCard(
                     context: context,

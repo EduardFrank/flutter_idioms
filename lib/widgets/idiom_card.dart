@@ -11,12 +11,14 @@ class IdiomCard extends StatelessWidget {
   final Idiom idiom;
   final Progress? progress;
   final VoidCallback? onLearnedPressed;
+  final VoidCallback? onResetPressed;
 
   const IdiomCard({
     super.key,
     required this.idiom,
     required this.progress,
     this.onLearnedPressed,
+    this.onResetPressed
   });
 
   @override
@@ -62,6 +64,11 @@ class IdiomCard extends StatelessWidget {
                               onPressed: () {
                                 final repo = Provider.of<Repo>(context, listen: false);
                                 repo.markIdiomAsUnlearned(idiom);
+
+                                if (onResetPressed != null) {
+                                  onResetPressed!();
+                                }
+
                                 Navigator.of(context).pop(); // Close dialog
                               },
                               child: const Text('Reset'),

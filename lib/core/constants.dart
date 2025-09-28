@@ -3,6 +3,7 @@ import 'package:idioms/models/idiom.dart';
 
 const MASTER_IDIOMS_COUNT = 5;
 
+const MAX_IDIOMS_PER_DAY = 5;
 
 final SAMPLE_IDIOMS = [
   // ===================== BASIC (20) =====================
@@ -14,7 +15,7 @@ final SAMPLE_IDIOMS = [
       "He told a joke to break the ice at the party.",
       "She broke the ice with a friendly smile."
     ],
-    translations: {"de": "So das Eis brechen (German)"},
+    translations: {"de": "So das Eis brechen"},
   ),
 
   Idiom.create(
@@ -25,7 +26,7 @@ final SAMPLE_IDIOMS = [
       "The test was a piece of cake.",
       "For her, cooking this dish is a piece of cake."
     ],
-    translations: {"de": "Ein Kinderspiel (German)"},
+    translations: {"de": "Ein Kinderspiel"},
   ),
 
   Idiom.create(
@@ -36,7 +37,7 @@ final SAMPLE_IDIOMS = [
       "I won’t come to work today, I’m feeling under the weather.",
       "She stayed home because she was under the weather."
     ],
-    translations: {"de": "Sich unwohl fühlen (German)"},
+    translations: {"de": "Sich unwohl fühlen"},
   ),
 
   Idiom.create(
@@ -47,7 +48,7 @@ final SAMPLE_IDIOMS = [
       "Don’t spill the beans about the surprise party!",
       "He accidentally spilled the beans during lunch."
     ],
-    translations: {"de": "Ein Geheimnis verraten (German)"},
+    translations: {"de": "Ein Geheimnis verraten"},
   ),
 
   Idiom.create(
@@ -58,7 +59,7 @@ final SAMPLE_IDIOMS = [
       "I’m really tired; I’m going to hit the sack.",
       "She usually hits the sack around 10 p.m."
     ],
-    translations: {"de": "Ins Bett gehen (German)"},
+    translations: {"de": "Ins Bett gehen"},
   ),
 
   Idiom.create(
@@ -69,7 +70,7 @@ final SAMPLE_IDIOMS = [
       "She let the cat out of the bag about the engagement.",
       "He let the cat out of the bag during the meeting."
     ],
-    translations: {"de": "Ein Geheimnis ausplaudern (German)"},
+    translations: {"de": "Ein Geheimnis ausplaudern"},
   ),
 
   Idiom.create(
@@ -80,7 +81,7 @@ final SAMPLE_IDIOMS = [
       "Their new house cost an arm and a leg.",
       "That designer bag costs an arm and a leg."
     ],
-    translations: {"de": "Ein Vermögen kosten (German)"},
+    translations: {"de": "Ein Vermögen kosten"},
   ),
 
   Idiom.create(
@@ -91,7 +92,7 @@ final SAMPLE_IDIOMS = [
       "We go out for dinner once in a blue moon.",
       "He visits his hometown once in a blue moon."
     ],
-    translations: {"de": "Sehr selten (German)"},
+    translations: {"de": "Sehr selten"},
   ),
 
   Idiom.create(
@@ -102,7 +103,7 @@ final SAMPLE_IDIOMS = [
       "You hit the nail on the head with that suggestion.",
       "Her analysis really hit the nail on the head."
     ],
-    translations: {"de": "Den Nagel auf den Kopf treffen (German)"},
+    translations: {"de": "Den Nagel auf den Kopf treffen"},
   ),
 
   Idiom.create(
@@ -113,7 +114,7 @@ final SAMPLE_IDIOMS = [
       "I’ve done all I can—the ball is in your court.",
       "The offer is on the table; now the ball is in their court."
     ],
-    translations: {"de": "Du bist am Zug (German)"},
+    translations: {"de": "Du bist am Zug"},
   ),
 
   Idiom.create(
@@ -124,7 +125,7 @@ final SAMPLE_IDIOMS = [
       "His rude comments only added fuel to the fire.",
       "Yelling back will just add fuel to the fire."
     ],
-    translations: {"de": "Öl ins Feuer gießen (German)"},
+    translations: {"de": "Öl ins Feuer gießen"},
   ),
 
   Idiom.create(
@@ -135,7 +136,7 @@ final SAMPLE_IDIOMS = [
       "She was burning the midnight oil to finish the project.",
       "He burned the midnight oil preparing for the exam."
     ],
-    translations: {"de": "Die Nacht durcharbeiten (German)"},
+    translations: {"de": "Die Nacht durcharbeiten"},
   ),
 
   Idiom.create(
@@ -146,7 +147,7 @@ final SAMPLE_IDIOMS = [
       "He decided to bite the bullet and accept the criticism.",
       "I had to bite the bullet and tell her the truth."
     ],
-    translations: {"de": "In den sauren Apfel beißen (German)"},
+    translations: {"de": "In den sauren Apfel beißen"},
   ),
 
   Idiom.create(
@@ -157,7 +158,7 @@ final SAMPLE_IDIOMS = [
       "She always goes the extra mile for her clients.",
       "He went the extra mile to finish the task on time."
     ],
-    translations: {"de": "Sich besonders anstrengen (German)"},
+    translations: {"de": "Sich besonders anstrengen"},
   ),
 
   Idiom.create(
@@ -168,7 +169,7 @@ final SAMPLE_IDIOMS = [
       "He goes jogging to blow off steam after work.",
       "She shouted to blow off steam."
     ],
-    translations: {"de": "Dampf ablassen (German)"},
+    translations: {"de": "Dampf ablassen"},
   ),
 
   Idiom.create(
@@ -179,7 +180,7 @@ final SAMPLE_IDIOMS = [
       "We’ve done enough, let’s call it a day.",
       "After ten hours, they decided to call it a day."
     ],
-    translations: {"de": "Für heute Schluss machen (German)"},
+    translations: {"de": "Für heute Schluss machen"},
   ),
 
   Idiom.create(
@@ -190,7 +191,7 @@ final SAMPLE_IDIOMS = [
       "They cut corners to finish the project on time.",
       "Don’t cut corners when preparing the report."
     ],
-    translations: {"de": "Ecken und Kanten abkürzen (German)"},
+    translations: {"de": "Ecken und Kanten abkürzen"},
   ),
 
   Idiom.create(
@@ -201,7 +202,7 @@ final SAMPLE_IDIOMS = [
       "Please keep an eye on the children.",
       "I’ll keep an eye on the situation."
     ],
-    translations: {"de": "Im Auge behalten (German)"},
+    translations: {"de": "Im Auge behalten"},
   ),
 
   Idiom.create(
@@ -212,7 +213,7 @@ final SAMPLE_IDIOMS = [
       "Sit tight while I get more information.",
       "He told us to sit tight and wait for instructions."
     ],
-    translations: {"de": "Abwarten (German)"},
+    translations: {"de": "Abwarten"},
   ),
 
   Idiom.create(
@@ -223,7 +224,7 @@ final SAMPLE_IDIOMS = [
       "The plan failed, so we had to go back to square one.",
       "We went back to square one after the experiment failed."
     ],
-    translations: {"de": "Wieder am Anfang anfangen (German)"},
+    translations: {"de": "Wieder am Anfang anfangen"},
   ),
 
 // ===================== INTERMEDIATE (20) =====================
@@ -235,7 +236,7 @@ final SAMPLE_IDIOMS = [
       "He bit off more than he could chew with this project.",
       "Don’t bite off more than you can chew with your schedule."
     ],
-    translations: {"de": "Sich übernehmen (German)"},
+    translations: {"de": "Sich übernehmen"},
   ),
 
   Idiom.create(
@@ -246,7 +247,7 @@ final SAMPLE_IDIOMS = [
       "He burned bridges with his former employer.",
       "Be careful not to burn bridges at work."
     ],
-    translations: {"de": "Brücken abbrechen (German)"},
+    translations: {"de": "Brücken abbrechen"},
   ),
 
   Idiom.create(
@@ -257,7 +258,7 @@ final SAMPLE_IDIOMS = [
       "She hit the ground running on her first day.",
       "We need to hit the ground running after the break."
     ],
-    translations: {"de": "Richtig durchstarten (German)"},
+    translations: {"de": "Richtig durchstarten"},
   ),
 
   Idiom.create(
@@ -268,7 +269,7 @@ final SAMPLE_IDIOMS = [
       "He jumped on the bandwagon and bought the new phone.",
       "Many companies jumped on the bandwagon of sustainability."
     ],
-    translations: {"de": "Auf den Zug aufspringen (German)"},
+    translations: {"de": "Auf den Zug aufspringen"},
   ),
 
   Idiom.create(
@@ -279,7 +280,7 @@ final SAMPLE_IDIOMS = [
       "After failing the test, he threw in the towel.",
       "The team threw in the towel after halftime."
     ],
-    translations: {"de": "Das Handtuch werfen (German)"},
+    translations: {"de": "Das Handtuch werfen"},
   ),
 
   Idiom.create(
@@ -290,7 +291,7 @@ final SAMPLE_IDIOMS = [
       "They stayed friends through thick and thin.",
       "She supported him through thick and thin."
     ],
-    translations: {"de": "In guten wie in schlechten Zeiten (German)"},
+    translations: {"de": "In guten wie in schlechten Zeiten"},
   ),
 
   Idiom.create(
@@ -301,7 +302,7 @@ final SAMPLE_IDIOMS = [
       "Losing that job was a blessing in disguise.",
       "Missing the bus was a blessing in disguise because I met an old friend."
     ],
-    translations: {"de": "Ein Glück im Unglück (German)"},
+    translations: {"de": "Ein Glück im Unglück"},
   ),
 
   Idiom.create(
@@ -312,7 +313,7 @@ final SAMPLE_IDIOMS = [
       "Let’s cut to the chase and discuss the budget.",
       "He always cuts to the chase in meetings."
     ],
-    translations: {"de": "Zur Sache kommen (German)"},
+    translations: {"de": "Zur Sache kommen"},
   ),
 
   Idiom.create(
@@ -323,7 +324,7 @@ final SAMPLE_IDIOMS = [
       "The unpaid bills were the elephant in the room.",
       "We avoided the elephant in the room during the discussion."
     ],
-    translations: {"de": "Der Elefant im Raum (German)"},
+    translations: {"de": "Der Elefant im Raum"},
   ),
 
   Idiom.create(
@@ -334,7 +335,7 @@ final SAMPLE_IDIOMS = [
       "His rude comment was the last straw.",
       "When the car broke down again, it was the last straw."
     ],
-    translations: {"de": "Der Tropfen, der das Fass zum Überlaufen bringt (German)"},
+    translations: {"de": "Der Tropfen, der das Fass zum Überlaufen bringt"},
   ),
 
   Idiom.create(
@@ -345,7 +346,7 @@ final SAMPLE_IDIOMS = [
       "If you blame her, you’re barking up the wrong tree.",
       "He was barking up the wrong tree with that idea."
     ],
-    translations: {"de": "Auf dem Holzweg sein (German)"},
+    translations: {"de": "Auf dem Holzweg sein"},
   ),
 
   Idiom.create(
@@ -356,7 +357,7 @@ final SAMPLE_IDIOMS = [
       "They hit the jackpot with their new invention.",
       "She hit the jackpot at the casino."
     ],
-    translations: {"de": "Den großen Gewinn erzielen (German)"},
+    translations: {"de": "Den großen Gewinn erzielen"},
   ),
 
   Idiom.create(
@@ -367,7 +368,7 @@ final SAMPLE_IDIOMS = [
       "Keep your chin up; things will improve.",
       "He kept his chin up despite the setbacks."
     ],
-    translations: {"de": "Kopf hoch (German)"},
+    translations: {"de": "Kopf hoch"},
   ),
 
   Idiom.create(
@@ -378,7 +379,7 @@ final SAMPLE_IDIOMS = [
       "Unfortunately, their old dog kicked the bucket.",
       "He’s worried about what will happen if he kicks the bucket."
     ],
-    translations: {"de": "Den Löffel abgeben (German)"},
+    translations: {"de": "Den Löffel abgeben"},
   ),
 
   Idiom.create(
@@ -389,7 +390,7 @@ final SAMPLE_IDIOMS = [
       "Don’t bring up the old argument—let sleeping dogs lie.",
       "He decided to let sleeping dogs lie."
     ],
-    translations: {"de": "Schlafende Hunde nicht wecken (German)"},
+    translations: {"de": "Schlafende Hunde nicht wecken"},
   ),
 
   Idiom.create(
@@ -400,7 +401,7 @@ final SAMPLE_IDIOMS = [
       "He’s on thin ice with his boss after being late.",
       "You’re on thin ice if you break the rules again."
     ],
-    translations: {"de": "Auf dünnem Eis (German)"},
+    translations: {"de": "Auf dünnem Eis"},
   ),
 
   Idiom.create(
@@ -411,7 +412,7 @@ final SAMPLE_IDIOMS = [
       "He wants a piece of the pie in the business deal.",
       "Everyone wants a piece of the pie in the booming market."
     ],
-    translations: {"de": "Ein Stück vom Kuchen (German)"},
+    translations: {"de": "Ein Stück vom Kuchen"},
   ),
 
   Idiom.create(
@@ -422,7 +423,7 @@ final SAMPLE_IDIOMS = [
       "Are you serious or just pulling my leg?",
       "He was pulling my leg about the story."
     ],
-    translations: {"de": "Jemanden auf den Arm nehmen (German)"},
+    translations: {"de": "Jemanden auf den Arm nehmen"},
   ),
 
   Idiom.create(
@@ -433,7 +434,7 @@ final SAMPLE_IDIOMS = [
       "Take his advice with a grain of salt.",
       "She told me the story, but I took it with a grain of salt."
     ],
-    translations: {"de": "Mit Vorsicht genießen (German)"},
+    translations: {"de": "Mit Vorsicht genießen"},
   ),
 
 // ===================== ADVANCED (10) =====================
@@ -445,7 +446,7 @@ final SAMPLE_IDIOMS = [
       "He threw caution to the wind and invested all his money.",
       "She threw caution to the wind and accepted the job offer abroad."
     ],
-    translations: {"de": "Alle Vorsicht über Bord werfen (German)"},
+    translations: {"de": "Alle Vorsicht über Bord werfen"},
   ),
 
   Idiom.create(
@@ -456,7 +457,7 @@ final SAMPLE_IDIOMS = [
       "He flew off the handle when he heard the news.",
       "Don’t fly off the handle over minor issues."
     ],
-    translations: {"de": "Aus der Haut fahren (German)"},
+    translations: {"de": "Aus der Haut fahren"},
   ),
 
   Idiom.create(
@@ -467,7 +468,7 @@ final SAMPLE_IDIOMS = [
       "He threw his colleague under the bus to protect himself.",
       "Don’t throw me under the bus in front of the boss."
     ],
-    translations: {"de": "Jemanden opfern, um sich zu retten (German)"},
+    translations: {"de": "Jemanden opfern, um sich zu retten"},
   ),
 
   Idiom.create(
@@ -478,7 +479,7 @@ final SAMPLE_IDIOMS = [
       "Several startups bit the dust last year.",
       "His old car finally bit the dust."
     ],
-    translations: {"de": "Den Geist aufgeben (German)"},
+    translations: {"de": "Den Geist aufgeben"},
   ),
 
   Idiom.create(
@@ -489,7 +490,7 @@ final SAMPLE_IDIOMS = [
       "Don’t worry about the exam now; we’ll cross that bridge when we come to it.",
       "We’ll cross that bridge when we come to it regarding finances."
     ],
-    translations: {"de": "Die Brücke überqueren, wenn man dazu kommt (German)"},
+    translations: {"de": "Die Brücke überqueren, wenn man dazu kommt"},
   ),
 
   Idiom.create(
@@ -500,7 +501,7 @@ final SAMPLE_IDIOMS = [
       "It’s no use crying over spilled milk.",
       "Don’t cry over spilled milk; just move on."
     ],
-    translations: {"de": "Über verschüttete Milch weinen (German)"},
+    translations: {"de": "Über verschüttete Milch weinen"},
   ),
 
   Idiom.create(
@@ -511,7 +512,7 @@ final SAMPLE_IDIOMS = [
       "He called her lazy, but that’s the pot calling the kettle black.",
       "It’s the pot calling the kettle black to complain about tardiness."
     ],
-    translations: {"de": "Der Topf sagt zum Kessel, er sei schwarz (German)"},
+    translations: {"de": "Der Topf sagt zum Kessel, er sei schwarz"},
   ),
 
   Idiom.create(
@@ -522,7 +523,7 @@ final SAMPLE_IDIOMS = [
       "They decided to let bygones be bygones after the argument.",
       "Let bygones be bygones and move on."
     ],
-    translations: {"de": "Vergangenes ruhen lassen (German)"},
+    translations: {"de": "Vergangenes ruhen lassen"},
   ),
 
   Idiom.create(
@@ -533,7 +534,7 @@ final SAMPLE_IDIOMS = [
       "The project went down in flames after the software crashed.",
       "He went down in flames in the final exam."
     ],
-    translations: {"de": "Im Fiasko enden (German)"},
+    translations: {"de": "Im Fiasko enden"},
   ),
 
   Idiom.create(
@@ -544,6 +545,6 @@ final SAMPLE_IDIOMS = [
       "The manager put the kibosh on the proposal.",
       "They put the kibosh on the party plans due to rain."
     ],
-    translations: {"de": "Einem Ende setzen (German)"},
+    translations: {"de": "Einem Ende setzen"},
   )
 ];

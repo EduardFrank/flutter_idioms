@@ -6,7 +6,6 @@ import 'package:idioms/features/home/pages/settings.dart';
 import 'package:idioms/features/learn/pages/learn.dart';
 import 'package:idioms/features/vocabulary/pages/vocabularies.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:sz_fancy_bottom_navigation/sz_fancy_bottom_navigation.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -145,38 +144,44 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
       ),
-      body: PageView(
-        controller: _pageController,
-        children: [
-          const OverviewPage(),
-          const LearnPage(),
-          const VocabulariesPage(),
-        ],
-        onPageChanged: (index) {
+      body: SafeArea(
+        top: true,
+        bottom: false,
+        child: PageView(
+          controller: _pageController,
+          children: [
+            const OverviewPage(),
+            const LearnPage(),
+            const VocabulariesPage(),
+          ],
+          onPageChanged: (index) {
+            setState(() {
+              _selectedIndex = index;
+            });
+          },
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: (index) {
+          _pageController.jumpToPage(index);
           setState(() {
             _selectedIndex = index;
           });
         },
-      ),
-      bottomNavigationBar: FancyBottomNavigation(
-        pageController: _pageController,
-        initialSelection: 0,
-        key: bottomNavigationKey,
-        hidden: false,
-        shadowColor: Colors.black12,
-        tabs: [
-          TabData(
-            iconData: Icons.home,
-            title: 'Overview',
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Overview',
           ),
-          TabData(
-            iconData: Icons.school,
-            title: 'Learn',
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'Learn',
           ),
-          TabData(
-            iconData: Icons.menu_book,
-            title: 'Vocabulary',
-          )
+          BottomNavigationBarItem(
+            icon: Icon(Icons.menu_book),
+            label: 'Vocabulary',
+          ),
         ],
       ),
     );

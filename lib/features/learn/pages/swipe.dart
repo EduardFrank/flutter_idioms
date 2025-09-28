@@ -10,14 +10,14 @@ import 'package:idioms/repos/repo.dart';
 import 'package:idioms/widgets/tindercard.dart';
 import 'package:provider/provider.dart';
 
-class QuizPage extends StatefulWidget {
-  const QuizPage({super.key});
+class SwipeIdiomsPage extends StatefulWidget {
+  const SwipeIdiomsPage({super.key});
 
   @override
-  State<QuizPage> createState() => _QuizPageState();
+  State<SwipeIdiomsPage> createState() => _SwipeIdiomsPageState();
 }
 
-class _QuizPageState extends State<QuizPage> {
+class _SwipeIdiomsPageState extends State<SwipeIdiomsPage> {
   late List<Idiom> quizIdioms;
   int score = 0;
   int currentIndex = 0;

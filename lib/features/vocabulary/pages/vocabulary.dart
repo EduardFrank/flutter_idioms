@@ -97,10 +97,13 @@ class _VocabularyPageState extends State<VocabularyPage> {
                   final idiom = idioms[index];
 
                   return IdiomCard(
-                      idiom: idiom,
-                      progress: repo.getProgressByIdiom(idiom),
+                    idiom: idiom,
+                    progress: repo.getProgressByIdiom(idiom),
                     onLearnedPressed: () {
                         repo.markIdiomAsLearned(idiom);
+                        setState(() {});
+                    },
+                    onResetPressed: () {
                         setState(() {});
                     },
                   );

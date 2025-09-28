@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:idioms/core/constants.dart';
 import 'package:idioms/models/idiom.dart';
 import 'package:idioms/models/progress.dart';
@@ -25,15 +27,16 @@ class Repo {
     _idiomOfTheDayBox = _store.box<IdiomOfTheDay>();
 
     // Seed with initial data if empty
-//    if (_idiomBox.isEmpty()) {
+    if (_idiomBox.isEmpty()) {
       _seedIdioms();
-//    }
+    }
 
     _isInitialized = true;
   }
 
   /// Sample data to populate ObjectBox initially
   void _seedIdioms() {
+    _progressBox.removeAll();
     _idiomBox.removeAll();
     _idiomBox.putMany(SAMPLE_IDIOMS);
   }
@@ -278,6 +281,38 @@ class Repo {
     _idiomOfTheDayBox.put(idiomOfTheDay);
     
     return selectedIdiom;
+  }
+
+  List<Idiom> getRandomUnlearnedIdioms({int count = 5}) {
+    // Step 1: Get all learned idiom IDs
+    final learnedIds = _progressBox.getAll()
+        .map((p) => p.idiom.target?.id)
+        .whereType<int>()
+        .toSet();
+
+    // Step 2: Filter idioms that haven't been learned
+    final unlearnedIdioms = _idiomBox.getAll()
+        .where((idiom) => !learnedIds.contains(idiom.id))
+        .toList();
+
+    // Step 3: Shuffle and pick up to [count] idioms
+    unlearnedIdioms.shuffle(Random());
+    if (unlearnedIdioms.length <= count) {
+      return unlearnedIdioms;
+    }
+    return unlearnedIdioms.sublist(0, count);
+  }
+
+  List<Idiom> getRandomIdioms({int count = 5}) {
+    // Step 2: Filter idioms that haven't been learned
+    final unlearnedIdioms = _idiomBox.getAll();
+
+    // Step 3: Shuffle and pick up to [count] idioms
+    unlearnedIdioms.shuffle(Random());
+    if (unlearnedIdioms.length <= count) {
+      return unlearnedIdioms;
+    }
+    return unlearnedIdioms.sublist(0, count);
   }
 
   void close() {
