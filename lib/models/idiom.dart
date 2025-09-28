@@ -48,6 +48,20 @@ class Idiom {
 
   Map<String, String> get translations =>
       Map<String, String>.from(jsonDecode(translationsJson));
+
+  factory Idiom.fromJson(Map<String, dynamic> json) {
+    return Idiom(
+      id: 0,
+      difficultyValue: Difficulty.values.firstWhere(
+            (e) => e.name == json['difficulty'],
+        orElse: () => Difficulty.basic,
+      ).index,
+      idiom: json['idiom'] as String,
+      definition: json['definition'] as String,
+      examplesJson: jsonEncode(json['examples']),
+      translationsJson: jsonEncode(json['translations']),
+    );
+  }
 }
 
 enum Difficulty {

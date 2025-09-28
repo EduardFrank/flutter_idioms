@@ -13,6 +13,7 @@ class Progress {
   int timesPracticed;
 
   /// When it was last practiced
+  @Property(type: PropertyType.date)
   DateTime lastPracticed;
 
   /// Default constructor for ObjectBox

@@ -1,6 +1,7 @@
 import 'package:idioms/core/constants.dart';
 import 'package:idioms/models/idiom.dart';
 import 'package:idioms/models/progress.dart';
+import 'package:idioms/models/idiom_of_the_day.dart';
 import 'package:idioms/objectbox.g.dart';
 
 class Repo {
@@ -11,6 +12,7 @@ class Repo {
   late final Store _store;
   late final Box<Idiom> _idiomBox;
   late final Box<Progress> _progressBox;
+  late final Box<IdiomOfTheDay> _idiomOfTheDayBox;
 
   bool _isInitialized = false;
 
@@ -20,17 +22,19 @@ class Repo {
     _store = await openStore();
     _idiomBox = _store.box<Idiom>();
     _progressBox = _store.box<Progress>();
+    _idiomOfTheDayBox = _store.box<IdiomOfTheDay>();
 
     // Seed with initial data if empty
-    if (_idiomBox.isEmpty()) {
+//    if (_idiomBox.isEmpty()) {
       _seedIdioms();
-    }
+//    }
 
     _isInitialized = true;
   }
 
   /// Sample data to populate ObjectBox initially
   void _seedIdioms() {
+    _idiomBox.removeAll();
     _idiomBox.putMany(SAMPLE_IDIOMS);
   }
 
@@ -199,6 +203,81 @@ class Repo {
 
     // Return linked idioms, filter out nulls just in case
     return results.map((p) => p.idiom.target).whereType<Idiom>().toList();
+  }
+
+  int calculateDayStreak(DateTime fromDate) {
+    // Step 1: Normalize the date to ignore time
+    DateTime currentDate = DateTime(fromDate.year, fromDate.month, fromDate.day);
+
+    int streak = 0;
+
+    while (true) {
+      // Step 2: Check if any idiom was learned on this date
+      final learnedToday = getIdiomsLearnedOnDate(currentDate);
+      if (learnedToday.isEmpty) {
+        // No idioms learned on this day -> streak ends
+        break;
+      }
+
+      // Step 3: Increment streak and go back one day
+      streak += 1;
+      currentDate = currentDate.subtract(const Duration(days: 1));
+    }
+
+    return streak;
+  }
+
+  /// Get all idioms that have not been learned yet
+  List<Idiom> getUnlearnedIdioms() {
+    final allIdioms = getAllIdioms();
+    final learnedIds = <int>{};
+    
+    // Get IDs of all learned idioms
+    final allProgress = _progressBox.getAll();
+    for (final progress in allProgress) {
+      learnedIds.add(progress.idiom.targetId);
+    }
+    
+    // Filter out the learned idioms
+    return allIdioms.where((idiom) => !learnedIds.contains(idiom.id)).toList();
+  }
+
+  /// Get idiom of the day for the current date
+  Idiom? getIdiomOfTheDay() {
+    // Create a date for today (without time)
+    final today = DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
+    
+    // Check if we already have an idiom of the day for today
+    final query = _idiomOfTheDayBox.query(
+      IdiomOfTheDay_.date.equals(today.millisecondsSinceEpoch),
+    ).build();
+    final results = query.find();
+    query.close();
+    
+    // If we have an idiom of the day for today, return it
+    if (results.isNotEmpty) {
+      final idiomOfTheDayEntry = results.first;
+      return _idiomBox.get(idiomOfTheDayEntry.idiomId);
+    }
+    
+    // If not, find an unlearned idiom and save it as the idiom of the day
+    final unlearnedIdioms = getUnlearnedIdioms();
+    if (unlearnedIdioms.isEmpty) {
+      return null; // All idioms have been learned
+    }
+    
+    // Generate a random index
+    final randomIndex = today.millisecondsSinceEpoch % unlearnedIdioms.length;
+    final selectedIdiom = unlearnedIdioms[randomIndex];
+    
+    // Save this idiom as the idiom of the day
+    final idiomOfTheDay = IdiomOfTheDay(
+      idiomId: selectedIdiom.id,
+      date: today,
+    );
+    _idiomOfTheDayBox.put(idiomOfTheDay);
+    
+    return selectedIdiom;
   }
 
   void close() {

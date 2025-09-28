@@ -2,6 +2,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:idioms/repos/repo.dart';
 import 'package:idioms/widgets/idiom_card.dart';
+import 'package:idioms/widgets/idiom_dialog.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 
@@ -38,7 +39,7 @@ class _OverviewPageState extends State<OverviewPage> with SingleTickerProviderSt
   void _previousWeek() => setState(() { weekOffset--; _animationController.forward(from: 0); });
   void _nextWeek() => setState(() { weekOffset++; _animationController.forward(from: 0); });
 
-  List<Map<String, dynamic>> _getWeeklyDataWithMastered(Repo repo) {
+  List<Map<String, dynamic>> _getWeeklyData(Repo repo) {
     final today = DateTime.now();
     final monday = DateTime(today.year, today.month, today.day)
         .subtract(Duration(days: today.weekday - 1 - weekOffset * 7));
@@ -47,18 +48,10 @@ class _OverviewPageState extends State<OverviewPage> with SingleTickerProviderSt
     for (int i = 0; i < 7; i++) {
       final day = monday.add(Duration(days: i));
       final idiomsLearned = repo.getIdiomsLearnedOnDate(day);
-
-      int masteredCount = idiomsLearned
-          .where((i) {
-        final progress = repo.getProgressByIdiom(i);
-        return progress != null && progress.timesPracticed > 5;
-      })
-          .length;
-
+      
       data.add({
         'date': day,
         'learned': idiomsLearned.length,
-        'mastered': masteredCount,
       });
     }
     return data;
@@ -66,9 +59,11 @@ class _OverviewPageState extends State<OverviewPage> with SingleTickerProviderSt
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     final repo = Provider.of<Repo>(context, listen: false);
     final idioms = repo.getIdiomsLearnedOnDate(selectedDate);
-    final weeklyData = _getWeeklyDataWithMastered(repo);
+    final weeklyData = _getWeeklyData(repo);
+    final idiomOfTheDay = repo.getIdiomOfTheDay();
 
     final maxY = (weeklyData.map((d) => d['learned'] as int).fold<int>(0, (a, b) => a > b ? a : b) + 1).toDouble();
     final weekStart = weeklyData.first['date'] as DateTime;
@@ -76,7 +71,6 @@ class _OverviewPageState extends State<OverviewPage> with SingleTickerProviderSt
 
     // Prepare spots for line chart
     final learnedSpots  = List.generate(7, (i) => FlSpot(i.toDouble(), (weeklyData[i]['learned']  as int).toDouble()));
-    final masteredSpots = List.generate(7, (i) => FlSpot(i.toDouble(), (weeklyData[i]['mastered'] as int).toDouble()));
 
     return Scaffold(
       backgroundColor: Colors.grey[50],
@@ -86,6 +80,93 @@ class _OverviewPageState extends State<OverviewPage> with SingleTickerProviderSt
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // Streak display
+              Center(
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Icon(Icons.local_fire_department, color: Colors.orange, size: 24),
+                      const SizedBox(width: 8),
+                      Text(
+                        'Day streak: ${repo.calculateDayStreak(DateTime.now())} days',
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.orange,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 16),
+              
+              // Idiom of the day section
+              InkWell(
+                onTap: () {
+                  if (idiomOfTheDay != null) {
+                    showDialog(
+                      context: context,
+                      builder: (context) => IdiomDialog(
+                        idiom: idiomOfTheDay,
+                      ),
+                    );
+                  }
+                },
+                child: Center(
+                  child: Container(
+                    padding: const EdgeInsets.all(16),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.blue[50],
+                      border: Border.all(color: Colors.blue[200]!),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Column(
+                      children: [
+                        const Text(
+                          'Idiom of the Day',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blue,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Builder(
+                          builder: (context) {
+
+                            if (idiomOfTheDay != null) {
+                              return Text(
+                                '"${idiomOfTheDay.idiom}" \n ${idiomOfTheDay.definition}',
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              );
+                            } else {
+                              return const Text(
+                                'No new idioms available! Great job!',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontStyle: FontStyle.italic,
+                                  color: Colors.grey,
+                                ),
+                              );
+                            }
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 16),
+              
               // Top row: week navigation and selector
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -123,8 +204,6 @@ class _OverviewPageState extends State<OverviewPage> with SingleTickerProviderSt
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   _buildLegendTile(Colors.blue, "Learned"),
-                  const SizedBox(width: 16),
-                  _buildLegendTile(Colors.green, "Mastered"),
                 ],
               ),
 
@@ -180,22 +259,6 @@ class _OverviewPageState extends State<OverviewPage> with SingleTickerProviderSt
                           ),
                         ),
                       ),
-                      // Mastered line
-                      LineChartBarData(
-                        spots: masteredSpots,
-                        isCurved: true,
-                        color: Colors.green,
-                        barWidth: 3,
-                        dotData: FlDotData(show: true),
-                        belowBarData: BarAreaData(
-                          show: true,
-                          gradient: LinearGradient(
-                            colors: [Colors.green.withOpacity(0.3), Colors.green.withOpacity(0.0)],
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
-                          ),
-                        ),
-                      ),
                     ],
                     lineTouchData: LineTouchData(
                       handleBuiltInTouches: true,
@@ -210,12 +273,11 @@ class _OverviewPageState extends State<OverviewPage> with SingleTickerProviderSt
                         }
                       },
                       touchTooltipData: LineTouchTooltipData(
-                   //     tooltipBgColor: Colors.black87,
+                        getTooltipColor: (c) => Colors.black87,
                         getTooltipItems: (spots) {
                           return spots.map((spot) {
-                            final label = spot.barIndex == 0 ? 'Learned' : 'Mastered';
                             return LineTooltipItem(
-                              '$label: ${spot.y.toInt()}',
+                              '${spot.y.toInt()}',
                               const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                             );
                           }).toList();
@@ -298,8 +360,6 @@ class _OverviewPageState extends State<OverviewPage> with SingleTickerProviderSt
   }
 
   Future<void> _showDateWeekPicker() async {
-    final repo = Provider.of<Repo>(context, listen: false);
-
     await showModalBottomSheet(
       context: context,
       isScrollControlled: true,

@@ -15,6 +15,7 @@ import 'package:objectbox/objectbox.dart' as obx;
 import 'package:objectbox_flutter_libs/objectbox_flutter_libs.dart';
 
 import 'models/idiom.dart';
+import 'models/idiom_of_the_day.dart';
 import 'models/progress.dart';
 
 export 'package:objectbox/objectbox.dart'; // so that callers only have to import this file
@@ -102,6 +103,34 @@ final _entities = <obx_int.ModelEntity>[
     relations: <obx_int.ModelRelation>[],
     backlinks: <obx_int.ModelBacklink>[],
   ),
+  obx_int.ModelEntity(
+    id: const obx_int.IdUid(3, 2028463856188918006),
+    name: 'IdiomOfTheDay',
+    lastPropertyId: const obx_int.IdUid(3, 5211568287568647274),
+    flags: 0,
+    properties: <obx_int.ModelProperty>[
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(1, 6032712201148762251),
+        name: 'id',
+        type: 6,
+        flags: 1,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(2, 1785541115290960821),
+        name: 'idiomId',
+        type: 6,
+        flags: 0,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(3, 5211568287568647274),
+        name: 'date',
+        type: 10,
+        flags: 0,
+      ),
+    ],
+    relations: <obx_int.ModelRelation>[],
+    backlinks: <obx_int.ModelBacklink>[],
+  ),
 ];
 
 /// Shortcut for [obx.Store.new] that passes [getObjectBoxModel] and for Flutter
@@ -142,7 +171,7 @@ Future<obx.Store> openStore({
 obx_int.ModelDefinition getObjectBoxModel() {
   final model = obx_int.ModelInfo(
     entities: _entities,
-    lastEntityId: const obx_int.IdUid(2, 3533130332039032368),
+    lastEntityId: const obx_int.IdUid(3, 2028463856188918006),
     lastIndexId: const obx_int.IdUid(1, 4121055704686731824),
     lastRelationId: const obx_int.IdUid(0, 0),
     lastSequenceId: const obx_int.IdUid(0, 0),
@@ -268,6 +297,49 @@ obx_int.ModelDefinition getObjectBoxModel() {
         return object;
       },
     ),
+    IdiomOfTheDay: obx_int.EntityDefinition<IdiomOfTheDay>(
+      model: _entities[2],
+      toOneRelations: (IdiomOfTheDay object) => [],
+      toManyRelations: (IdiomOfTheDay object) => {},
+      getId: (IdiomOfTheDay object) => object.id,
+      setId: (IdiomOfTheDay object, int id) {
+        object.id = id;
+      },
+      objectToFB: (IdiomOfTheDay object, fb.Builder fbb) {
+        fbb.startTable(4);
+        fbb.addInt64(0, object.id);
+        fbb.addInt64(1, object.idiomId);
+        fbb.addInt64(2, object.date.millisecondsSinceEpoch);
+        fbb.finish(fbb.endTable());
+        return object.id;
+      },
+      objectFromFB: (obx.Store store, ByteData fbData) {
+        final buffer = fb.BufferContext(fbData);
+        final rootOffset = buffer.derefObject(0);
+        final idParam = const fb.Int64Reader().vTableGet(
+          buffer,
+          rootOffset,
+          4,
+          0,
+        );
+        final idiomIdParam = const fb.Int64Reader().vTableGet(
+          buffer,
+          rootOffset,
+          6,
+          0,
+        );
+        final dateParam = DateTime.fromMillisecondsSinceEpoch(
+          const fb.Int64Reader().vTableGet(buffer, rootOffset, 8, 0),
+        );
+        final object = IdiomOfTheDay(
+          id: idParam,
+          idiomId: idiomIdParam,
+          date: dateParam,
+        );
+
+        return object;
+      },
+    ),
   };
 
   return obx_int.ModelDefinition(model, bindings);
@@ -324,5 +396,23 @@ class Progress_ {
   /// See [Progress.lastPracticed].
   static final lastPracticed = obx.QueryDateProperty<Progress>(
     _entities[1].properties[3],
+  );
+}
+
+/// [IdiomOfTheDay] entity fields to define ObjectBox queries.
+class IdiomOfTheDay_ {
+  /// See [IdiomOfTheDay.id].
+  static final id = obx.QueryIntegerProperty<IdiomOfTheDay>(
+    _entities[2].properties[0],
+  );
+
+  /// See [IdiomOfTheDay.idiomId].
+  static final idiomId = obx.QueryIntegerProperty<IdiomOfTheDay>(
+    _entities[2].properties[1],
+  );
+
+  /// See [IdiomOfTheDay.date].
+  static final date = obx.QueryDateProperty<IdiomOfTheDay>(
+    _entities[2].properties[2],
   );
 }

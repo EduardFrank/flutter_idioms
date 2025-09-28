@@ -73,9 +73,33 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "3:2028463856188918006",
+      "lastPropertyId": "3:5211568287568647274",
+      "name": "IdiomOfTheDay",
+      "properties": [
+        {
+          "id": "1:6032712201148762251",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1785541115290960821",
+          "name": "idiomId",
+          "type": 6
+        },
+        {
+          "id": "3:5211568287568647274",
+          "name": "date",
+          "type": 10
+        }
+      ],
+      "relations": []
     }
   ],
-  "lastEntityId": "2:3533130332039032368",
+  "lastEntityId": "3:2028463856188918006",
   "lastIndexId": "1:4121055704686731824",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",

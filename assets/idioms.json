@@ -1,0 +1,752 @@
+[
+  {
+    "id": 1,
+    "difficulty": "basic",
+    "idiom": "Break the ice",
+    "definition": "To initiate conversation in a social setting.",
+    "examples": [
+      "He told a joke to break the ice at the party.",
+      "She broke the ice with a friendly smile."
+    ],
+    "translations": {
+      "de": "So das Eis brechen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 2,
+    "difficulty": "basic",
+    "idiom": "Piece of cake",
+    "definition": "Something that is very easy to do.",
+    "examples": [
+      "The test was a piece of cake.",
+      "For her, cooking this dish is a piece of cake."
+    ],
+    "translations": {
+      "de": "Ein Kinderspiel (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 3,
+    "difficulty": "basic",
+    "idiom": "Under the weather",
+    "definition": "Feeling slightly ill or unwell.",
+    "examples": [
+      "I won’t come to work today, I’m feeling under the weather.",
+      "She stayed home because she was under the weather."
+    ],
+    "translations": {
+      "de": "Sich unwohl fühlen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 4,
+    "difficulty": "basic",
+    "idiom": "Spill the beans",
+    "definition": "To reveal a secret or disclose information.",
+    "examples": [
+      "Don’t spill the beans about the surprise party!",
+      "He accidentally spilled the beans during lunch."
+    ],
+    "translations": {
+      "de": "Ein Geheimnis verraten (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 5,
+    "difficulty": "basic",
+    "idiom": "Hit the sack",
+    "definition": "To go to bed or sleep.",
+    "examples": [
+      "I’m really tired; I’m going to hit the sack.",
+      "She usually hits the sack around 10 p.m."
+    ],
+    "translations": {
+      "de": "Ins Bett gehen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 6,
+    "difficulty": "basic",
+    "idiom": "Let the cat out of the bag",
+    "definition": "To accidentally reveal a secret.",
+    "examples": [
+      "She let the cat out of the bag about the engagement.",
+      "He let the cat out of the bag during the meeting."
+    ],
+    "translations": {
+      "de": "Ein Geheimnis ausplaudern (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 7,
+    "difficulty": "basic",
+    "idiom": "Cost an arm and a leg",
+    "definition": "To be very expensive.",
+    "examples": [
+      "Their new house cost an arm and a leg.",
+      "That designer bag costs an arm and a leg."
+    ],
+    "translations": {
+      "de": "Ein Vermögen kosten (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 8,
+    "difficulty": "basic",
+    "idiom": "Once in a blue moon",
+    "definition": "Something that happens very rarely.",
+    "examples": [
+      "We go out for dinner once in a blue moon.",
+      "He visits his hometown once in a blue moon."
+    ],
+    "translations": {
+      "de": "Sehr selten (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 9,
+    "difficulty": "basic",
+    "idiom": "Hit the nail on the head",
+    "definition": "To describe exactly what is causing a situation or problem.",
+    "examples": [
+      "You hit the nail on the head with that suggestion.",
+      "Her analysis really hit the nail on the head."
+    ],
+    "translations": {
+      "de": "Den Nagel auf den Kopf treffen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 10,
+    "difficulty": "basic",
+    "idiom": "The ball is in your court",
+    "definition": "It’s your decision or responsibility to act now.",
+    "examples": [
+      "I’ve done all I can—the ball is in your court.",
+      "The offer is on the table; now the ball is in their court."
+    ],
+    "translations": {
+      "de": "Du bist am Zug (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 11,
+    "difficulty": "basic",
+    "idiom": "Break the ice",
+    "definition": "To initiate conversation in a social setting.",
+    "examples": [
+      "He told a joke to break the ice at the party.",
+      "She broke the ice with a friendly smile."
+    ],
+    "translations": {
+      "de": "So das Eis brechen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 12,
+    "difficulty": "basic",
+    "idiom": "Piece of cake",
+    "definition": "Something that is very easy to do.",
+    "examples": [
+      "The test was a piece of cake.",
+      "For her, cooking this dish is a piece of cake."
+    ],
+    "translations": {
+      "de": "Ein Kinderspiel (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 13,
+    "difficulty": "basic",
+    "idiom": "Under the weather",
+    "definition": "Feeling slightly ill or unwell.",
+    "examples": [
+      "I won’t come to work today, I’m feeling under the weather.",
+      "She stayed home because she was under the weather."
+    ],
+    "translations": {
+      "de": "Sich unwohl fühlen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 14,
+    "difficulty": "basic",
+    "idiom": "Spill the beans",
+    "definition": "To reveal a secret or disclose information.",
+    "examples": [
+      "Don’t spill the beans about the surprise party!",
+      "He accidentally spilled the beans during lunch."
+    ],
+    "translations": {
+      "de": "Ein Geheimnis verraten (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 15,
+    "difficulty": "basic",
+    "idiom": "Hit the sack",
+    "definition": "To go to bed or sleep.",
+    "examples": [
+      "I’m really tired; I’m going to hit the sack.",
+      "She usually hits the sack around 10 p.m."
+    ],
+    "translations": {
+      "de": "Ins Bett gehen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 16,
+    "difficulty": "basic",
+    "idiom": "Let the cat out of the bag",
+    "definition": "To accidentally reveal a secret.",
+    "examples": [
+      "She let the cat out of the bag about the engagement.",
+      "He let the cat out of the bag during the meeting."
+    ],
+    "translations": {
+      "de": "Ein Geheimnis ausplaudern (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 17,
+    "difficulty": "basic",
+    "idiom": "Cost an arm and a leg",
+    "definition": "To be very expensive.",
+    "examples": [
+      "Their new house cost an arm and a leg.",
+      "That designer bag costs an arm and a leg."
+    ],
+    "translations": {
+      "de": "Ein Vermögen kosten (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 18,
+    "difficulty": "basic",
+    "idiom": "Once in a blue moon",
+    "definition": "Something that happens very rarely.",
+    "examples": [
+      "We go out for dinner once in a blue moon.",
+      "He visits his hometown once in a blue moon."
+    ],
+    "translations": {
+      "de": "Sehr selten (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 19,
+    "difficulty": "basic",
+    "idiom": "Hit the nail on the head",
+    "definition": "To describe exactly what is causing a situation or problem.",
+    "examples": [
+      "You hit the nail on the head with that suggestion.",
+      "Her analysis really hit the nail on the head."
+    ],
+    "translations": {
+      "de": "Den Nagel auf den Kopf treffen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 20,
+    "difficulty": "basic",
+    "idiom": "The ball is in your court",
+    "definition": "It’s your decision or responsibility to act now.",
+    "examples": [
+      "I’ve done all I can—the ball is in your court.",
+      "The offer is on the table; now the ball is in their court."
+    ],
+    "translations": {
+      "de": "Du bist am Zug (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 21,
+    "difficulty": "basic",
+    "idiom": "Break the ice",
+    "definition": "To initiate conversation in a social setting.",
+    "examples": [
+      "He told a joke to break the ice at the party.",
+      "She broke the ice with a friendly smile."
+    ],
+    "translations": {
+      "de": "So das Eis brechen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 22,
+    "difficulty": "basic",
+    "idiom": "Piece of cake",
+    "definition": "Something that is very easy to do.",
+    "examples": [
+      "The test was a piece of cake.",
+      "For her, cooking this dish is a piece of cake."
+    ],
+    "translations": {
+      "de": "Ein Kinderspiel (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 23,
+    "difficulty": "basic",
+    "idiom": "Under the weather",
+    "definition": "Feeling slightly ill or unwell.",
+    "examples": [
+      "I won’t come to work today, I’m feeling under the weather.",
+      "She stayed home because she was under the weather."
+    ],
+    "translations": {
+      "de": "Sich unwohl fühlen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 24,
+    "difficulty": "basic",
+    "idiom": "Spill the beans",
+    "definition": "To reveal a secret or disclose information.",
+    "examples": [
+      "Don’t spill the beans about the surprise party!",
+      "He accidentally spilled the beans during lunch."
+    ],
+    "translations": {
+      "de": "Ein Geheimnis verraten (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 25,
+    "difficulty": "basic",
+    "idiom": "Hit the sack",
+    "definition": "To go to bed or sleep.",
+    "examples": [
+      "I’m really tired; I’m going to hit the sack.",
+      "She usually hits the sack around 10 p.m."
+    ],
+    "translations": {
+      "de": "Ins Bett gehen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 26,
+    "difficulty": "basic",
+    "idiom": "Let the cat out of the bag",
+    "definition": "To accidentally reveal a secret.",
+    "examples": [
+      "She let the cat out of the bag about the engagement.",
+      "He let the cat out of the bag during the meeting."
+    ],
+    "translations": {
+      "de": "Ein Geheimnis ausplaudern (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 27,
+    "difficulty": "basic",
+    "idiom": "Cost an arm and a leg",
+    "definition": "To be very expensive.",
+    "examples": [
+      "Their new house cost an arm and a leg.",
+      "That designer bag costs an arm and a leg."
+    ],
+    "translations": {
+      "de": "Ein Vermögen kosten (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 28,
+    "difficulty": "basic",
+    "idiom": "Once in a blue moon",
+    "definition": "Something that happens very rarely.",
+    "examples": [
+      "We go out for dinner once in a blue moon.",
+      "He visits his hometown once in a blue moon."
+    ],
+    "translations": {
+      "de": "Sehr selten (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 29,
+    "difficulty": "basic",
+    "idiom": "Hit the nail on the head",
+    "definition": "To describe exactly what is causing a situation or problem.",
+    "examples": [
+      "You hit the nail on the head with that suggestion.",
+      "Her analysis really hit the nail on the head."
+    ],
+    "translations": {
+      "de": "Den Nagel auf den Kopf treffen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 30,
+    "difficulty": "basic",
+    "idiom": "The ball is in your court",
+    "definition": "It’s your decision or responsibility to act now.",
+    "examples": [
+      "I’ve done all I can—the ball is in your court.",
+      "The offer is on the table; now the ball is in their court."
+    ],
+    "translations": {
+      "de": "Du bist am Zug (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 31,
+    "difficulty": "basic",
+    "idiom": "Break the ice",
+    "definition": "To initiate conversation in a social setting.",
+    "examples": [
+      "He told a joke to break the ice at the party.",
+      "She broke the ice with a friendly smile."
+    ],
+    "translations": {
+      "de": "So das Eis brechen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 32,
+    "difficulty": "basic",
+    "idiom": "Piece of cake",
+    "definition": "Something that is very easy to do.",
+    "examples": [
+      "The test was a piece of cake.",
+      "For her, cooking this dish is a piece of cake."
+    ],
+    "translations": {
+      "de": "Ein Kinderspiel (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 33,
+    "difficulty": "basic",
+    "idiom": "Under the weather",
+    "definition": "Feeling slightly ill or unwell.",
+    "examples": [
+      "I won’t come to work today, I’m feeling under the weather.",
+      "She stayed home because she was under the weather."
+    ],
+    "translations": {
+      "de": "Sich unwohl fühlen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 34,
+    "difficulty": "basic",
+    "idiom": "Spill the beans",
+    "definition": "To reveal a secret or disclose information.",
+    "examples": [
+      "Don’t spill the beans about the surprise party!",
+      "He accidentally spilled the beans during lunch."
+    ],
+    "translations": {
+      "de": "Ein Geheimnis verraten (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 35,
+    "difficulty": "basic",
+    "idiom": "Hit the sack",
+    "definition": "To go to bed or sleep.",
+    "examples": [
+      "I’m really tired; I’m going to hit the sack.",
+      "She usually hits the sack around 10 p.m."
+    ],
+    "translations": {
+      "de": "Ins Bett gehen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 36,
+    "difficulty": "basic",
+    "idiom": "Let the cat out of the bag",
+    "definition": "To accidentally reveal a secret.",
+    "examples": [
+      "She let the cat out of the bag about the engagement.",
+      "He let the cat out of the bag during the meeting."
+    ],
+    "translations": {
+      "de": "Ein Geheimnis ausplaudern (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 37,
+    "difficulty": "basic",
+    "idiom": "Cost an arm and a leg",
+    "definition": "To be very expensive.",
+    "examples": [
+      "Their new house cost an arm and a leg.",
+      "That designer bag costs an arm and a leg."
+    ],
+    "translations": {
+      "de": "Ein Vermögen kosten (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 38,
+    "difficulty": "basic",
+    "idiom": "Once in a blue moon",
+    "definition": "Something that happens very rarely.",
+    "examples": [
+      "We go out for dinner once in a blue moon.",
+      "He visits his hometown once in a blue moon."
+    ],
+    "translations": {
+      "de": "Sehr selten (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 39,
+    "difficulty": "basic",
+    "idiom": "Hit the nail on the head",
+    "definition": "To describe exactly what is causing a situation or problem.",
+    "examples": [
+      "You hit the nail on the head with that suggestion.",
+      "Her analysis really hit the nail on the head."
+    ],
+    "translations": {
+      "de": "Den Nagel auf den Kopf treffen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 40,
+    "difficulty": "basic",
+    "idiom": "The ball is in your court",
+    "definition": "It’s your decision or responsibility to act now.",
+    "examples": [
+      "I’ve done all I can—the ball is in your court.",
+      "The offer is on the table; now the ball is in their court."
+    ],
+    "translations": {
+      "de": "Du bist am Zug (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 41,
+    "difficulty": "basic",
+    "idiom": "Break the ice",
+    "definition": "To initiate conversation in a social setting.",
+    "examples": [
+      "He told a joke to break the ice at the party.",
+      "She broke the ice with a friendly smile."
+    ],
+    "translations": {
+      "de": "So das Eis brechen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 42,
+    "difficulty": "basic",
+    "idiom": "Piece of cake",
+    "definition": "Something that is very easy to do.",
+    "examples": [
+      "The test was a piece of cake.",
+      "For her, cooking this dish is a piece of cake."
+    ],
+    "translations": {
+      "de": "Ein Kinderspiel (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 43,
+    "difficulty": "basic",
+    "idiom": "Under the weather",
+    "definition": "Feeling slightly ill or unwell.",
+    "examples": [
+      "I won’t come to work today, I’m feeling under the weather.",
+      "She stayed home because she was under the weather."
+    ],
+    "translations": {
+      "de": "Sich unwohl fühlen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 44,
+    "difficulty": "basic",
+    "idiom": "Spill the beans",
+    "definition": "To reveal a secret or disclose information.",
+    "examples": [
+      "Don’t spill the beans about the surprise party!",
+      "He accidentally spilled the beans during lunch."
+    ],
+    "translations": {
+      "de": "Ein Geheimnis verraten (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 45,
+    "difficulty": "basic",
+    "idiom": "Hit the sack",
+    "definition": "To go to bed or sleep.",
+    "examples": [
+      "I’m really tired; I’m going to hit the sack.",
+      "She usually hits the sack around 10 p.m."
+    ],
+    "translations": {
+      "de": "Ins Bett gehen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 46,
+    "difficulty": "basic",
+    "idiom": "Let the cat out of the bag",
+    "definition": "To accidentally reveal a secret.",
+    "examples": [
+      "She let the cat out of the bag about the engagement.",
+      "He let the cat out of the bag during the meeting."
+    ],
+    "translations": {
+      "de": "Ein Geheimnis ausplaudern (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 47,
+    "difficulty": "basic",
+    "idiom": "Cost an arm and a leg",
+    "definition": "To be very expensive.",
+    "examples": [
+      "Their new house cost an arm and a leg.",
+      "That designer bag costs an arm and a leg."
+    ],
+    "translations": {
+      "de": "Ein Vermögen kosten (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 48,
+    "difficulty": "basic",
+    "idiom": "Once in a blue moon",
+    "definition": "Something that happens very rarely.",
+    "examples": [
+      "We go out for dinner once in a blue moon.",
+      "He visits his hometown once in a blue moon."
+    ],
+    "translations": {
+      "de": "Sehr selten (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 49,
+    "difficulty": "basic",
+    "idiom": "Hit the nail on the head",
+    "definition": "To describe exactly what is causing a situation or problem.",
+    "examples": [
+      "You hit the nail on the head with that suggestion.",
+      "Her analysis really hit the nail on the head."
+    ],
+    "translations": {
+      "de": "Den Nagel auf den Kopf treffen (German)",
+      "fr": "",
+      "es": ""
+    }
+  },
+  {
+    "id": 50,
+    "difficulty": "basic",
+    "idiom": "The ball is in your court",
+    "definition": "It’s your decision or responsibility to act now.",
+    "examples": [
+      "I’ve done all I can—the ball is in your court.",
+      "The offer is on the table; now the ball is in their court."
+    ],
+    "translations": {
+      "de": "Du bist am Zug (German)",
+      "fr": "",
+      "es": ""
+    }
+  }
+]

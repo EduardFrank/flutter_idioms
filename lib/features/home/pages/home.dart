@@ -166,11 +166,11 @@ class _HomePageState extends State<HomePage> {
         shadowColor: Colors.black12,
         tabs: [
           TabData(
-            iconData: Icons.school,
+            iconData: Icons.home,
             title: 'Overview',
           ),
           TabData(
-            iconData: Icons.quiz,
+            iconData: Icons.school,
             title: 'Learn',
           ),
           TabData(
