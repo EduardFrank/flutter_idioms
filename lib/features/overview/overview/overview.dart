@@ -16,6 +16,7 @@ class OverviewPage extends StatefulWidget {
 class _OverviewPageState extends State<OverviewPage> with SingleTickerProviderStateMixin {
   DateTime selectedDate = DateTime.now();
   int weekOffset = 0;
+  int _activeTab = 0; // 0 = Day, 1 = Week
 
   late AnimationController _animationController;
 
@@ -449,6 +450,4 @@ class _OverviewPageState extends State<OverviewPage> with SingleTickerProviderSt
       },
     );
   }
-
-  int _activeTab = 0; // 0 = Day, 1 = Week
 }

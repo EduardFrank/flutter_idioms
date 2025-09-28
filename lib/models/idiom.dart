@@ -6,6 +6,8 @@ class Idiom {
   @Id()
   int id;
 
+
+  int globalId;
   int difficultyValue; // store enum as int
   String idiom;
   String definition;
@@ -15,6 +17,7 @@ class Idiom {
   // 👇 Default constructor for ObjectBox
   Idiom({
     this.id = 0,
+    required this.globalId,
     required this.difficultyValue,
     required this.idiom,
     required this.definition,
@@ -26,6 +29,7 @@ class Idiom {
   @Transient()
   factory Idiom.create({
     int id = 0,
+    required int globalId,
     required Difficulty difficulty,
     required String idiom,
     required String definition,
@@ -34,6 +38,7 @@ class Idiom {
   }) {
     return Idiom(
       id: id,
+      globalId: globalId,
       difficultyValue: difficulty.index,
       idiom: idiom,
       definition: definition,
@@ -52,6 +57,7 @@ class Idiom {
   factory Idiom.fromJson(Map<String, dynamic> json) {
     return Idiom(
       id: 0,
+      globalId: json['id'] as int,
       difficultyValue: Difficulty.values.firstWhere(
             (e) => e.name == json['difficulty'],
         orElse: () => Difficulty.basic,

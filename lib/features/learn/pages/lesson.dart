@@ -17,7 +17,7 @@ class LessonPage extends StatefulWidget {
 }
 
 class _LessonPageState extends State<LessonPage> {
-  final int maxTimeSeconds = 10;
+  final int maxTimeSeconds = 15;
 
   late List<Idiom> lessonIdioms;
   late List<Idiom> randomIdioms;

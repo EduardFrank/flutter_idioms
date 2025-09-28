@@ -8,6 +8,7 @@ const MAX_IDIOMS_PER_DAY = 5;
 final SAMPLE_IDIOMS = [
   // ===================== BASIC (20) =====================
   Idiom.create(
+    globalId: 1,
     difficulty: Difficulty.basic,
     idiom: "Break the ice",
     definition: "To initiate conversation in a social setting.",
@@ -19,6 +20,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 2,
     difficulty: Difficulty.basic,
     idiom: "Piece of cake",
     definition: "Something that is very easy to do.",
@@ -30,6 +32,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 3,
     difficulty: Difficulty.basic,
     idiom: "Under the weather",
     definition: "Feeling slightly ill or unwell.",
@@ -41,6 +44,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 4,
     difficulty: Difficulty.basic,
     idiom: "Spill the beans",
     definition: "To reveal a secret or disclose information.",
@@ -52,6 +56,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 5,
     difficulty: Difficulty.basic,
     idiom: "Hit the sack",
     definition: "To go to bed or sleep.",
@@ -63,6 +68,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 6,
     difficulty: Difficulty.basic,
     idiom: "Let the cat out of the bag",
     definition: "To accidentally reveal a secret.",
@@ -74,6 +80,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 7,
     difficulty: Difficulty.basic,
     idiom: "Cost an arm and a leg",
     definition: "To be very expensive.",
@@ -85,6 +92,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 8,
     difficulty: Difficulty.basic,
     idiom: "Once in a blue moon",
     definition: "Something that happens very rarely.",
@@ -96,6 +104,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 9,
     difficulty: Difficulty.basic,
     idiom: "Hit the nail on the head",
     definition: "To describe exactly what is causing a situation or problem.",
@@ -107,6 +116,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 10,
     difficulty: Difficulty.basic,
     idiom: "The ball is in your court",
     definition: "It’s your decision or responsibility to act now.",
@@ -118,6 +128,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 11,
     difficulty: Difficulty.basic,
     idiom: "Add fuel to the fire",
     definition: "To make a bad situation worse.",
@@ -129,6 +140,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 12,
     difficulty: Difficulty.basic,
     idiom: "Burn the midnight oil",
     definition: "To work late into the night.",
@@ -140,6 +152,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 13,
     difficulty: Difficulty.basic,
     idiom: "Bite the bullet",
     definition: "To endure a painful situation bravely.",
@@ -151,6 +164,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 14,
     difficulty: Difficulty.basic,
     idiom: "Go the extra mile",
     definition: "To make more effort than necessary.",
@@ -162,6 +176,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 15,
     difficulty: Difficulty.basic,
     idiom: "Blow off steam",
     definition: "To release pent-up energy or emotion.",
@@ -173,6 +188,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 16,
     difficulty: Difficulty.basic,
     idiom: "Call it a day",
     definition: "To stop working for the day.",
@@ -184,6 +200,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 17,
     difficulty: Difficulty.basic,
     idiom: "Cut corners",
     definition: "To do something in the easiest, quickest, or cheapest way.",
@@ -195,6 +212,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 18,
     difficulty: Difficulty.basic,
     idiom: "Keep an eye on",
     definition: "To watch carefully or supervise.",
@@ -206,6 +224,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 19,
     difficulty: Difficulty.basic,
     idiom: "Sit tight",
     definition: "To wait patiently.",
@@ -217,6 +236,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 20,
     difficulty: Difficulty.basic,
     idiom: "Go back to square one",
     definition: "To start again from the beginning.",
@@ -229,6 +249,7 @@ final SAMPLE_IDIOMS = [
 
 // ===================== INTERMEDIATE (20) =====================
   Idiom.create(
+    globalId: 21,
     difficulty: Difficulty.intermediate,
     idiom: "Bite off more than you can chew",
     definition: "To take on more than one can handle.",
@@ -240,6 +261,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 22,
     difficulty: Difficulty.intermediate,
     idiom: "Burn bridges",
     definition: "To destroy relationships or opportunities.",
@@ -251,6 +273,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 23,
     difficulty: Difficulty.intermediate,
     idiom: "Hit the ground running",
     definition: "To start a task with enthusiasm and efficiency.",
@@ -262,6 +285,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 24,
     difficulty: Difficulty.intermediate,
     idiom: "Jump on the bandwagon",
     definition: "To follow a trend or popular activity.",
@@ -273,6 +297,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 25,
     difficulty: Difficulty.intermediate,
     idiom: "Throw in the towel",
     definition: "To give up or admit defeat.",
@@ -284,6 +309,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 26,
     difficulty: Difficulty.intermediate,
     idiom: "Through thick and thin",
     definition: "In good times and bad.",
@@ -295,6 +321,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 27,
     difficulty: Difficulty.intermediate,
     idiom: "A blessing in disguise",
     definition: "Something that seems bad but turns out good.",
@@ -306,6 +333,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 28,
     difficulty: Difficulty.intermediate,
     idiom: "Cut to the chase",
     definition: "To get to the point without wasting time.",
@@ -317,6 +345,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 29,
     difficulty: Difficulty.intermediate,
     idiom: "Elephant in the room",
     definition: "An obvious problem that is being ignored.",
@@ -328,6 +357,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 30,
     difficulty: Difficulty.intermediate,
     idiom: "The last straw",
     definition: "The final problem in a series of problems.",
@@ -339,6 +369,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 31,
     difficulty: Difficulty.intermediate,
     idiom: "Bark up the wrong tree",
     definition: "To make a wrong assumption or pursue the wrong course.",
@@ -350,6 +381,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 32,
     difficulty: Difficulty.intermediate,
     idiom: "Hit the jackpot",
     definition: "To have great success or luck.",
@@ -361,6 +393,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 33,
     difficulty: Difficulty.intermediate,
     idiom: "Keep your chin up",
     definition: "To stay positive in difficult situations.",
@@ -372,6 +405,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 34,
     difficulty: Difficulty.intermediate,
     idiom: "Kick the bucket",
     definition: "To die.",
@@ -383,6 +417,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 35,
     difficulty: Difficulty.intermediate,
     idiom: "Let sleeping dogs lie",
     definition: "Do not disturb a situation that is currently fine.",
@@ -394,6 +429,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 36,
     difficulty: Difficulty.intermediate,
     idiom: "On thin ice",
     definition: "In a risky or dangerous situation.",
@@ -405,6 +441,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 37,
     difficulty: Difficulty.intermediate,
     idiom: "Piece of the pie",
     definition: "A share of something valuable.",
@@ -416,6 +453,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 38,
     difficulty: Difficulty.intermediate,
     idiom: "Pull someone’s leg",
     definition: "To joke or tease someone.",
@@ -427,6 +465,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 39,
     difficulty: Difficulty.intermediate,
     idiom: "Take it with a grain of salt",
     definition: "To view something skeptically.",
@@ -439,6 +478,7 @@ final SAMPLE_IDIOMS = [
 
 // ===================== ADVANCED (10) =====================
   Idiom.create(
+    globalId: 40,
     difficulty: Difficulty.advanced,
     idiom: "Throw caution to the wind",
     definition: "To take a risk without worrying about consequences.",
@@ -450,6 +490,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 41,
     difficulty: Difficulty.advanced,
     idiom: "Fly off the handle",
     definition: "To suddenly lose one’s temper.",
@@ -461,6 +502,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 42,
     difficulty: Difficulty.advanced,
     idiom: "Throw someone under the bus",
     definition: "To betray someone to save oneself.",
@@ -472,6 +514,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 43,
     difficulty: Difficulty.advanced,
     idiom: "Bite the dust",
     definition: "To fail or die.",
@@ -483,6 +526,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 44,
     difficulty: Difficulty.advanced,
     idiom: "Cross that bridge when you come to it",
     definition: "Deal with a problem when it arises, not before.",
@@ -494,6 +538,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 45,
     difficulty: Difficulty.advanced,
     idiom: "Cry over spilled milk",
     definition: "To be upset about something that cannot be undone.",
@@ -505,6 +550,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 46,
     difficulty: Difficulty.advanced,
     idiom: "The pot calling the kettle black",
     definition: "Criticizing someone for a fault you also have.",
@@ -516,6 +562,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 47,
     difficulty: Difficulty.advanced,
     idiom: "Let bygones be bygones",
     definition: "To forgive and forget past offenses.",
@@ -527,6 +574,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 48,
     difficulty: Difficulty.advanced,
     idiom: "Go down in flames",
     definition: "To fail spectacularly.",
@@ -538,6 +586,7 @@ final SAMPLE_IDIOMS = [
   ),
 
   Idiom.create(
+    globalId: 49,
     difficulty: Difficulty.advanced,
     idiom: "Put the kibosh on",
     definition: "To stop or end something decisively.",

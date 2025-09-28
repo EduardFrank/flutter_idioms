@@ -36,6 +36,7 @@ class Repo {
 
   /// Sample data to populate ObjectBox initially
   void _seedIdioms() {
+    _idiomOfTheDayBox.removeAll();
     _progressBox.removeAll();
     _idiomBox.removeAll();
     _idiomBox.putMany(SAMPLE_IDIOMS);

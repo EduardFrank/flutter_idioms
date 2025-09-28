@@ -30,6 +30,7 @@ class IdiomsApp extends StatelessWidget {
       child: Consumer2<Repo, ThemeProvider>(
         builder: (context, idiomRepo, themeProvider, child) {
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             title: 'Idioms Learning App',
             theme: buildLightTheme(),
             darkTheme: buildDarkTheme(),

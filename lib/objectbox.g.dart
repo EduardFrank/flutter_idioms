@@ -24,7 +24,7 @@ final _entities = <obx_int.ModelEntity>[
   obx_int.ModelEntity(
     id: const obx_int.IdUid(1, 3789809205061507047),
     name: 'Idiom',
-    lastPropertyId: const obx_int.IdUid(7, 3181950640816437535),
+    lastPropertyId: const obx_int.IdUid(8, 1722169275497384267),
     flags: 0,
     properties: <obx_int.ModelProperty>[
       obx_int.ModelProperty(
@@ -61,6 +61,12 @@ final _entities = <obx_int.ModelEntity>[
         id: const obx_int.IdUid(7, 3181950640816437535),
         name: 'translationsJson',
         type: 9,
+        flags: 0,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(8, 1722169275497384267),
+        name: 'globalId',
+        type: 6,
         flags: 0,
       ),
     ],
@@ -198,13 +204,14 @@ obx_int.ModelDefinition getObjectBoxModel() {
         final definitionOffset = fbb.writeString(object.definition);
         final examplesJsonOffset = fbb.writeString(object.examplesJson);
         final translationsJsonOffset = fbb.writeString(object.translationsJson);
-        fbb.startTable(8);
+        fbb.startTable(9);
         fbb.addInt64(0, object.id);
         fbb.addOffset(1, idiomOffset);
         fbb.addOffset(2, definitionOffset);
         fbb.addInt64(4, object.difficultyValue);
         fbb.addOffset(5, examplesJsonOffset);
         fbb.addOffset(6, translationsJsonOffset);
+        fbb.addInt64(7, object.globalId);
         fbb.finish(fbb.endTable());
         return object.id;
       },
@@ -215,6 +222,12 @@ obx_int.ModelDefinition getObjectBoxModel() {
           buffer,
           rootOffset,
           4,
+          0,
+        );
+        final globalIdParam = const fb.Int64Reader().vTableGet(
+          buffer,
+          rootOffset,
+          18,
           0,
         );
         final difficultyValueParam = const fb.Int64Reader().vTableGet(
@@ -237,6 +250,7 @@ obx_int.ModelDefinition getObjectBoxModel() {
         ).vTableGet(buffer, rootOffset, 16, '');
         final object = Idiom(
           id: idParam,
+          globalId: globalIdParam,
           difficultyValue: difficultyValueParam,
           idiom: idiomParam,
           definition: definitionParam,
@@ -373,6 +387,11 @@ class Idiom_ {
   /// See [Idiom.translationsJson].
   static final translationsJson = obx.QueryStringProperty<Idiom>(
     _entities[0].properties[5],
+  );
+
+  /// See [Idiom.globalId].
+  static final globalId = obx.QueryIntegerProperty<Idiom>(
+    _entities[0].properties[6],
   );
 }
 
