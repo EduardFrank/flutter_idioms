@@ -1,9 +1,12 @@
+import 'dart:convert';
 import 'dart:math';
 
+import 'package:flutter/services.dart';
 import 'package:idioms/core/constants.dart';
 import 'package:idioms/models/idiom.dart';
 import 'package:idioms/models/progress.dart';
 import 'package:idioms/models/idiom_of_the_day.dart';
+import 'package:idioms/models/section.dart';
 import 'package:idioms/objectbox.g.dart';
 
 class Repo {
@@ -15,6 +18,7 @@ class Repo {
   late final Box<Idiom> _idiomBox;
   late final Box<Progress> _progressBox;
   late final Box<IdiomOfTheDay> _idiomOfTheDayBox;
+  late final Box<Section> _sectionBox;
 
   bool _isInitialized = false;
 
@@ -22,12 +26,13 @@ class Repo {
   Future<void> init() async {
     if (_isInitialized) return;
     _store = await openStore();
+    _sectionBox = _store.box<Section>();
     _idiomBox = _store.box<Idiom>();
     _progressBox = _store.box<Progress>();
     _idiomOfTheDayBox = _store.box<IdiomOfTheDay>();
 
     // Seed with initial data if empty
-    if (_idiomBox.isEmpty()) {
+    if (_sectionBox.isEmpty() || _idiomBox.isEmpty() || _progressBox.isEmpty() || _idiomOfTheDayBox.isEmpty()) {
       _seedIdioms();
     }
 
@@ -35,11 +40,27 @@ class Repo {
   }
 
   /// Sample data to populate ObjectBox initially
-  void _seedIdioms() {
+  void _seedIdioms() async {
+    _sectionBox.removeAll();
     _idiomOfTheDayBox.removeAll();
     _progressBox.removeAll();
     _idiomBox.removeAll();
-    _idiomBox.putMany(SAMPLE_IDIOMS);
+
+    final jsonStr = await rootBundle.loadString('assets/data/idioms.json');
+    final List<dynamic> data = jsonDecode(jsonStr);
+
+    for (final sectionJson in data) {
+      // Create and put section
+      final section = Section.fromJson(sectionJson);
+      _sectionBox.put(section);
+
+      // Create idioms
+      for (final idiomJson in sectionJson['idioms']) {
+        final idiom = Idiom.fromJson(idiomJson);
+        idiom.section.target = section; // link idiom to section
+        _idiomBox.put(idiom);
+      }
+    }
   }
 
   /// CRUD Operations
@@ -314,6 +335,45 @@ class Repo {
       return unlearnedIdioms;
     }
     return unlearnedIdioms.sublist(0, count);
+  }
+
+  /// Get all sections that contain idioms of a specific difficulty
+  List<Section> getSectionsByDifficulty(Difficulty difficulty) {
+    final difficultyValue = difficulty.index;
+
+    // Step 1: Query all idioms with the given difficulty
+    final idiomQuery = _idiomBox
+        .query(Idiom_.difficultyValue.equals(difficultyValue))
+        .build();
+    final idioms = idiomQuery.find();
+    idiomQuery.close();
+
+    if (idioms.isEmpty) return [];
+
+    // Step 2: Extract unique section IDs from these idioms
+    final sectionIds = idioms
+        .map((idiom) => idiom.section.targetId)
+        .where((id) => id != 0)
+        .toSet();
+
+    if (sectionIds.isEmpty) return [];
+
+    // Step 3: Fetch and return all matching sections
+    final sections = _sectionBox.getMany(sectionIds.toList())
+        .whereType<Section>()
+        .toList();
+
+    return sections;
+  }
+
+  /// Get all idioms that belong to a specific section
+  List<Idiom> getIdiomsForSection(Section section) {
+    final query = _idiomBox
+        .query(Idiom_.section.equals(section.id))
+        .build();
+    final results = query.find();
+    query.close();
+    return results;
   }
 
   void close() {

@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:idioms/models/idiom.dart';
 import 'package:idioms/repos/repo.dart';
-import 'package:idioms/widgets/idiom_card.dart';
+import 'package:idioms/widgets/idiom_item.dart';
 import 'package:provider/provider.dart';
 
 class VocabularyPage extends StatefulWidget {
@@ -44,7 +43,11 @@ class _VocabularyPageState extends State<VocabularyPage> {
   @override
   Widget build(BuildContext context) {
     final repo = Provider.of<Repo>(context, listen: false);
-    final idioms = repo.getIdiomsByDifficulty(widget.difficulty);
+
+    // Step 1: Get all sections containing idioms of this difficulty
+    final sections = repo.getSectionsByDifficulty(widget.difficulty);
+
+    // Step 2: Optional stats
     final countIdioms = repo.countIdiomsByDifficulty(widget.difficulty);
     final countLearned = repo.countLearnedByDifficulty(widget.difficulty);
     final countMastered = repo.countMasteredByDifficulty(widget.difficulty);
@@ -72,7 +75,7 @@ class _VocabularyPageState extends State<VocabularyPage> {
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: color.withValues(alpha: 0.1),
+                color: color.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Row(
@@ -86,26 +89,81 @@ class _VocabularyPageState extends State<VocabularyPage> {
             ),
             const SizedBox(height: 20),
             const Text(
-              'Idioms in this level:',
+              'Sections:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             Expanded(
               child: ListView.builder(
-                itemCount: idioms.length, // Placeholder count
+                itemCount: sections.length,
                 itemBuilder: (context, index) {
-                  final idiom = idioms[index];
+                  final section = sections[index];
 
-                  return IdiomCard(
-                    idiom: idiom,
-                    progress: repo.getProgressByIdiom(idiom),
-                    onLearnedPressed: () {
-                        repo.markIdiomAsLearned(idiom);
-                        setState(() {});
-                    },
-                    onResetPressed: () {
-                        setState(() {});
-                    },
+                  // Get idioms for this section and difficulty
+                  final idioms = repo
+                      .getIdiomsForSection(section)
+                      .where((i) => i.difficulty == widget.difficulty)
+                      .toList();
+
+                  return Card(
+                    elevation: 2,
+                    margin: const EdgeInsets.symmetric(vertical: 6),
+                    child: Theme(
+                      data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+                      child: ExpansionTile(
+                        showTrailingIcon: false,
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Expanded(
+                              child: Text(
+                                section.name,
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              '${idioms.length} idiom${idioms.length != 1 ? 's' : ''}',
+                              style: TextStyle(
+                                color: Colors.grey[600],
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
+                        children: idioms.isEmpty
+                            ? [
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Text(
+                              'No idioms in this section for this level.',
+                              style: TextStyle(color: color.withOpacity(0.7)),
+                            ),
+                          ),
+                        ]
+                            : List.generate(idioms.length * 2 - 1, (i) {
+                          if (i.isEven) {
+                            final idiom = idioms[i ~/ 2];
+                            return IdiomItem(
+                              idiom: idiom,
+                              progress: repo.getProgressByIdiom(idiom),
+                              onLearnedPressed: () {
+                                repo.markIdiomAsLearned(idiom);
+                                setState(() {});
+                              },
+                              onResetPressed: () {
+                                setState(() {});
+                              },
+                            );
+                          } else {
+                            // Only between items, not after the last one
+                            return const Divider(height: 1, thickness: 1);
+                          }
+                        }),
+                      ),
+                    ),
                   );
                 },
               ),
@@ -131,7 +189,7 @@ class _VocabularyPageState extends State<VocabularyPage> {
           title,
           style: TextStyle(
             fontSize: 14,
-            color: color.withValues(alpha: 0.7),
+            color: color.withOpacity(0.7),
           ),
         ),
       ],

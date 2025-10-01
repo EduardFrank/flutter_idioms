@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:idioms/models/section.dart';
 import 'package:objectbox/objectbox.dart';
 
 @Entity()
@@ -6,13 +7,15 @@ class Idiom {
   @Id()
   int id;
 
-
   int globalId;
   int difficultyValue; // store enum as int
   String idiom;
   String definition;
   String examplesJson;
   String translationsJson;
+
+  /// Each idiom belongs to one section
+  final section = ToOne<Section>();
 
   // 👇 Default constructor for ObjectBox
   Idiom({
@@ -58,10 +61,7 @@ class Idiom {
     return Idiom(
       id: 0,
       globalId: json['id'] as int,
-      difficultyValue: Difficulty.values.firstWhere(
-            (e) => e.name == json['difficulty'],
-        orElse: () => Difficulty.basic,
-      ).index,
+      difficultyValue: json['difficulty'] as int,
       idiom: json['idiom'] as String,
       definition: json['definition'] as String,
       examplesJson: jsonEncode(json['examples']),

@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:idioms/repos/repo.dart';
-import 'package:idioms/widgets/idiom_card.dart';
+import 'package:idioms/widgets/idiom_item.dart';
 import 'package:idioms/widgets/idiom_dialog.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
@@ -326,9 +326,11 @@ class _OverviewPageState extends State<OverviewPage> with SingleTickerProviderSt
               // Idioms list
               Column(
                 children: idioms.map((idiom) {
-                  return IdiomCard(
-                    idiom: idiom,
-                    progress: repo.getProgressByIdiom(idiom),
+                  return Card(
+                      child: IdiomItem(
+                        idiom: idiom,
+                        progress: repo.getProgressByIdiom(idiom),
+                      )
                   );
                 }).toList(),
               ),

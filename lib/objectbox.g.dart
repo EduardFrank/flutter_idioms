@@ -17,6 +17,7 @@ import 'package:objectbox_flutter_libs/objectbox_flutter_libs.dart';
 import 'models/idiom.dart';
 import 'models/idiom_of_the_day.dart';
 import 'models/progress.dart';
+import 'models/section.dart';
 
 export 'package:objectbox/objectbox.dart'; // so that callers only have to import this file
 
@@ -24,7 +25,7 @@ final _entities = <obx_int.ModelEntity>[
   obx_int.ModelEntity(
     id: const obx_int.IdUid(1, 3789809205061507047),
     name: 'Idiom',
-    lastPropertyId: const obx_int.IdUid(8, 1722169275497384267),
+    lastPropertyId: const obx_int.IdUid(9, 4148271300712694630),
     flags: 0,
     properties: <obx_int.ModelProperty>[
       obx_int.ModelProperty(
@@ -68,6 +69,14 @@ final _entities = <obx_int.ModelEntity>[
         name: 'globalId',
         type: 6,
         flags: 0,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(9, 4148271300712694630),
+        name: 'sectionId',
+        type: 11,
+        flags: 520,
+        indexId: const obx_int.IdUid(2, 7116714260834507034),
+        relationTarget: 'Section',
       ),
     ],
     relations: <obx_int.ModelRelation>[],
@@ -137,6 +146,40 @@ final _entities = <obx_int.ModelEntity>[
     relations: <obx_int.ModelRelation>[],
     backlinks: <obx_int.ModelBacklink>[],
   ),
+  obx_int.ModelEntity(
+    id: const obx_int.IdUid(5, 1138163484536723501),
+    name: 'Section',
+    lastPropertyId: const obx_int.IdUid(3, 7706954393911341486),
+    flags: 0,
+    properties: <obx_int.ModelProperty>[
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(1, 5686226604528461991),
+        name: 'id',
+        type: 6,
+        flags: 1,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(2, 737307155141686998),
+        name: 'name',
+        type: 9,
+        flags: 0,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(3, 7706954393911341486),
+        name: 'globalId',
+        type: 6,
+        flags: 0,
+      ),
+    ],
+    relations: <obx_int.ModelRelation>[],
+    backlinks: <obx_int.ModelBacklink>[
+      obx_int.ModelBacklink(
+        name: 'idioms',
+        srcEntity: 'Idiom',
+        srcField: 'section',
+      ),
+    ],
+  ),
 ];
 
 /// Shortcut for [obx.Store.new] that passes [getObjectBoxModel] and for Flutter
@@ -177,13 +220,17 @@ Future<obx.Store> openStore({
 obx_int.ModelDefinition getObjectBoxModel() {
   final model = obx_int.ModelInfo(
     entities: _entities,
-    lastEntityId: const obx_int.IdUid(3, 2028463856188918006),
-    lastIndexId: const obx_int.IdUid(1, 4121055704686731824),
+    lastEntityId: const obx_int.IdUid(5, 1138163484536723501),
+    lastIndexId: const obx_int.IdUid(2, 7116714260834507034),
     lastRelationId: const obx_int.IdUid(0, 0),
     lastSequenceId: const obx_int.IdUid(0, 0),
-    retiredEntityUids: const [],
+    retiredEntityUids: const [8084422679899971631],
     retiredIndexUids: const [],
-    retiredPropertyUids: const [7728149458038448356],
+    retiredPropertyUids: const [
+      7728149458038448356,
+      2670722699414363570,
+      2402498241147596340,
+    ],
     retiredRelationUids: const [],
     modelVersion: 5,
     modelVersionParserMinimum: 5,
@@ -193,7 +240,7 @@ obx_int.ModelDefinition getObjectBoxModel() {
   final bindings = <Type, obx_int.EntityDefinition>{
     Idiom: obx_int.EntityDefinition<Idiom>(
       model: _entities[0],
-      toOneRelations: (Idiom object) => [],
+      toOneRelations: (Idiom object) => [object.section],
       toManyRelations: (Idiom object) => {},
       getId: (Idiom object) => object.id,
       setId: (Idiom object, int id) {
@@ -204,7 +251,7 @@ obx_int.ModelDefinition getObjectBoxModel() {
         final definitionOffset = fbb.writeString(object.definition);
         final examplesJsonOffset = fbb.writeString(object.examplesJson);
         final translationsJsonOffset = fbb.writeString(object.translationsJson);
-        fbb.startTable(9);
+        fbb.startTable(10);
         fbb.addInt64(0, object.id);
         fbb.addOffset(1, idiomOffset);
         fbb.addOffset(2, definitionOffset);
@@ -212,6 +259,7 @@ obx_int.ModelDefinition getObjectBoxModel() {
         fbb.addOffset(5, examplesJsonOffset);
         fbb.addOffset(6, translationsJsonOffset);
         fbb.addInt64(7, object.globalId);
+        fbb.addInt64(8, object.section.targetId);
         fbb.finish(fbb.endTable());
         return object.id;
       },
@@ -257,7 +305,13 @@ obx_int.ModelDefinition getObjectBoxModel() {
           examplesJson: examplesJsonParam,
           translationsJson: translationsJsonParam,
         );
-
+        object.section.targetId = const fb.Int64Reader().vTableGet(
+          buffer,
+          rootOffset,
+          20,
+          0,
+        );
+        object.section.attach(store);
         return object;
       },
     ),
@@ -354,6 +408,64 @@ obx_int.ModelDefinition getObjectBoxModel() {
         return object;
       },
     ),
+    Section: obx_int.EntityDefinition<Section>(
+      model: _entities[3],
+      toOneRelations: (Section object) => [],
+      toManyRelations: (Section object) => {
+        obx_int.RelInfo<Idiom>.toOneBacklink(
+          9,
+          object.id,
+          (Idiom srcObject) => srcObject.section,
+        ): object.idioms,
+      },
+      getId: (Section object) => object.id,
+      setId: (Section object, int id) {
+        object.id = id;
+      },
+      objectToFB: (Section object, fb.Builder fbb) {
+        final nameOffset = fbb.writeString(object.name);
+        fbb.startTable(4);
+        fbb.addInt64(0, object.id);
+        fbb.addOffset(1, nameOffset);
+        fbb.addInt64(2, object.globalId);
+        fbb.finish(fbb.endTable());
+        return object.id;
+      },
+      objectFromFB: (obx.Store store, ByteData fbData) {
+        final buffer = fb.BufferContext(fbData);
+        final rootOffset = buffer.derefObject(0);
+        final idParam = const fb.Int64Reader().vTableGet(
+          buffer,
+          rootOffset,
+          4,
+          0,
+        );
+        final globalIdParam = const fb.Int64Reader().vTableGet(
+          buffer,
+          rootOffset,
+          8,
+          0,
+        );
+        final nameParam = const fb.StringReader(
+          asciiOptimization: true,
+        ).vTableGet(buffer, rootOffset, 6, '');
+        final object = Section(
+          id: idParam,
+          globalId: globalIdParam,
+          name: nameParam,
+        );
+        obx_int.InternalToManyAccess.setRelInfo<Section>(
+          object.idioms,
+          store,
+          obx_int.RelInfo<Idiom>.toOneBacklink(
+            9,
+            object.id,
+            (Idiom srcObject) => srcObject.section,
+          ),
+        );
+        return object;
+      },
+    ),
   };
 
   return obx_int.ModelDefinition(model, bindings);
@@ -392,6 +504,11 @@ class Idiom_ {
   /// See [Idiom.globalId].
   static final globalId = obx.QueryIntegerProperty<Idiom>(
     _entities[0].properties[6],
+  );
+
+  /// See [Idiom.section].
+  static final section = obx.QueryRelationToOne<Idiom, Section>(
+    _entities[0].properties[7],
   );
 }
 
@@ -434,4 +551,25 @@ class IdiomOfTheDay_ {
   static final date = obx.QueryDateProperty<IdiomOfTheDay>(
     _entities[2].properties[2],
   );
+}
+
+/// [Section] entity fields to define ObjectBox queries.
+class Section_ {
+  /// See [Section.id].
+  static final id = obx.QueryIntegerProperty<Section>(
+    _entities[3].properties[0],
+  );
+
+  /// See [Section.name].
+  static final name = obx.QueryStringProperty<Section>(
+    _entities[3].properties[1],
+  );
+
+  /// See [Section.globalId].
+  static final globalId = obx.QueryIntegerProperty<Section>(
+    _entities[3].properties[2],
+  );
+
+  /// see [Section.idioms]
+  static final idioms = obx.QueryBacklinkToMany<Idiom, Section>(Idiom_.section);
 }
