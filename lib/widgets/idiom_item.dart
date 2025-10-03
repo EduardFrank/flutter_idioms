@@ -32,11 +32,6 @@ class IdiomItem extends StatelessWidget {
           context: context,
           builder: (context) => IdiomDialog(
             idiom: idiom,
-            onLearnedPressed: () {
-              if (onLearnedPressed != null) {
-                onLearnedPressed!();
-              }
-            },
           ),
         );
       },

@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:idioms/models/idiom.dart';
+import 'package:idioms/providers/tts_provider.dart';
+import 'package:provider/provider.dart';
 
 class IdiomDialog extends StatefulWidget {
   final Idiom idiom;
@@ -91,6 +93,16 @@ class _IdiomDialogState extends State<IdiomDialog> with TickerProviderStateMixin
     super.dispose();
   }
 
+  Future<void> _speak(String text) async {
+    final ttsProvider = Provider.of<TtsProvider>(context, listen: false);
+    await ttsProvider.speak(text);
+  }
+
+  Future<void> _stop() async {
+    final ttsProvider = Provider.of<TtsProvider>(context, listen: false);
+    await ttsProvider.stop();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Dialog(
@@ -126,7 +138,16 @@ class _IdiomDialogState extends State<IdiomDialog> with TickerProviderStateMixin
                           ),
                         ),
                         IconButton(
-                          onPressed: () => Navigator.of(context).pop(),
+                          onPressed: () => _speak(widget.idiom.idiom),
+                          icon: const Icon(Icons.volume_up),
+                          color: Theme.of(context).primaryColor,
+                          tooltip: 'Speak idiom',
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            _stop();
+                            Navigator.of(context).pop();
+                          },
                           icon: const Icon(Icons.close),
                           color: Colors.black,
                           tooltip: 'Close',
@@ -156,10 +177,24 @@ class _IdiomDialogState extends State<IdiomDialog> with TickerProviderStateMixin
                                   color: Theme.of(context).primaryColor,
                                 ),
                               ),
-                              Icon(
-                                Icons.info_outline,
-                                color: Theme.of(context).primaryColor,
-                                size: 20,
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  IconButton(
+                                    onPressed: () => _speak(widget.idiom.definition),
+                                    icon: const Icon(Icons.volume_up),
+                                    color: Theme.of(context).primaryColor,
+                                    iconSize: 20,
+                                    tooltip: 'Speak definition',
+                                    padding: EdgeInsets.zero,
+                                    constraints: BoxConstraints(minHeight: 24, minWidth: 24),
+                                  ),
+                                  Icon(
+                                    Icons.info_outline,
+                                    color: Theme.of(context).primaryColor,
+                                    size: 20,
+                                  ),
+                                ],
                               ),
                             ],
                           ),
@@ -194,10 +229,27 @@ class _IdiomDialogState extends State<IdiomDialog> with TickerProviderStateMixin
                                   color: Colors.blue[700],
                                 ),
                               ),
-                              Icon(
-                                Icons.lightbulb_outline,
-                                color: Colors.blue[700],
-                                size: 20,
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  IconButton(
+                                    onPressed: () {
+                                      String examplesText = widget.idiom.examples.join('. ');
+                                      _speak(examplesText);
+                                    },
+                                    icon: const Icon(Icons.volume_up),
+                                    color: Colors.blue[700],
+                                    iconSize: 20,
+                                    tooltip: 'Speak examples',
+                                    padding: EdgeInsets.zero,
+                                    constraints: BoxConstraints(minHeight: 24, minWidth: 24),
+                                  ),
+                                  Icon(
+                                    Icons.lightbulb_outline,
+                                    color: Colors.blue[700],
+                                    size: 20,
+                                  ),
+                                ],
                               ),
                             ],
                           ),

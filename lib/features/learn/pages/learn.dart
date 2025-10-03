@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:idioms/core/constants.dart';
 import 'package:idioms/features/learn/pages/lesson.dart';
-import 'package:idioms/features/learn/pages/swipe.dart';
 import 'package:idioms/repos/repo.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';

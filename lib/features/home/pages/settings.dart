@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:idioms/providers/theme_provider.dart';
+import 'package:idioms/providers/tts_provider.dart';
+import 'package:idioms/providers/notification_provider.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final notificationProvider = Provider.of<NotificationProvider>(context);
+    
     return Scaffold(
       appBar: AppBar(
         title: const Text('Settings'),
@@ -26,35 +31,46 @@ class SettingsPage extends StatelessWidget {
             Card(
               child: Column(
                 children: [
-                  const ListTile(
-                    leading: Icon(Icons.language),
-                    title: Text('Language'),
-                    subtitle: Text('English'),
-                    trailing: Icon(Icons.arrow_forward_ios),
-                  ),
-                  const Divider(height: 1),
                   ListTile(
                     leading: Icon(
-                      Provider.of<ThemeProvider>(context).isDarkMode 
-                        ? Icons.light_mode 
-                        : Icons.dark_mode,
+                      Provider
+                          .of<ThemeProvider>(context)
+                          .isDarkMode
+                          ? Icons.light_mode
+                          : Icons.dark_mode,
                     ),
                     title: const Text('Dark Mode'),
                     trailing: Switch(
-                      value: Provider.of<ThemeProvider>(context).isDarkMode,
+                      value: Provider
+                          .of<ThemeProvider>(context)
+                          .isDarkMode,
                       onChanged: (value) {
-                        Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
+                        Provider
+                            .of<ThemeProvider>(context, listen: false)
+                            .toggleTheme();
                       },
                     ),
                   ),
                   const Divider(height: 1),
+                  SwitchListTile(
+                    title: const Text('Enable Notifications'),
+                    subtitle: const Text('Receive daily reminders to practice idioms'),
+                    value: notificationProvider.notificationsEnabled,
+                    onChanged: (value) {
+                      notificationProvider.toggleNotifications(value);
+                    },
+                    secondary: const Icon(Icons.notifications),
+                  ),
                   ListTile(
-                    leading: Icon(Icons.notifications),
-                    title: Text('Notifications'),
-                    trailing: Switch(
-                      value: true,
-                      onChanged: (value) {},
+                    leading: const SizedBox(width: 25),
+                    title: const Text('Notification Time'),
+                    subtitle: Text(
+                      'Daily reminder at ${notificationProvider.reminderTime}',
                     ),
+                    trailing: const Icon(Icons.access_time),
+                    onTap: () => {
+                      _selectNotificationTime(context, notificationProvider),
+                    }
                   ),
                 ],
               ),
@@ -63,5 +79,23 @@ class SettingsPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<void> _selectNotificationTime(
+    BuildContext context,
+    NotificationProvider notificationProvider,
+  ) async {
+    final TimeOfDay? time = await showTimePicker(
+      context: context,
+      initialTime: TimeOfDay.fromDateTime(
+        DateTime(0, 0, 0, notificationProvider.reminderTime.hour, notificationProvider.reminderTime.minute),
+      ),
+    );
+
+    if (time != null) {
+      notificationProvider.setReminderTime(
+        NotificationTime(time.hour, time.minute),
+      );
+    }
   }
 }
