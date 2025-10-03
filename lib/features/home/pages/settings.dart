@@ -31,27 +31,6 @@ class SettingsPage extends StatelessWidget {
             Card(
               child: Column(
                 children: [
-                  ListTile(
-                    leading: Icon(
-                      Provider
-                          .of<ThemeProvider>(context)
-                          .isDarkMode
-                          ? Icons.light_mode
-                          : Icons.dark_mode,
-                    ),
-                    title: const Text('Dark Mode'),
-                    trailing: Switch(
-                      value: Provider
-                          .of<ThemeProvider>(context)
-                          .isDarkMode,
-                      onChanged: (value) {
-                        Provider
-                            .of<ThemeProvider>(context, listen: false)
-                            .toggleTheme();
-                      },
-                    ),
-                  ),
-                  const Divider(height: 1),
                   SwitchListTile(
                     title: const Text('Enable Notifications'),
                     subtitle: const Text('Receive daily reminders to practice idioms'),

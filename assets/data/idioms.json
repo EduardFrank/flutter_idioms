@@ -81,16 +81,16 @@
       },
       {
         "id": 6,
-        "idiom": "Cost an arm and a leg.",
+        "idiom": "To cost an arm and a leg",
         "difficulty": 0,
-        "definition": "To be very expensive.",
+        "definition": "To be extremely expensive.",
         "examples": [
-          "That new car must have cost him an arm and a leg.",
-          "Concert tickets these days cost an arm and a leg."
+          "Getting that concert ticket cost me an arm and a leg.",
+          "A trip to Switzerland can cost an arm and a leg if you don't plan carefully."
         ],
         "translations": {
-          "de": "Ein Vermögen kosten.",
-          "fr": "Coûter un bras."
+          "de": "Ein Vermögen kosten / Eine Stange Geld kosten",
+          "fr": "Coûter les yeux de la tête"
         }
       },
       {
@@ -1401,20 +1401,6 @@
         }
       },
       {
-        "id": 97,
-        "idiom": "To cost an arm and a leg",
-        "difficulty": 0,
-        "definition": "To be extremely expensive.",
-        "examples": [
-          "Getting that concert ticket cost me an arm and a leg.",
-          "A trip to Switzerland can cost an arm and a leg if you don't plan carefully."
-        ],
-        "translations": {
-          "de": "Ein Vermögen kosten / Eine Stange Geld kosten",
-          "fr": "Coûter les yeux de la tête"
-        }
-      },
-      {
         "id": 98,
         "idiom": "To be rolling in money",
         "difficulty": 0,
@@ -2099,20 +2085,6 @@
         "translations": {
           "de": "Mit dem goldenen Löffel geboren werden",
           "fr": "Naître avec une cuillère en argent dans la bouche"
-        }
-      },
-      {
-        "id": 148,
-        "idiom": "Pay an arm and a leg",
-        "difficulty": 0,
-        "definition": "To pay a very high price for something.",
-        "examples": [
-          "Designer clothes usually cost an arm and a leg.",
-          "I don't want to pay an arm and a leg for a concert ticket."
-        ],
-        "translations": {
-          "de": "Ein Vermögen bezahlen / Sehr viel Geld ausgeben",
-          "fr": "Payer les yeux de la tête"
         }
       },
       {
@@ -3783,20 +3755,6 @@
         "translations": {
           "de": "Wenn man vom Teufel spricht",
           "fr": "Quand on parle du loup"
-        }
-      },
-      {
-        "id": 266,
-        "idiom": "Cost an arm and a leg",
-        "difficulty": 0,
-        "definition": "To be very expensive.",
-        "examples": [
-          "That new car must have cost him an arm and a leg.",
-          "Traveling around the world can cost an arm and a leg."
-        ],
-        "translations": {
-          "de": "Ein Vermögen kosten",
-          "fr": "Coûter les yeux de la tête"
         }
       },
       {
@@ -11154,20 +11112,6 @@
         "translations": {
           "de": "Bände sprechen",
           "fr": "En dire long"
-        }
-      },
-      {
-        "id": 783,
-        "idiom": "Costs an arm and a leg",
-        "difficulty": 0,
-        "definition": "To be very expensive.",
-        "examples": [
-          "That new car costs an arm and a leg.",
-          "Getting a degree these days costs an arm and a leg."
-        ],
-        "translations": {
-          "de": "Ein Vermögen kosten / Teuer wie die Nacht",
-          "fr": "Coûter un bras / Coûter les yeux de la tête"
         }
       },
       {
