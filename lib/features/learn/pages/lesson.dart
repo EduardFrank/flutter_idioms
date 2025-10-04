@@ -10,7 +10,12 @@ import 'package:provider/provider.dart';
 enum LessonMode { idiomToDefinition, definitionToIdiom, example }
 
 class LessonPage extends StatefulWidget {
-  const LessonPage({super.key});
+  final List<Idiom>? lessonIdioms;
+
+  const LessonPage({
+    super.key,
+    required this.lessonIdioms
+  });
 
   @override
   State<LessonPage> createState() => _LessonPageState();
@@ -52,8 +57,13 @@ class _LessonPageState extends State<LessonPage> {
     super.initState();
     final repo = Provider.of<Repo>(context, listen: false);
 
-    // Pick 5 random idioms
-    lessonIdioms = repo.getRandomUnlearnedIdioms(count: MAX_IDIOMS_PER_DAY);
+    if (widget.lessonIdioms != null) {
+      lessonIdioms = widget.lessonIdioms!;
+    } else {
+      // Pick 5 random idioms
+      lessonIdioms = repo.getRandomUnlearnedIdioms(count: MAX_IDIOMS_PER_DAY);
+    }
+
     randomIdioms = repo.getRandomIdioms(count: 20);
     // Initialize questions queue (each idiom in both modes)
     for (int i = 0; i < lessonIdioms.length; i++) {

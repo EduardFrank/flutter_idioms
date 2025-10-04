@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:idioms/core/constants.dart';
-import 'package:idioms/features/learn/pages/lesson.dart';
+import 'package:idioms/features/learn/pages/learn_entry.dart';
 import 'package:idioms/repos/repo.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
@@ -87,7 +87,7 @@ class _LearnPageState extends State<LearnPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const LessonPage()),
+                                builder: (context) => const LearnIdiomsEntryPage()),
                           );
                         },
                         icon: const Icon(Icons.play_arrow),
