@@ -393,6 +393,7 @@ class _LessonPageState extends State<LessonPage> {
     bool alreadyClosed = false;
 
     showModalBottomSheet(
+      useSafeArea: true,
       context: context,
       enableDrag: true,
       isDismissible: true,
@@ -401,47 +402,49 @@ class _LessonPageState extends State<LessonPage> {
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       builder: (_) {
-        return Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Wrap(
-            children: [
-              Center(
-                child: Text(
-                  'Lesson Summary 🎉',
-                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                ),
-              ),
-              const SizedBox(height: 16),
-              Text('Overall Accuracy: ${accuracy()}%\n'),
-              Text('Average Time per Question: ${avgTimePerQuestion.toStringAsFixed(1)}s\n'),
-              const SizedBox(height: 16),
-              const Text('Per-Idiom Performance:'),
-              const SizedBox(height: 8),
-              ...List.generate(lessonIdioms.length, (i) {
-                int correct = correctCounts[i] ?? 0;
-                double time = totalTime[i] ?? 0;
-                return ListTile(
-                  title: Text(lessonIdioms[i].idiom),
-                  subtitle: Text(
-                    'Correct in $correct/2 attempts, Avg Time: ${(time / 2).toStringAsFixed(1)}s',
+        return SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Wrap(
+              children: [
+                Center(
+                  child: Text(
+                    'Lesson Summary 🎉',
+                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
-                );
-              }),
-              const SizedBox(height: 16),
-              Center(
-                child: ElevatedButton(
-                  onPressed: () {
-                    if (!alreadyClosed) {
-                      alreadyClosed = true;
-                      onClose();
-                    }
-                    Navigator.pop(context);
-                    Navigator.pop(context);
-                  },
-                  child: const Text('Close'),
                 ),
-              ),
-            ],
+                const SizedBox(height: 16),
+                Text('Overall Accuracy: ${accuracy()}%\n'),
+                Text('Average Time per Question: ${avgTimePerQuestion.toStringAsFixed(1)}s\n'),
+                const SizedBox(height: 16),
+                const Text('Per-Idiom Performance:'),
+                const SizedBox(height: 8),
+                ...List.generate(lessonIdioms.length, (i) {
+                  int correct = correctCounts[i] ?? 0;
+                  double time = totalTime[i] ?? 0;
+                  return ListTile(
+                    title: Text(lessonIdioms[i].idiom),
+                    subtitle: Text(
+                      'Correct in $correct/2 attempts, Avg Time: ${(time / 2).toStringAsFixed(1)}s',
+                    ),
+                  );
+                }),
+                const SizedBox(height: 16),
+                Center(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      if (!alreadyClosed) {
+                        alreadyClosed = true;
+                        onClose();
+                      }
+                      Navigator.pop(context);
+                      Navigator.pop(context);
+                    },
+                    child: const Text('Close'),
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },
