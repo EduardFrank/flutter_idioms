@@ -66,20 +66,6 @@
     "section": "Body Part Idioms",
     "idioms": [
       {
-        "id": 5,
-        "idiom": "Pull someone's leg.",
-        "difficulty": 0,
-        "definition": "To tease or joke with someone by telling them something untrue.",
-        "examples": [
-          "Are you serious, or are you just pulling my leg?",
-          "Don't believe him, he's just pulling your leg."
-        ],
-        "translations": {
-          "de": "Jemanden auf den Arm nehmen.",
-          "fr": "Faire marcher quelqu'un."
-        }
-      },
-      {
         "id": 6,
         "idiom": "To cost an arm and a leg",
         "difficulty": 0,
@@ -136,20 +122,6 @@
         }
       },
       {
-        "id": 10,
-        "idiom": "To pull someone's leg",
-        "difficulty": 0,
-        "definition": "To play a trick on someone, often by telling them something untrue.",
-        "examples": [
-          "Are you serious, or are you just pulling my leg?",
-          "Don't worry, I was just pulling your leg."
-        ],
-        "translations": {
-          "de": "Jemanden auf den Arm nehmen.",
-          "fr": "Faire marcher quelqu'un / Se moquer de quelqu'un."
-        }
-      },
-      {
         "id": 11,
         "idiom": "Have your head in the clouds",
         "difficulty": 0,
@@ -174,20 +146,6 @@
         ],
         "translations": {
           "de": "Jemandem ein Ohr leihen",
-          "fr": "Prêter l'oreille"
-        }
-      },
-      {
-        "id": 13,
-        "idiom": "Lend an ear.",
-        "difficulty": 0,
-        "definition": "To listen attentively and sympathetically to someone.",
-        "examples": [
-          "If you need to talk, I'm happy to lend an ear.",
-          "She always lends an ear to her friends when they have problems."
-        ],
-        "translations": {
-          "de": "Ein Ohr leihen",
           "fr": "Prêter l'oreille"
         }
       },
@@ -234,20 +192,6 @@
         }
       },
       {
-        "id": 17,
-        "idiom": "Keep an eye on",
-        "difficulty": 0,
-        "definition": "To watch or monitor something or someone carefully.",
-        "examples": [
-          "Can you keep an eye on my bag while I go to the restroom?",
-          "The parents asked the babysitter to keep an eye on the children."
-        ],
-        "translations": {
-          "de": "ein Auge auf etwas haben",
-          "fr": "garder un œil sur"
-        }
-      },
-      {
         "id": 18,
         "idiom": "Give a hand",
         "difficulty": 0,
@@ -286,20 +230,6 @@
         "translations": {
           "de": "Ein Auge zudrücken (close one eye), Etwas ignorieren (ignore something)",
           "fr": "Fermer les yeux sur quelque chose (close one's eyes on something)"
-        }
-      },
-      {
-        "id": 21,
-        "idiom": "Keep an eye on something/someone",
-        "difficulty": 0,
-        "definition": "To watch or monitor something or someone carefully.",
-        "examples": [
-          "Can you keep an eye on my bag while I go to the restroom?",
-          "The lifeguard needs to keep an eye on all the swimmers."
-        ],
-        "translations": {
-          "de": "Ein Auge auf etwas/jemanden haben (have an eye on something/someone)",
-          "fr": "Garder un œil sur quelque chose/quelqu'un (keep an eye on something/someone), Surveiller (monitor)"
         }
       }
     ]
@@ -2511,20 +2441,6 @@
         }
       },
       {
-        "id": 178,
-        "idiom": "Take something with a grain of salt",
-        "difficulty": 1,
-        "definition": "To treat something with skepticism; to not believe something completely.",
-        "examples": [
-          "You should take his promises with a grain of salt; he often exaggerates.",
-          "I always take online reviews with a grain of salt because they can be biased."
-        ],
-        "translations": {
-          "de": "Etwas mit Vorsicht genießen",
-          "fr": "Prendre quelque chose avec des pincettes"
-        }
-      },
-      {
         "id": 179,
         "idiom": "The icing on the cake",
         "difficulty": 0,
@@ -2564,20 +2480,6 @@
         "translations": {
           "de": "Kinderleicht",
           "fr": "Un jeu d'enfant"
-        }
-      },
-      {
-        "id": 182,
-        "idiom": "Bring home the bacon",
-        "difficulty": 0,
-        "definition": "To earn a living; to provide for one's family.",
-        "examples": [
-          "After college, I need to get a good job and start bringing home the bacon.",
-          "She works hard to bring home the bacon for her children."
-        ],
-        "translations": {
-          "de": "Das Geld nach Hause bringen",
-          "fr": "Gagner sa croûte"
         }
       },
       {
@@ -2665,22 +2567,8 @@
         }
       },
       {
-        "id": 189,
-        "idiom": "Take something with a grain of salt.",
-        "difficulty": 0,
-        "definition": "To be skeptical about something; to not believe something completely.",
-        "examples": [
-          "You should take his promises with a grain of salt; he often doesn't follow through.",
-          "I take everything the tabloids say with a grain of salt."
-        ],
-        "translations": {
-          "de": "Etwas mit Vorsicht genießen / Etwas nicht ganz glauben.",
-          "fr": "Prendre quelque chose avec des pincettes."
-        }
-      },
-      {
         "id": 190,
-        "idiom": "Bring home the bacon.",
+        "idiom": "to bring home the bacon.",
         "difficulty": 0,
         "definition": "To earn a living; to provide financial support for one's family.",
         "examples": [
@@ -2718,20 +2606,6 @@
         "translations": {
           "de": "Sich wie warme Semmeln verkaufen.",
           "fr": "Se vendre comme des petits pains."
-        }
-      },
-      {
-        "id": 193,
-        "idiom": "Butter someone up.",
-        "difficulty": 0,
-        "definition": "To flatter someone in order to gain a favor or approval.",
-        "examples": [
-          "He's always trying to butter up his boss to get a raise.",
-          "If you want them to agree, you'll have to butter them up a bit first."
-        ],
-        "translations": {
-          "de": "Jemanden umschmeicheln.",
-          "fr": "Passer de la pommade à quelqu's."
         }
       },
       {
@@ -2774,20 +2648,6 @@
         "translations": {
           "de": "Seelenruhig",
           "fr": "Froid comme un concombre"
-        }
-      },
-      {
-        "id": 197,
-        "idiom": "Butter someone up",
-        "difficulty": 0,
-        "definition": "To flatter someone excessively in order to gain their favor or cooperation.",
-        "examples": [
-          "He tried to butter up his boss before asking for a raise, hoping it would work.",
-          "If you want her to agree to the proposal, you'll have to butter her up a bit first with compliments."
-        ],
-        "translations": {
-          "de": "Jemandem Honig um den Mund schmieren",
-          "fr": "Passer de la pommade à quelqu'un"
         }
       },
       {
@@ -2847,20 +2707,6 @@
         }
       },
       {
-        "id": 202,
-        "idiom": "The apple of my eye",
-        "difficulty": 0,
-        "definition": "Someone or something that is cherished above all others.",
-        "examples": [
-          "His granddaughter is the apple of his eye.",
-          "That old car used to be the apple of my eye."
-        ],
-        "translations": {
-          "de": "Mein Augapfel / Mein Ein und Alles.",
-          "fr": "La prunelle de mes yeux."
-        }
-      },
-      {
         "id": 203,
         "idiom": "Sour grapes",
         "difficulty": 0,
@@ -2872,20 +2718,6 @@
         "translations": {
           "de": "Saure Trauben / Missgunst",
           "fr": "Les raisins sont trop verts / Dénigrement par dépit"
-        }
-      },
-      {
-        "id": 204,
-        "idiom": "Take it with a grain of salt",
-        "difficulty": 0,
-        "definition": "To not completely believe something; to be skeptical about it.",
-        "examples": [
-          "I'd take anything he says with a grain of salt; he tends to exaggerate.",
-          "You should take that news report with a grain of salt; it might not be entirely accurate."
-        ],
-        "translations": {
-          "de": "Mit Vorsicht genießen",
-          "fr": "Prendre avec des pincettes"
         }
       },
       {
@@ -2928,20 +2760,6 @@
         "translations": {
           "de": "Durchdrehen / Ausflippen.",
           "fr": "Devenir fou / Péter les plombs."
-        }
-      },
-      {
-        "id": 208,
-        "idiom": "Apple of my eye.",
-        "difficulty": 0,
-        "definition": "Someone or something that one cherishes above all others; a favorite person or thing.",
-        "examples": [
-          "His granddaughter is the apple of his eye; he spoils her rotten.",
-          "That old car might be rusty, but it's the apple of my eye."
-        ],
-        "translations": {
-          "de": "Mein Augapfel / Mein Liebling.",
-          "fr": "La prunelle de mes yeux."
         }
       },
       {
@@ -3027,19 +2845,6 @@
         }
       },
       {
-        "id": 215,
-        "idiom": "A hard nut to crack",
-        "difficulty": 0,
-        "definition": "A difficult problem to solve or a person who is difficult to understand or deal with.",
-        "examples": [
-          "This algebra problem is a hard nut to crack."
-        ],
-        "translations": {
-          "de": "Eine harte Nuss",
-          "fr": "Une tâche ardue"
-        }
-      },
-      {
         "id": 216,
         "idiom": "Go bananas",
         "difficulty": 0,
@@ -3106,20 +2911,6 @@
         "translations": {
           "de": "Etwas mit Vorsicht genießen / Etwas nicht ganz glauben",
           "fr": "Prendre quelque chose avec un grain de sel"
-        }
-      },
-      {
-        "id": 221,
-        "idiom": "A tough nut to crack",
-        "difficulty": 0,
-        "definition": "A difficult problem to solve or a person who is difficult to understand or deal with.",
-        "examples": [
-          "This mathematical equation is a tough nut to crack.",
-          "Our new client is a tough nut to crack, but I'm sure we can win them over."
-        ],
-        "translations": {
-          "de": "Eine harte Nuss zu knacken",
-          "fr": "Une noix difficile à casser / Un os dur à ronger"
         }
       },
       {
@@ -3678,19 +3469,6 @@
         }
       },
       {
-        "id": 260,
-        "idiom": "Under the weather",
-        "difficulty": 0,
-        "definition": "Feeling unwell or sick.",
-        "examples": [
-          "I'm feeling a bit under the weather today, so I might leave work early."
-        ],
-        "translations": {
-          "de": "nicht ganz auf der Höhe sein",
-          "fr": "ne pas être dans son assiette"
-        }
-      },
-      {
         "id": 261,
         "idiom": "Spill the beans",
         "difficulty": 0,
@@ -3704,19 +3482,6 @@
         }
       },
       {
-        "id": 262,
-        "idiom": "Call it a day",
-        "difficulty": 0,
-        "definition": "To stop working on something, usually for the rest of the day.",
-        "examples": [
-          "It's getting late; let's call it a day and pick this up tomorrow."
-        ],
-        "translations": {
-          "de": "Feierabend machen",
-          "fr": "arrêter pour la journée"
-        }
-      },
-      {
         "id": 263,
         "idiom": "Hit the road",
         "difficulty": 0,
@@ -3727,20 +3492,6 @@
         "translations": {
           "de": "aufbrechen",
           "fr": "prendre la route"
-        }
-      },
-      {
-        "id": 264,
-        "idiom": "Feel under the weather",
-        "difficulty": 0,
-        "definition": "To feel slightly ill or unwell.",
-        "examples": [
-          "I'm feeling a bit under the weather today, so I might go home early.",
-          "She's been under the weather for a few days, so she couldn't come to the party."
-        ],
-        "translations": {
-          "de": "Sich unwohl fühlen / Sich kränklich fühlen",
-          "fr": "Ne pas se sentir bien / Avoir un petit coup de mou"
         }
       },
       {
@@ -3768,19 +3519,6 @@
         "translations": {
           "de": "Sich übernehmen",
           "fr": "Avoir les yeux plus gros que le ventre"
-        }
-      },
-      {
-        "id": 268,
-        "idiom": "To get cold feet",
-        "difficulty": 0,
-        "definition": "To suddenly become too frightened to do something you had planned to do.",
-        "examples": [
-          "He was going to propose, but he got cold feet at the last minute and postponed it."
-        ],
-        "translations": {
-          "de": "Kalte Füße bekommen",
-          "fr": "Avoir la frousse"
         }
       },
       {
@@ -3903,20 +3641,6 @@
         "translations": {
           "de": "Losfahren / Sich auf den Weg machen.",
           "fr": "Prendre la route."
-        }
-      },
-      {
-        "id": 278,
-        "idiom": "Under the weather.",
-        "difficulty": 0,
-        "definition": "Feeling slightly unwell or sick.",
-        "examples": [
-          "I'm feeling a bit under the weather today, so I might go home early.",
-          "She's been under the weather for a few days with a cold."
-        ],
-        "translations": {
-          "de": "Sich nicht wohlfühlen.",
-          "fr": "Ne pas se sentir dans son assiette."
         }
       },
       {
@@ -4149,19 +3873,6 @@
     "section": "Time Idioms",
     "idioms": [
       {
-        "id": 295,
-        "idiom": "Against the clock",
-        "difficulty": 0,
-        "definition": "Rushing to do something before a specific deadline or within a limited time.",
-        "examples": [
-          "We worked against the clock to finish the project before the client's deadline."
-        ],
-        "translations": {
-          "de": "gegen die Uhr",
-          "fr": "contre la montre"
-        }
-      },
-      {
         "id": 296,
         "idiom": "In the nick of time",
         "difficulty": 0,
@@ -4172,19 +3883,6 @@
         "translations": {
           "de": "im letzten Augenblick",
           "fr": "juste à temps"
-        }
-      },
-      {
-        "id": 297,
-        "idiom": "Time flies",
-        "difficulty": 0,
-        "definition": "An expression indicating that time passes very quickly.",
-        "examples": [
-          "It feels like just yesterday we started this project, time really flies!"
-        ],
-        "translations": {
-          "de": "die Zeit vergeht wie im Flug",
-          "fr": "le temps file"
         }
       },
       {
@@ -4270,20 +3968,6 @@
         }
       },
       {
-        "id": 304,
-        "idiom": "The eleventh hour",
-        "difficulty": 1,
-        "definition": "The last possible moment.",
-        "examples": [
-          "They reached an agreement at the eleventh hour, just before the strike.",
-          "She submitted her assignment at the eleventh hour, barely making the deadline."
-        ],
-        "translations": {
-          "de": "In letzter Minute",
-          "fr": "À la dernière minute"
-        }
-      },
-      {
         "id": 305,
         "idiom": "Run out of time",
         "difficulty": 0,
@@ -4295,20 +3979,6 @@
         "translations": {
           "de": "Die Zeit läuft ab",
           "fr": "Manquer de temps"
-        }
-      },
-      {
-        "id": 306,
-        "idiom": "At the eleventh hour",
-        "difficulty": 0,
-        "definition": "At the last possible moment; just before it's too late.",
-        "examples": [
-          "The contract was signed at the eleventh hour, just before the deadline expired.",
-          "She managed to submit her application at the eleventh hour."
-        ],
-        "translations": {
-          "de": "In letzter Minute / In letzter Stunde",
-          "fr": "À la dernière minute / Au dernier moment"
         }
       },
       {
@@ -4449,20 +4119,6 @@
         }
       },
       {
-        "id": 317,
-        "idiom": "Make up for lost time",
-        "difficulty": 0,
-        "definition": "To do something quickly or with extra effort because you were unable to do it earlier.",
-        "examples": [
-          "After recovering from his illness, he worked hard to make up for lost time.",
-          "We're trying to make up for lost time on the project after the initial delays."
-        ],
-        "translations": {
-          "de": "verlorene Zeit aufholen",
-          "fr": "rattraper le temps perdu"
-        }
-      },
-      {
         "id": 318,
         "idiom": "Beat the clock.",
         "difficulty": 0,
@@ -4516,48 +4172,6 @@
         "translations": {
           "de": "Alle Jubeljahre einmal.",
           "fr": "Tous les trente-six du mois."
-        }
-      },
-      {
-        "id": 322,
-        "idiom": "Against the clock.",
-        "difficulty": 0,
-        "definition": "In a great hurry, with a limited amount of time.",
-        "examples": [
-          "We're working against the clock to get this report finished by morning.",
-          "The doctors worked against the clock to save the patient's life."
-        ],
-        "translations": {
-          "de": "Gegen die Uhr arbeiten.",
-          "fr": "Travailler contre la montre."
-        }
-      },
-      {
-        "id": 323,
-        "idiom": "Turn back the clock.",
-        "difficulty": 0,
-        "definition": "To wish things were as they were in the past; to return to an earlier time or state.",
-        "examples": [
-          "If I could turn back the clock, I would have studied harder for that exam.",
-          "You can't turn back the clock; what's done is done."
-        ],
-        "translations": {
-          "de": "Die Zeit zurückdrehen.",
-          "fr": "Remonter le temps."
-        }
-      },
-      {
-        "id": 324,
-        "idiom": "Burning the midnight oil",
-        "difficulty": 0,
-        "definition": "To work or study late into the night.",
-        "examples": [
-          "I had to burn the midnight oil to finish my essay before the deadline.",
-          "Students often burn the midnight oil during exam season."
-        ],
-        "translations": {
-          "de": "Bis spät in die Nacht arbeiten/lernen",
-          "fr": "Travailler jusqu'au bout de la nuit"
         }
       },
       {
@@ -4757,20 +4371,6 @@
         }
       },
       {
-        "id": 339,
-        "idiom": "Time flies when you're having fun.",
-        "difficulty": 0,
-        "definition": "An expression meaning that time seems to pass quickly when you are enjoying yourself.",
-        "examples": [
-          "I can't believe it's already midnight; time flies when you're having fun!",
-          "Our vacation went by so fast; time really flies when you're having fun."
-        ],
-        "translations": {
-          "de": "Die Zeit vergeht wie im Flug, wenn man Spaß hat.",
-          "fr": "Le temps passe vite quand on s'amuse."
-        }
-      },
-      {
         "id": 340,
         "idiom": "The eleventh hour.",
         "difficulty": 0,
@@ -4782,20 +4382,6 @@
         "translations": {
           "de": "In letzter Minute.",
           "fr": "À la dernière minute."
-        }
-      },
-      {
-        "id": 341,
-        "idiom": "Turn back the clock",
-        "difficulty": 0,
-        "definition": "To return to an earlier time or state. Often implies wishing to change past events.",
-        "examples": [
-          "If I could turn back the clock, I would have studied harder for that exam.",
-          "You can't turn back the clock; you just have to move forward."
-        ],
-        "translations": {
-          "de": "Die Zeit zurückdrehen.",
-          "fr": "Remonter le temps."
         }
       },
       {
@@ -4855,20 +4441,6 @@
         }
       },
       {
-        "id": 346,
-        "idiom": "Time flies.",
-        "difficulty": 0,
-        "definition": "Time passes very quickly.",
-        "examples": [
-          "It feels like only yesterday we started this project; time flies!",
-          "When you're having fun, time really flies."
-        ],
-        "translations": {
-          "de": "Die Zeit vergeht wie im Flug.",
-          "fr": "Le temps passe vite."
-        }
-      },
-      {
         "id": 347,
         "idiom": "On the dot",
         "difficulty": 0,
@@ -4884,7 +4456,7 @@
       },
       {
         "id": 348,
-        "idiom": "Race against the clock",
+        "idiom": "to race against the clock",
         "difficulty": 0,
         "definition": "To hurry to do something before a deadline or a specific time runs out.",
         "examples": [
@@ -5079,20 +4651,6 @@
         }
       },
       {
-        "id": 362,
-        "idiom": "Make up for lost time.",
-        "difficulty": 0,
-        "definition": "To do something quickly or more often to compensate for a period of inactivity or absence.",
-        "examples": [
-          "After being sick for a week, he had to work extra hard to make up for lost time.",
-          "They spent the whole weekend together to make up for lost time after she returned from her trip."
-        ],
-        "translations": {
-          "de": "Verlorene Zeit aufholen.",
-          "fr": "Rattraper le temps perdu."
-        }
-      },
-      {
         "id": 363,
         "idiom": "No time to lose",
         "difficulty": 0,
@@ -5201,34 +4759,6 @@
         "translations": {
           "de": "Ab und zu, gelegentlich",
           "fr": "De temps en temps, occasionnellement"
-        }
-      },
-      {
-        "id": 371,
-        "idiom": "Eleventh hour",
-        "difficulty": 0,
-        "definition": "At the last possible moment or very late.",
-        "examples": [
-          "We managed to finish the report at the eleventh hour, just before the deadline.",
-          "They cancelled the meeting at the eleventh hour, which caused a lot of inconvenience."
-        ],
-        "translations": {
-          "de": "In letzter Minute",
-          "fr": "À la dernière minute"
-        }
-      },
-      {
-        "id": 372,
-        "idiom": "Strike while the iron is hot.",
-        "difficulty": 0,
-        "definition": "To take action decisively and make the most of an opportunity while conditions are favorable.",
-        "examples": [
-          "The market is good right now, so we should strike while the iron is hot and launch our new product.",
-          "She got a job offer and decided to strike while the iron was hot, accepting it immediately rather than waiting."
-        ],
-        "translations": {
-          "de": "Das Eisen schmieden, solange es heiß ist.",
-          "fr": "Battre le fer tant qu'il est chaud."
         }
       },
       {
@@ -5557,20 +5087,6 @@
         }
       },
       {
-        "id": 396,
-        "idiom": "Head in the clouds.",
-        "difficulty": 0,
-        "definition": "To be unrealistic, dreamy, or impractical.",
-        "examples": [
-          "He always has his head in the clouds, dreaming about becoming a rock star.",
-          "You need to take your head out of the clouds and focus on reality."
-        ],
-        "translations": {
-          "de": "Den Kopf in den Wolken haben",
-          "fr": "Avoir la tête dans les nuages"
-        }
-      },
-      {
         "id": 397,
         "idiom": "Clear the air.",
         "difficulty": 0,
@@ -5694,19 +5210,6 @@
         "translations": {
           "de": "Ein Unglück kommt selten allein / Wenn es regnet, schüttet es",
           "fr": "Un malheur n'arrive jamais seul / Quand ça va mal, ça va très mal"
-        }
-      },
-      {
-        "id": 406,
-        "idiom": "Head in the clouds",
-        "difficulty": 0,
-        "definition": "To be lost in thought or daydreaming; to have impractical ideas.",
-        "examples": [
-          "He always has his head in the clouds, dreaming of unrealistic inventions."
-        ],
-        "translations": {
-          "de": "Den Kopf in den Wolken haben",
-          "fr": "Avoir la tête dans les nuages"
         }
       },
       {
@@ -6006,19 +5509,6 @@
     "section": "People/Personality",
     "idioms": [
       {
-        "id": 426,
-        "idiom": "A wolf in sheep's clothing.",
-        "difficulty": 0,
-        "definition": "A person who appears friendly or harmless but is actually hostile or dangerous.",
-        "examples": [
-          "Be careful of him; he seems nice, but he's a wolf in sheep's clothing."
-        ],
-        "translations": {
-          "de": "Ein Wolf im Schafspelz.",
-          "fr": "Un loup déguisé en agneau."
-        }
-      },
-      {
         "id": 427,
         "idiom": "Read between the lines.",
         "difficulty": 0,
@@ -6042,20 +5532,6 @@
         "translations": {
           "de": "Jemanden auf Abstand halten.",
           "fr": "Tenir quelqu'un à distance."
-        }
-      },
-      {
-        "id": 429,
-        "idiom": "A tough nut to crack.",
-        "difficulty": 0,
-        "definition": "A difficult person to deal with or a difficult problem to solve.",
-        "examples": [
-          "Our new boss is a tough nut to crack.",
-          "This math problem is a tough nut to crack."
-        ],
-        "translations": {
-          "de": "Ein harter Brocken.",
-          "fr": "Un os dur à ronger."
         }
       },
       {
@@ -6425,20 +5901,6 @@
     "section": "Color Idioms",
     "idioms": [
       {
-        "id": 455,
-        "idiom": "Feel blue.",
-        "difficulty": 0,
-        "definition": "To feel sad or depressed.",
-        "examples": [
-          "He's been feeling blue ever since his pet passed away.",
-          "Sometimes on rainy days, I tend to feel a little blue."
-        ],
-        "translations": {
-          "de": "Niedergeschlagen sein",
-          "fr": "Avoir le blues"
-        }
-      },
-      {
         "id": 456,
         "idiom": "Green with envy.",
         "difficulty": 0,
@@ -6450,20 +5912,6 @@
         "translations": {
           "de": "Grün vor Neid",
           "fr": "Vert de jalousie"
-        }
-      },
-      {
-        "id": 457,
-        "idiom": "Out of the blue.",
-        "difficulty": 0,
-        "definition": "Unexpectedly; without any warning.",
-        "examples": [
-          "Her old friend called her out of the blue after twenty years.",
-          "The idea came to him completely out of the blue."
-        ],
-        "translations": {
-          "de": "Aus heiterem Himmel",
-          "fr": "De but en blanc, à l'improviste"
         }
       },
       {
@@ -6551,20 +5999,6 @@
         }
       },
       {
-        "id": 464,
-        "idiom": "Green with envy",
-        "difficulty": 0,
-        "definition": "Very jealous.",
-        "examples": [
-          "When I saw her new car, I was green with envy.",
-          "He was green with envy over his brother's success."
-        ],
-        "translations": {
-          "de": "Grün vor Neid",
-          "fr": "Vert de jalousie"
-        }
-      },
-      {
         "id": 465,
         "idiom": "Black and white",
         "difficulty": 0,
@@ -6579,48 +6013,6 @@
         }
       },
       {
-        "id": 466,
-        "idiom": "Catch someone red-handed",
-        "difficulty": 0,
-        "definition": "To catch someone in the act of doing something wrong.",
-        "examples": [
-          "The police caught the thief red-handed trying to escape.",
-          "My mom caught me red-handed eating cookies before dinner."
-        ],
-        "translations": {
-          "de": "Auf frischer Tat ertappen",
-          "fr": "Prendre quelqu'un la main dans le sac"
-        }
-      },
-      {
-        "id": 467,
-        "idiom": "White elephant",
-        "difficulty": 0,
-        "definition": "A possession that is useless or troublesome, especially one that is expensive to maintain or difficult to dispose of.",
-        "examples": [
-          "That old factory became a white elephant for the city.",
-          "The new stadium turned out to be a white elephant, rarely used and costly to maintain."
-        ],
-        "translations": {
-          "de": "Ein weißer Elefant",
-          "fr": "Un éléphant blanc"
-        }
-      },
-      {
-        "id": 468,
-        "idiom": "Black sheep",
-        "difficulty": 0,
-        "definition": "A person who is considered a disgrace or embarrassment to their family or group.",
-        "examples": [
-          "He's always been considered the black sheep of the family because of his unusual lifestyle.",
-          "Despite his success, he was still seen as the black sheep by some relatives."
-        ],
-        "translations": {
-          "de": "Schwarzes Schaf",
-          "fr": "Le mouton noir"
-        }
-      },
-      {
         "id": 469,
         "idiom": "Red tape",
         "difficulty": 0,
@@ -6632,34 +6024,6 @@
         "translations": {
           "de": "Bürokratie / Roter Bürokratismus",
           "fr": "La paperasse / La bureaucratie"
-        }
-      },
-      {
-        "id": 470,
-        "idiom": "Caught red-handed",
-        "difficulty": 0,
-        "definition": "Caught in the act of doing something wrong or illegal.",
-        "examples": [
-          "The thief was caught red-handed trying to steal the jewels.",
-          "I caught my kids red-handed eating cookies before dinner."
-        ],
-        "translations": {
-          "de": "Auf frischer Tat ertappt werden",
-          "fr": "Être pris la main dans le sac / Être pris en flagrant délit"
-        }
-      },
-      {
-        "id": 471,
-        "idiom": "Black sheep of the family",
-        "difficulty": 1,
-        "definition": "A member of a family or group who is considered a disgrace or failure.",
-        "examples": [
-          "He's always been the black sheep of the family, choosing an unconventional path.",
-          "Every family has a black sheep, someone who marches to the beat of their own drum."
-        ],
-        "translations": {
-          "de": "das schwarze Schaf der Familie",
-          "fr": "le mouton noir de la famille"
         }
       },
       {
@@ -7209,20 +6573,6 @@
         }
       },
       {
-        "id": 508,
-        "idiom": "Elephant in the room",
-        "difficulty": 0,
-        "definition": "An obvious problem or controversial issue that no one wants to discuss.",
-        "examples": [
-          "The budget deficit was the elephant in the room at the meeting.",
-          "Everyone knew about the rising tensions, but no one addressed the elephant in the room."
-        ],
-        "translations": {
-          "de": "der Elefant im Raum",
-          "fr": "l'éléphant dans la pièce"
-        }
-      },
-      {
         "id": 509,
         "idiom": "Bite off more than one can chew",
         "difficulty": 0,
@@ -7248,20 +6598,6 @@
         "translations": {
           "de": "probleme angehen, wenn sie entstehen",
           "fr": "on avisera le moment venu"
-        }
-      },
-      {
-        "id": 511,
-        "idiom": "Take with a grain of salt",
-        "difficulty": 0,
-        "definition": "To not believe something completely; to be skeptical about its accuracy.",
-        "examples": [
-          "You should take his advice with a grain of salt, as he's not an expert.",
-          "Her claims should be taken with a grain of salt; she tends to exaggerate."
-        ],
-        "translations": {
-          "de": "mit Vorsicht genießen",
-          "fr": "prendre avec des pincettes"
         }
       },
       {
@@ -8453,34 +7789,6 @@
         }
       },
       {
-        "id": 593,
-        "idiom": "See eye to eye",
-        "difficulty": 0,
-        "definition": "To agree with someone; to have the same opinion.",
-        "examples": [
-          "My brother and I don't always see eye to eye on politics.",
-          "It's great when colleagues can see eye to eye on important decisions."
-        ],
-        "translations": {
-          "de": "Einer Meinung sein",
-          "fr": "Être du même avis"
-        }
-      },
-      {
-        "id": 594,
-        "idiom": "Give someone the cold shoulder",
-        "difficulty": 0,
-        "definition": "To intentionally ignore or be unfriendly towards someone.",
-        "examples": [
-          "After their argument, she gave him the cold shoulder.",
-          "He felt terrible when his friends gave him the cold shoulder after the misunderstanding."
-        ],
-        "translations": {
-          "de": "Jemandem die kalte Schulter zeigen",
-          "fr": "Faire la tête à quelqu'un"
-        }
-      },
-      {
         "id": 595,
         "idiom": "Clear the air",
         "difficulty": 0,
@@ -8593,20 +7901,6 @@
         }
       },
       {
-        "id": 603,
-        "idiom": "To see eye to eye",
-        "difficulty": 0,
-        "definition": "To agree completely with someone.",
-        "examples": [
-          "My sister and I don't always see eye to eye on politics.",
-          "Luckily, my boss and I see eye to eye on most issues."
-        ],
-        "translations": {
-          "de": "Einer Meinung sein",
-          "fr": "Être du même avis"
-        }
-      },
-      {
         "id": 604,
         "idiom": "To get on like a house on fire",
         "difficulty": 0,
@@ -8675,19 +7969,6 @@
         }
       },
       {
-        "id": 609,
-        "idiom": "To lend an ear",
-        "difficulty": 0,
-        "definition": "To listen sympathetically to someone.",
-        "examples": [
-          "I'm always here to lend an ear if you need to talk about what's bothering you."
-        ],
-        "translations": {
-          "de": "Ein offenes Ohr haben",
-          "fr": "Prêter une oreille attentive"
-        }
-      },
-      {
         "id": 610,
         "idiom": "Through thick and thin",
         "difficulty": 0,
@@ -8727,20 +8008,6 @@
         "translations": {
           "de": "Eine Schulter zum Ausweinen",
           "fr": "Une épaule pour pleurer"
-        }
-      },
-      {
-        "id": 613,
-        "idiom": "Get on someone's nerves",
-        "difficulty": 0,
-        "definition": "To irritate or annoy someone.",
-        "examples": [
-          "His constant complaining really gets on my nerves.",
-          "That loud music is getting on my nerves."
-        ],
-        "translations": {
-          "de": "Jemandem auf die Nerven gehen",
-          "fr": "Taper sur les nerfs de quelqu'un"
         }
       },
       {
@@ -8811,20 +8078,6 @@
         "translations": {
           "de": "Sich auf Anhieb blendend verstehen",
           "fr": "S'entendre à merveille / Très bien s'entendre"
-        }
-      },
-      {
-        "id": 619,
-        "idiom": "To give someone the cold shoulder",
-        "difficulty": 0,
-        "definition": "To intentionally ignore someone or be unfriendly towards them.",
-        "examples": [
-          "After their argument, she gave him the cold shoulder for a week.",
-          "I tried to talk to her, but she just gave me the cold shoulder."
-        ],
-        "translations": {
-          "de": "Jemandem die kalte Schulter zeigen",
-          "fr": "Faire la tête / Faire la gueule à quelqu'un"
         }
       },
       {
@@ -8951,20 +8204,6 @@
         "translations": {
           "de": "Heuchler / Hinterhältiger Mensch / Verräter",
           "fr": "Fourbe / Traître / Hypocrite"
-        }
-      },
-      {
-        "id": 629,
-        "idiom": "Have a heart of gold",
-        "difficulty": 0,
-        "definition": "To be very kind and generous.",
-        "examples": [
-          "She always helps others; she truly has a heart of gold.",
-          "Despite his tough exterior, he has a heart of gold."
-        ],
-        "translations": {
-          "de": "Ein Herz aus Gold haben",
-          "fr": "Avoir un cœur d'or"
         }
       },
       {
@@ -9101,20 +8340,6 @@
         "translations": {
           "de": "Vier Augen sehen mehr als zwei",
           "fr": "Deux avis valent mieux qu'un"
-        }
-      },
-      {
-        "id": 640,
-        "idiom": "A cold shoulder",
-        "difficulty": 0,
-        "definition": "Unfriendly treatment towards someone, often intentionally ignoring them.",
-        "examples": [
-          "After our argument, she gave me the cold shoulder all evening.",
-          "He got the cold shoulder from his colleagues after missing the deadline."
-        ],
-        "translations": {
-          "de": "Die kalte Schulter zeigen",
-          "fr": "Un accueil glacial / Faire la tête"
         }
       },
       {
@@ -9669,34 +8894,6 @@
         }
       },
       {
-        "id": 679,
-        "idiom": "Burn the midnight oil",
-        "difficulty": 0,
-        "definition": "To work or study late into the night.",
-        "examples": [
-          "I had to burn the midnight oil to finish my report before the deadline.",
-          "Students often burn the midnight oil during exam season."
-        ],
-        "translations": {
-          "de": "Bis spät in die Nacht arbeiten / Die Nächte durcharbeiten",
-          "fr": "Travailler tard dans la nuit / Veiller"
-        }
-      },
-      {
-        "id": 680,
-        "idiom": "In a nutshell",
-        "difficulty": 0,
-        "definition": "To summarize something in a very brief way.",
-        "examples": [
-          "In a nutshell, our new strategy is to focus on digital marketing.",
-          "Can you tell me what happened, in a nutshell?"
-        ],
-        "translations": {
-          "de": "Kurz gesagt / In Kürze",
-          "fr": "En un mot / En résumé"
-        }
-      },
-      {
         "id": 681,
         "idiom": "Hit the ground running",
         "difficulty": 0,
@@ -10101,34 +9298,6 @@
         }
       },
       {
-        "id": 710,
-        "idiom": "Up in the air.",
-        "difficulty": 0,
-        "definition": "Undecided or uncertain; not yet resolved.",
-        "examples": [
-          "The plans for the merger are still up in the air.",
-          "Our vacation dates are up in the air until we finalize the flight bookings."
-        ],
-        "translations": {
-          "de": "Ungewiss.",
-          "fr": "En suspens."
-        }
-      },
-      {
-        "id": 711,
-        "idiom": "The elephant in the room.",
-        "difficulty": 0,
-        "definition": "An obvious problem or controversial issue that everyone is aware of but no one wants to discuss.",
-        "examples": [
-          "His poor performance has been the elephant in the room at every team meeting.",
-          "The company's declining sales were the elephant in the room during the board meeting."
-        ],
-        "translations": {
-          "de": "Das Offensichtliche, das niemand anspricht.",
-          "fr": "L'éléphant au milieu du salon."
-        }
-      },
-      {
         "id": 712,
         "idiom": "Touch base.",
         "difficulty": 0,
@@ -10223,20 +9392,6 @@
         "translations": {
           "de": "Die i-Punkte setzen und die t-Striche machen / Sehr sorgfältig sein",
           "fr": "Mettre les points sur les i / Être méticuleux"
-        }
-      },
-      {
-        "id": 719,
-        "idiom": "Call it a day.",
-        "difficulty": 0,
-        "definition": "To stop working on something for the rest of the day.",
-        "examples": [
-          "It's 5 PM, let's call it a day and pick this up tomorrow.",
-          "We've made good progress, so I think we can call it a day now."
-        ],
-        "translations": {
-          "de": "Feierabend machen",
-          "fr": "En rester là, s'arrêter pour la journée"
         }
       },
       {
@@ -10373,20 +9528,6 @@
         "translations": {
           "de": "Zur Sache kommen / Zu den harten Fakten kommen.",
           "fr": "Aller droit au but / Entrer dans le vif du sujet."
-        }
-      },
-      {
-        "id": 730,
-        "idiom": "Keep your eye on the ball",
-        "difficulty": 0,
-        "definition": "To remain alert and focused on the important aspects of a situation or task.",
-        "examples": [
-          "In this fast-paced industry, you need to keep your eye on the ball.",
-          "It's easy to get distracted, but try to keep your eye on the ball during the meeting."
-        ],
-        "translations": {
-          "de": "Den Blick aufs Wesentliche richten / Aufmerksam bleiben",
-          "fr": "Rester concentré / Garder l'œil sur la balle"
         }
       },
       {
@@ -10668,20 +9809,6 @@
         }
       },
       {
-        "id": 751,
-        "idiom": "Get something off one's chest",
-        "difficulty": 0,
-        "definition": "To express something that has been bothering you for a long time.",
-        "examples": [
-          "I finally got it off my chest and told her how I really felt.",
-          "Talking to a therapist can help you get things off your chest."
-        ],
-        "translations": {
-          "de": "Sich etwas von der Seele reden",
-          "fr": "Vider son sac"
-        }
-      },
-      {
         "id": 752,
         "idiom": "Hold your tongue",
         "difficulty": 0,
@@ -10738,20 +9865,6 @@
         }
       },
       {
-        "id": 756,
-        "idiom": "Through the grapevine",
-        "difficulty": 0,
-        "definition": "To hear news informally, often as gossip, from one person to another.",
-        "examples": [
-          "I heard through the grapevine that he's getting married.",
-          "Don't trust everything you hear through the grapevine."
-        ],
-        "translations": {
-          "de": "Durch Buschfunk / Gerüchteküche.",
-          "fr": "Par la bande / Par ouï-dire."
-        }
-      },
-      {
         "id": 757,
         "idiom": "To get something off your chest",
         "difficulty": 0,
@@ -10791,20 +9904,6 @@
         "translations": {
           "de": "Auf den Zug aufspringen / Mit dem Strom schwimmen",
           "fr": "Prendre le train en marche / Suivre le mouvement"
-        }
-      },
-      {
-        "id": 760,
-        "idiom": "Get it off your chest",
-        "difficulty": 0,
-        "definition": "To talk about something that has been worrying you, often confessing it.",
-        "examples": [
-          "Tell me what's bothering you; you'll feel better once you get it off your chest.",
-          "He finally decided to get it off his chest and admit his mistake to his supervisor."
-        ],
-        "translations": {
-          "de": "Es sich von der Seele reden",
-          "fr": "Vider son sac"
         }
       },
       {
@@ -11155,20 +10254,6 @@
           "de": "Durch die Gerüchteküche erfahren",
           "fr": "L'apprendre par le bouche-à-oreille"
         }
-      },
-      {
-        "id": 787,
-        "idiom": "Hold one's peace",
-        "difficulty": 0,
-        "definition": "To remain silent; to not speak or intervene (often implying a final opportunity to object).",
-        "examples": [
-          "If anyone has any objections, speak now or forever hold your peace.",
-          "He chose to hold his peace during the heated argument."
-        ],
-        "translations": {
-          "de": "Schweigen",
-          "fr": "Garder le silence"
-        }
       }
     ]
   },
@@ -11203,19 +10288,6 @@
         }
       },
       {
-        "id": 790,
-        "idiom": "Keep a straight face",
-        "difficulty": 0,
-        "definition": "To manage to look serious and avoid laughing or showing emotion, especially when something is funny.",
-        "examples": [
-          "It was so hard to keep a straight face when he told that ridiculous joke."
-        ],
-        "translations": {
-          "de": "ernst bleiben",
-          "fr": "garder son sérieux"
-        }
-      },
-      {
         "id": 791,
         "idiom": "Have a change of heart",
         "difficulty": 0,
@@ -11229,21 +10301,8 @@
         }
       },
       {
-        "id": 792,
-        "idiom": "Keep your chin up",
-        "difficulty": 0,
-        "definition": "To stay cheerful and brave in a difficult situation.",
-        "examples": [
-          "I know things are tough right now, but keep your chin up; it'll get better."
-        ],
-        "translations": {
-          "de": "Kopf hoch!",
-          "fr": "garde le moral"
-        }
-      },
-      {
         "id": 793,
-        "idiom": "Have a chip on your shoulder",
+        "idiom": "to have a chip on your shoulder",
         "difficulty": 0,
         "definition": "To hold a grudge or be easily angered because of a past slight or perceived injustice.",
         "examples": [
@@ -11253,90 +10312,6 @@
         "translations": {
           "de": "Einen Groll hegen",
           "fr": "Avoir la rancune tenace"
-        }
-      },
-      {
-        "id": 794,
-        "idiom": "Blow off steam",
-        "difficulty": 0,
-        "definition": "To do something to release pent-up anger or energy.",
-        "examples": [
-          "After a stressful day, I like to go for a run to blow off steam.",
-          "He went to the gym to blow off some steam after the frustrating meeting."
-        ],
-        "translations": {
-          "de": "Dampf ablassen",
-          "fr": "Décompresser"
-        }
-      },
-      {
-        "id": 795,
-        "idiom": "Get cold feet",
-        "difficulty": 0,
-        "definition": "To become nervous or scared about doing something you had planned to do, often at the last minute.",
-        "examples": [
-          "She was going to bungee jump, but she got cold feet at the last moment.",
-          "He got cold feet about the wedding and called it off."
-        ],
-        "translations": {
-          "de": "Kalte Füße bekommen",
-          "fr": "Avoir la frousse"
-        }
-      },
-      {
-        "id": 796,
-        "idiom": "To be on cloud nine",
-        "difficulty": 0,
-        "definition": "To be extremely happy.",
-        "examples": [
-          "After winning the lottery, he was on cloud nine for weeks.",
-          "She's been on cloud nine ever since her engagement."
-        ],
-        "translations": {
-          "de": "Im siebten Himmel sein",
-          "fr": "Être sur un petit nuage"
-        }
-      },
-      {
-        "id": 797,
-        "idiom": "Have a chip on one's shoulder",
-        "difficulty": 1,
-        "definition": "To hold a grudge or be resentful about something, often seeming to invite conflict.",
-        "examples": [
-          "He's always had a chip on his shoulder ever since he didn't get promoted.",
-          "She seems to have a chip on her shoulder about her past failures."
-        ],
-        "translations": {
-          "de": "Einen Groll hegen",
-          "fr": "Avoir la rancune tenace"
-        }
-      },
-      {
-        "id": 798,
-        "idiom": "Bite one's tongue",
-        "difficulty": 0,
-        "definition": "To refrain from speaking, often to avoid saying something inappropriate or to avoid an argument.",
-        "examples": [
-          "I had to bite my tongue to stop myself from criticizing her poor decision.",
-          "He bit his tongue and didn't comment on her bad driving."
-        ],
-        "translations": {
-          "de": "Sich auf die Zunge beißen",
-          "fr": "Tourner sa langue sept fois dans sa bouche"
-        }
-      },
-      {
-        "id": 799,
-        "idiom": "Butterflies in one's stomach",
-        "difficulty": 0,
-        "definition": "A fluttering sensation in the stomach caused by nervousness or excitement.",
-        "examples": [
-          "I always get butterflies in my stomach before a big presentation.",
-          "She had butterflies in her stomach on her first date with him."
-        ],
-        "translations": {
-          "de": "Schmetterlinge im Bauch haben",
-          "fr": "Avoir des papillons dans le ventre"
         }
       },
       {
@@ -11368,20 +10343,6 @@
         }
       },
       {
-        "id": 802,
-        "idiom": "Bite your tongue",
-        "difficulty": 0,
-        "definition": "To stop yourself from saying something that you want to say, often because it would be inappropriate or cause trouble.",
-        "examples": [
-          "I had to bite my tongue to stop myself from telling him off.",
-          "Sometimes it's better to bite your tongue and just listen."
-        ],
-        "translations": {
-          "de": "Sich auf die Zunge beißen",
-          "fr": "Tourner sa langue sept fois dans sa bouche / Se retenir de parler"
-        }
-      },
-      {
         "id": 803,
         "idiom": "Have mixed feelings",
         "difficulty": 0,
@@ -11393,34 +10354,6 @@
         "translations": {
           "de": "Gemischte Gefühle haben",
           "fr": "Avoir des sentiments partagés"
-        }
-      },
-      {
-        "id": 804,
-        "idiom": "To feel under the weather",
-        "difficulty": 0,
-        "definition": "To feel slightly unwell or sick.",
-        "examples": [
-          "I'm feeling a bit under the weather today, so I might leave early.",
-          "She's been under the weather all week."
-        ],
-        "translations": {
-          "de": "Sich unwohl fühlen",
-          "fr": "Ne pas se sentir dans son assiette"
-        }
-      },
-      {
-        "id": 805,
-        "idiom": "To have mixed feelings",
-        "difficulty": 0,
-        "definition": "To have conflicting emotions or opinions about something.",
-        "examples": [
-          "I have mixed feelings about moving to a new city; I'm excited but also nervous.",
-          "She had mixed feelings about the promotion, as it meant more responsibility."
-        ],
-        "translations": {
-          "de": "Gemischte Gefühle haben",
-          "fr": "Avoir des sentiments mitigés"
         }
       },
       {
@@ -11466,20 +10399,6 @@
         }
       },
       {
-        "id": 809,
-        "idiom": "On cloud nine",
-        "difficulty": 0,
-        "definition": "To be extremely happy.",
-        "examples": [
-          "After getting the promotion, he was on cloud nine.",
-          "They've been on cloud nine ever since their baby was born."
-        ],
-        "translations": {
-          "de": "Im siebten Himmel sein",
-          "fr": "Être au septième ciel"
-        }
-      },
-      {
         "id": 810,
         "idiom": "Feel out of sorts",
         "difficulty": 0,
@@ -11491,20 +10410,6 @@
         "translations": {
           "de": "Sich nicht wohlfühlen / Verstimmt sein",
           "fr": "Ne pas être dans son assiette"
-        }
-      },
-      {
-        "id": 811,
-        "idiom": "Get something off your chest",
-        "difficulty": 0,
-        "definition": "To talk about something that has been worrying you, often confessing it.",
-        "examples": [
-          "I need to get something off my chest; I've been feeling guilty about it.",
-          "Talking to a friend can help you get things off your chest."
-        ],
-        "translations": {
-          "de": "Sich etwas von der Seele reden",
-          "fr": "Vider son sac"
         }
       },
       {
@@ -11533,32 +10438,6 @@
         "translations": {
           "de": "Haltung bewahren / Keine Gefühle zeigen",
           "fr": "Garder son sang-froid"
-        }
-      },
-      {
-        "id": 814,
-        "idiom": "Be on cloud nine",
-        "difficulty": 0,
-        "definition": "To be extremely happy.",
-        "examples": [
-          "After winning the lottery, she was on cloud nine."
-        ],
-        "translations": {
-          "de": "Im siebten Himmel sein",
-          "fr": "Être au septième ciel"
-        }
-      },
-      {
-        "id": 815,
-        "idiom": "Have butterflies in one's stomach",
-        "difficulty": 0,
-        "definition": "To feel nervous or anxious, often before an important event.",
-        "examples": [
-          "I always get butterflies in my stomach before a big presentation."
-        ],
-        "translations": {
-          "de": "Schmetterlinge im Bauch haben",
-          "fr": "Avoir des papillons dans le ventre"
         }
       },
       {
@@ -11671,48 +10550,6 @@
         }
       },
       {
-        "id": 824,
-        "idiom": "Bite your tongue.",
-        "difficulty": 0,
-        "definition": "To stop yourself from saying something, often because it's inappropriate or would cause trouble.",
-        "examples": [
-          "I wanted to criticize his idea, but I bit my tongue.",
-          "She had to bite her tongue to avoid arguing with her boss."
-        ],
-        "translations": {
-          "de": "Sich auf die Zunge beißen.",
-          "fr": "Se mordre la langue."
-        }
-      },
-      {
-        "id": 825,
-        "idiom": "Get cold feet.",
-        "difficulty": 0,
-        "definition": "To suddenly become nervous or have second thoughts about doing something, usually before an important event.",
-        "examples": [
-          "He was going to propose, but he got cold feet at the last minute.",
-          "She got cold feet before her driving test and rescheduled it."
-        ],
-        "translations": {
-          "de": "Kalte Füße bekommen.",
-          "fr": "Se dégonfler."
-        }
-      },
-      {
-        "id": 826,
-        "idiom": "Over the moon.",
-        "difficulty": 0,
-        "definition": "Extremely happy or delighted.",
-        "examples": [
-          "She was over the moon when she heard she got the job.",
-          "The whole family was over the moon about the new baby."
-        ],
-        "translations": {
-          "de": "Überglücklich sein.",
-          "fr": "Être aux anges."
-        }
-      },
-      {
         "id": 827,
         "idiom": "In high spirits",
         "difficulty": 0,
@@ -11724,34 +10561,6 @@
         "translations": {
           "de": "Gut gelaunt",
           "fr": "De bonne humeur / En pleine forme"
-        }
-      },
-      {
-        "id": 828,
-        "idiom": "Be on cloud nine.",
-        "difficulty": 0,
-        "definition": "To be extremely happy or ecstatic.",
-        "examples": [
-          "Ever since she got promoted, she's been on cloud nine.",
-          "After winning the championship, the team was on cloud nine."
-        ],
-        "translations": {
-          "de": "Im siebten Himmel sein.",
-          "fr": "Être au septième ciel."
-        }
-      },
-      {
-        "id": 829,
-        "idiom": "Bite one's tongue.",
-        "difficulty": 0,
-        "definition": "To refrain from speaking, often to avoid saying something inappropriate or causing offense.",
-        "examples": [
-          "I had to bite my tongue to stop myself from criticizing his plan.",
-          "It was difficult, but I bit my tongue and didn't comment on her mistake."
-        ],
-        "translations": {
-          "de": "Sich auf die Zunge beißen.",
-          "fr": "Tourner sa langue sept fois dans sa bouche / Se retenir de parler."
         }
       },
       {
@@ -11797,62 +10606,6 @@
         }
       },
       {
-        "id": 833,
-        "idiom": "Butterflies in your stomach",
-        "difficulty": 0,
-        "definition": "A nervous feeling in one's stomach, typically before a significant event or when feeling anxious or excited.",
-        "examples": [
-          "I always get butterflies in my stomach before a big presentation.",
-          "She had butterflies in her stomach on her first date."
-        ],
-        "translations": {
-          "de": "Lampenfieber haben / Schmetterlinge im Bauch haben",
-          "fr": "avoir des papillons dans le ventre"
-        }
-      },
-      {
-        "id": 834,
-        "idiom": "To feel blue",
-        "difficulty": 0,
-        "definition": "To feel sad or depressed.",
-        "examples": [
-          "I sometimes feel blue on rainy days.",
-          "She's been feeling a bit blue since her pet passed away."
-        ],
-        "translations": {
-          "de": "Traurig sein / Niedergeschlagen sein",
-          "fr": "Avoir le cafard"
-        }
-      },
-      {
-        "id": 835,
-        "idiom": "To have a chip on one's shoulder",
-        "difficulty": 0,
-        "definition": "To hold a grudge or have a persistent feeling of resentment, especially due to a past injustice.",
-        "examples": [
-          "He's always complaining; he seems to have a chip on his shoulder about his promotion.",
-          "Don't talk to him about his past failures, he still has a chip on his shoulder."
-        ],
-        "translations": {
-          "de": "Einen Groll hegen / Eine empfindliche Stelle haben",
-          "fr": "Avoir une dent contre quelqu'un / Avoir un complexe"
-        }
-      },
-      {
-        "id": 836,
-        "idiom": "To bite one's tongue",
-        "difficulty": 0,
-        "definition": "To make an effort to not say something that one wants to say, often to avoid conflict or being rude.",
-        "examples": [
-          "I had to bite my tongue to stop myself from criticizing her idea.",
-          "She bit her tongue rather than argue with her boss."
-        ],
-        "translations": {
-          "de": "Sich auf die Zunge beißen",
-          "fr": "Tourner sa langue sept fois dans sa bouche / Se mordre la langue"
-        }
-      },
-      {
         "id": 837,
         "idiom": "To keep a straight face",
         "difficulty": 0,
@@ -11867,20 +10620,6 @@
         }
       },
       {
-        "id": 838,
-        "idiom": "To be green with envy",
-        "difficulty": 0,
-        "definition": "To be very jealous.",
-        "examples": [
-          "When I saw her new car, I was green with envy.",
-          "He was green with envy when his colleague got the promotion."
-        ],
-        "translations": {
-          "de": "Grün vor Neid sein",
-          "fr": "Être vert de jalousie"
-        }
-      },
-      {
         "id": 839,
         "idiom": "To get something off one's chest",
         "difficulty": 0,
@@ -11892,48 +10631,6 @@
         "translations": {
           "de": "Sich etwas von der Seele reden",
           "fr": "Vider son sac"
-        }
-      },
-      {
-        "id": 840,
-        "idiom": "Have a frog in one's throat",
-        "difficulty": 0,
-        "definition": "To have difficulty speaking because of hoarseness or a cough.",
-        "examples": [
-          "Excuse me, I have a frog in my throat; I need some water.",
-          "The singer had a frog in her throat during the first song."
-        ],
-        "translations": {
-          "de": "Einen Frosch im Hals haben",
-          "fr": "Avoir un chat dans la gorge"
-        }
-      },
-      {
-        "id": 841,
-        "idiom": "A chip on your shoulder",
-        "difficulty": 0,
-        "definition": "To hold a grudge or resentment, often due to a past wrong or perceived injustice.",
-        "examples": [
-          "He always seems to walk around with a chip on his shoulder.",
-          "Her difficult childhood left her with a chip on her shoulder."
-        ],
-        "translations": {
-          "de": "einen Groll hegen",
-          "fr": "avoir une dent contre quelqu'un"
-        }
-      },
-      {
-        "id": 842,
-        "idiom": "Have a chip on one's shoulder.",
-        "difficulty": 0,
-        "definition": "To hold a grudge or be resentful about something, often showing an aggressive or defiant attitude.",
-        "examples": [
-          "He's always had a chip on his shoulder since he was unfairly dismissed from his last job.",
-          "Don't go into that meeting with a chip on your shoulder; try to be open-minded."
-        ],
-        "translations": {
-          "de": "Groll hegen/Einen Komplex haben.",
-          "fr": "Avoir une rancune tenace."
         }
       },
       {
@@ -11962,131 +10659,6 @@
         "translations": {
           "de": "Sich kneifen (um zu sehen, ob man träumt).",
           "fr": "Se pincer (pour vérifier si on ne rêve pas)."
-        }
-      },
-      {
-        "id": 845,
-        "idiom": "To have a chip on your shoulder",
-        "difficulty": 0,
-        "definition": "To harbor resentment or a grievance about something, often showing a defensive or aggressive attitude.",
-        "examples": [
-          "He's always had a chip on his shoulder ever since he didn't get the promotion.",
-          "Don't approach him with that chip on your shoulder; it won't help."
-        ],
-        "translations": {
-          "de": "Einen Groll hegen / Ein Hühnchen mit jemandem zu rupfen haben (negative Konnotation)",
-          "fr": "Avoir une dent contre quelqu'un / Avoir un complexe d'infériorité (avec agressivité)"
-        }
-      },
-      {
-        "id": 846,
-        "idiom": "To be over the moon",
-        "difficulty": 0,
-        "definition": "To be extremely happy or delighted.",
-        "examples": [
-          "She was over the moon when she heard the good news.",
-          "The team was over the moon after winning the championship."
-        ],
-        "translations": {
-          "de": "Überglücklich sein / Aus dem Häuschen sein",
-          "fr": "Être aux anges / Être fou de joie"
-        }
-      },
-      {
-        "id": 847,
-        "idiom": "Be green with envy",
-        "difficulty": 0,
-        "definition": "To be very jealous.",
-        "examples": [
-          "When she saw his new sports car, she was green with envy.",
-          "All her classmates were green with envy when she won the scholarship."
-        ],
-        "translations": {
-          "de": "Grün vor Neid sein.",
-          "fr": "Être vert de jalousie."
-        }
-      },
-      {
-        "id": 848,
-        "idiom": "Have cold feet.",
-        "difficulty": 0,
-        "definition": "To feel nervous or hesitant about doing something, especially something important.",
-        "examples": [
-          "He was supposed to propose, but he got cold feet at the last minute.",
-          "I almost quit the marathon, but I didn't want to have cold feet."
-        ],
-        "translations": {
-          "de": "Kalte Füße bekommen / Bedenken haben.",
-          "fr": "Avoir les pieds froids / Hésiter."
-        }
-      },
-      {
-        "id": 849,
-        "idiom": "Keep your chin up.",
-        "difficulty": 0,
-        "definition": "To stay cheerful and courageous in a difficult situation.",
-        "examples": [
-          "I know you lost your job, but keep your chin up; things will get better.",
-          "Despite the setbacks, she always manages to keep her chin up."
-        ],
-        "translations": {
-          "de": "Kopf hoch! / Nicht den Mut verlieren.",
-          "fr": "Garder le moral / Courage !"
-        }
-      },
-      {
-        "id": 850,
-        "idiom": "Blow off steam.",
-        "difficulty": 0,
-        "definition": "To do or say something that helps you to get rid of strong feelings, especially anger or stress.",
-        "examples": [
-          "After a long week, I like to go for a run to blow off steam.",
-          "He went to the gym to blow off steam after the stressful meeting."
-        ],
-        "translations": {
-          "de": "Dampf ablassen / Sich abreagieren.",
-          "fr": "Décompresser / Se défouler."
-        }
-      },
-      {
-        "id": 851,
-        "idiom": "Get something off your chest.",
-        "difficulty": 0,
-        "definition": "To talk about something that has been worrying you for a long time.",
-        "examples": [
-          "I need to get something off my chest; I've been upset about this for weeks.",
-          "Talking to my friend helped me to get it off my chest."
-        ],
-        "translations": {
-          "de": "Sich etwas von der Seele reden / Das Herz ausschütten.",
-          "fr": "Vider son sac / Se libérer d'un poids."
-        }
-      },
-      {
-        "id": 852,
-        "idiom": "Have a chip on your shoulder.",
-        "difficulty": 0,
-        "definition": "To hold a grudge or feel resentful about something, often because of a past injustice.",
-        "examples": [
-          "He has had a chip on his shoulder ever since he didn't get the promotion.",
-          "Don't go into that meeting with a chip on your shoulder; try to be open-minded."
-        ],
-        "translations": {
-          "de": "Groll hegen / Ein Groll auf etwas haben.",
-          "fr": "Avoir une dent contre quelqu'un / Avoir un complexe."
-        }
-      },
-      {
-        "id": 853,
-        "idiom": "Have butterflies in your stomach.",
-        "difficulty": 0,
-        "definition": "To feel very nervous or excited about something.",
-        "examples": [
-          "Before my presentation, I always have butterflies in my stomach."
-        ],
-        "translations": {
-          "de": "Schmetterlinge im Bauch haben.",
-          "fr": "Avoir des papillons dans le ventre."
         }
       },
       {
@@ -12127,20 +10699,6 @@
         "translations": {
           "de": "Sich zusammenreißen",
           "fr": "Se ressaisir"
-        }
-      },
-      {
-        "id": 857,
-        "idiom": "Feeling under the weather",
-        "difficulty": 0,
-        "definition": "To feel unwell or slightly ill.",
-        "examples": [
-          "I'm feeling a bit under the weather today, so I'm going to stay home.",
-          "She's been feeling under the weather since yesterday."
-        ],
-        "translations": {
-          "de": "Sich unwohl fühlen / Sich angeschlagen fühlen",
-          "fr": "Se sentir un peu patraque / Ne pas être dans son assiette"
         }
       },
       {
@@ -12186,34 +10744,6 @@
         }
       },
       {
-        "id": 861,
-        "idiom": "Have butterflies in your stomach",
-        "difficulty": 0,
-        "definition": "To feel nervous or anxious, especially before an important event.",
-        "examples": [
-          "Before my first presentation, I always have butterflies in my stomach.",
-          "He had butterflies in his stomach before his wedding day."
-        ],
-        "translations": {
-          "de": "Schmetterlinge im Bauch haben",
-          "fr": "Avoir des papillons dans le ventre"
-        }
-      },
-      {
-        "id": 862,
-        "idiom": "To keep one's chin up",
-        "difficulty": 0,
-        "definition": "To remain cheerful and positive despite difficulties.",
-        "examples": [
-          "Things are tough right now, but try to keep your chin up.",
-          "Even after the setback, he managed to keep his chin up and keep working."
-        ],
-        "translations": {
-          "de": "Den Kopf nicht hängen lassen / Optimistisch bleiben",
-          "fr": "Garder le moral / Garder la tête haute"
-        }
-      },
-      {
         "id": 863,
         "idiom": "To have a change of heart",
         "difficulty": 0,
@@ -12239,20 +10769,6 @@
         "translations": {
           "de": "Einen Groll hegen",
           "fr": "Garder rancune"
-        }
-      },
-      {
-        "id": 865,
-        "idiom": "Let off steam",
-        "difficulty": 0,
-        "definition": "To release strong feelings, especially anger or frustration, by expressing them in a harmless way.",
-        "examples": [
-          "After a stressful day at work, I like to go for a run to let off steam.",
-          "She needs to let off steam after all that pressure from her boss."
-        ],
-        "translations": {
-          "de": "Dampf ablassen",
-          "fr": "Se défouler / Évacuer le stress"
         }
       },
       {
@@ -12353,61 +10869,6 @@
         }
       },
       {
-        "id": 873,
-        "idiom": "Have butterflies in one's stomach.",
-        "difficulty": 0,
-        "definition": "To feel nervous or anxious, usually before a significant event.",
-        "examples": [
-          "Before her first public speech, she always has butterflies in her stomach.",
-          "I had butterflies in my stomach on the morning of my wedding."
-        ],
-        "translations": {
-          "de": "Schmetterlinge im Bauch haben.",
-          "fr": "Avoir des papillons dans le ventre."
-        }
-      },
-      {
-        "id": 874,
-        "idiom": "Be over the moon",
-        "difficulty": 0,
-        "definition": "To be extremely happy or delighted.",
-        "examples": [
-          "When she heard she got the promotion, she was absolutely over the moon."
-        ],
-        "translations": {
-          "de": "Himmelhochjauchzend sein",
-          "fr": "Être aux anges"
-        }
-      },
-      {
-        "id": 875,
-        "idiom": "A chip on your shoulder.",
-        "difficulty": 0,
-        "definition": "To hold a grudge or feel resentful because of a past slight or injustice.",
-        "examples": [
-          "He's always had a chip on his shoulder ever since he didn't get that job.",
-          "She walks around with a chip on her shoulder, always ready for an argument."
-        ],
-        "translations": {
-          "de": "Groll hegen / Ein Hühnchen zu rupfen haben.",
-          "fr": "Avoir une rancune tenace."
-        }
-      },
-      {
-        "id": 876,
-        "idiom": "Lose your temper",
-        "difficulty": 0,
-        "definition": "To suddenly become angry.",
-        "examples": [
-          "He lost his temper when he found out his car had been damaged.",
-          "It's important to learn how not to lose your temper in frustrating situations."
-        ],
-        "translations": {
-          "de": "Die Beherrschung verlieren",
-          "fr": "Perdre son sang-froid"
-        }
-      },
-      {
         "id": 877,
         "idiom": "To keep your chin up",
         "difficulty": 0,
@@ -12419,20 +10880,6 @@
         "translations": {
           "de": "Kopf hoch",
           "fr": "Garder le moral / Ne pas se décourager"
-        }
-      },
-      {
-        "id": 878,
-        "idiom": "In the dumps",
-        "difficulty": 0,
-        "definition": "Feeling depressed, unhappy, or low-spirited.",
-        "examples": [
-          "She's been in the dumps ever since her pet died.",
-          "Don't be in the dumps, things will get better soon."
-        ],
-        "translations": {
-          "de": "deprimiert sein / Trübsal blasen",
-          "fr": "avoir le cafard / avoir le bourdon"
         }
       },
       {
@@ -12478,34 +10925,6 @@
         }
       },
       {
-        "id": 882,
-        "idiom": "Have mixed feelings.",
-        "difficulty": 0,
-        "definition": "To feel both positive and negative emotions about something at the same time.",
-        "examples": [
-          "I have mixed feelings about moving to a new city; I'm excited but also sad to leave friends.",
-          "She had mixed feelings about the promotion, as it meant more responsibility but also more stress."
-        ],
-        "translations": {
-          "de": "Gemischte Gefühle haben.",
-          "fr": "Avoir des sentiments mitigés."
-        }
-      },
-      {
-        "id": 883,
-        "idiom": "Be down in the dumps",
-        "difficulty": 0,
-        "definition": "To be sad or depressed.",
-        "examples": [
-          "She's been down in the dumps ever since her dog ran away.",
-          "Don't be down in the dumps; things will get better."
-        ],
-        "translations": {
-          "de": "Niedergeschlagen sein / Deprimiert sein",
-          "fr": "Avoir le moral à zéro / Broyer du noir"
-        }
-      },
-      {
         "id": 884,
         "idiom": "Pour your heart out",
         "difficulty": 0,
@@ -12517,20 +10936,6 @@
         "translations": {
           "de": "Sein Herz ausschütten",
           "fr": "Vider son sac"
-        }
-      },
-      {
-        "id": 885,
-        "idiom": "Bury your head in the sand.",
-        "difficulty": 0,
-        "definition": "To avoid a difficult situation by pretending it doesn't exist or refusing to acknowledge it.",
-        "examples": [
-          "You can't just bury your head in the sand and hope the problem goes away on its own.",
-          "Ignoring the mounting bills is just burying your head in the sand; you need to address them."
-        ],
-        "translations": {
-          "de": "Den Kopf in den Sand stecken.",
-          "fr": "Faire l'autruche / Se voiler la face."
         }
       },
       {
@@ -12573,20 +10978,6 @@
         "translations": {
           "de": "Sich nicht wohlfühlen",
           "fr": "Ne pas se sentir dans son assiette"
-        }
-      },
-      {
-        "id": 889,
-        "idiom": "Bury one's head in the sand",
-        "difficulty": 0,
-        "definition": "To avoid a difficult situation by pretending it doesn't exist.",
-        "examples": [
-          "You can't just bury your head in the sand; you need to address the problem.",
-          "Ignoring climate change is like burying your head in the sand."
-        ],
-        "translations": {
-          "de": "Den Kopf in den Sand stecken",
-          "fr": "Faire l'autruche"
         }
       },
       {
@@ -12642,20 +11033,6 @@
         "translations": {
           "de": "Aus der Haut fahren",
           "fr": "Piquer une crise"
-        }
-      },
-      {
-        "id": 894,
-        "idiom": "A chip on one's shoulder",
-        "difficulty": 0,
-        "definition": "To hold a grudge or have an angry attitude because of a past grievance.",
-        "examples": [
-          "He's always had a chip on his shoulder since he didn't get promoted.",
-          "Don't talk to him about his past; he has a real chip on his shoulder about it."
-        ],
-        "translations": {
-          "de": "Groll hegen",
-          "fr": "Avoir une dent contre quelqu'un"
         }
       },
       {
@@ -12869,20 +11246,6 @@
         }
       },
       {
-        "id": 910,
-        "idiom": "Rain cats and dogs",
-        "difficulty": 0,
-        "definition": "To rain very heavily.",
-        "examples": [
-          "Don't forget your umbrella; it's raining cats and dogs outside.",
-          "We had to cancel the picnic because it started raining cats and dogs."
-        ],
-        "translations": {
-          "de": "In Strömen regnen",
-          "fr": "Pleuvoir des cordes"
-        }
-      },
-      {
         "id": 911,
         "idiom": "Let sleeping dogs lie",
         "difficulty": 0,
@@ -12936,20 +11299,6 @@
         "translations": {
           "de": "Eine Schlange im Gras",
           "fr": "Une vipère"
-        }
-      },
-      {
-        "id": 915,
-        "idiom": "A fish out of water.",
-        "difficulty": 0,
-        "definition": "Someone who is in an unfamiliar and uncomfortable situation.",
-        "examples": [
-          "At the formal dinner, he felt like a fish out of water.",
-          "Moving to a big city, she felt like a fish out of water for the first few weeks."
-        ],
-        "translations": {
-          "de": "Sich wie ein Fisch auf dem Trockenen fühlen.",
-          "fr": "Se sentir comme un poisson hors de l'eau."
         }
       },
       {
@@ -13065,20 +11414,6 @@
         }
       },
       {
-        "id": 924,
-        "idiom": "A wild goose chase.",
-        "difficulty": 0,
-        "definition": "A foolish and hopeless pursuit of something unattainable.",
-        "examples": [
-          "Searching for that rare antique online turned out to be a wild goose chase.",
-          "The detective was sent on a wild goose chase after a false lead."
-        ],
-        "translations": {
-          "de": "Eine vergebliche Suche.",
-          "fr": "Une course folle."
-        }
-      },
-      {
         "id": 925,
         "idiom": "Hold your horses.",
         "difficulty": 0,
@@ -13163,20 +11498,6 @@
         }
       },
       {
-        "id": 931,
-        "idiom": "Wild goose chase",
-        "difficulty": 0,
-        "definition": "A foolish and hopeless pursuit of something unattainable.",
-        "examples": [
-          "The treasure hunt turned out to be a wild goose chase.",
-          "I spent all day on a wild goose chase trying to find that obscure document."
-        ],
-        "translations": {
-          "de": "Sinnloses Unterfangen",
-          "fr": "Une chasse à l'oie sauvage"
-        }
-      },
-      {
         "id": 932,
         "idiom": "A fly in the ointment",
         "difficulty": 2,
@@ -13202,20 +11523,6 @@
         "translations": {
           "de": "Jeder Hund hat seinen Tag/Jeder kommt mal dran.",
           "fr": "À chacun son tour/Chacun son jour de gloire."
-        }
-      },
-      {
-        "id": 934,
-        "idiom": "The early bird catches the worm.",
-        "difficulty": 0,
-        "definition": "Success comes to those who prepare well and start early.",
-        "examples": [
-          "If you want to get good seats, you'll have to arrive early; the early bird catches the worm.",
-          "He always gets to work an hour before anyone else because he believes the early bird catches the worm."
-        ],
-        "translations": {
-          "de": "Der frühe Vogel fängt den Wurm.",
-          "fr": "Le monde appartient à ceux qui se lèvent tôt."
         }
       },
       {
@@ -13247,34 +11554,6 @@
         }
       },
       {
-        "id": 937,
-        "idiom": "Like a fish out of water",
-        "difficulty": 0,
-        "definition": "Feeling uncomfortable or out of place in a particular situation.",
-        "examples": [
-          "At the formal dinner, I felt like a fish out of water.",
-          "He's an artist surrounded by engineers; he often feels like a fish out of water."
-        ],
-        "translations": {
-          "de": "Wie ein Fisch auf dem Trockenen",
-          "fr": "Comme un poisson hors de l'eau"
-        }
-      },
-      {
-        "id": 938,
-        "idiom": "Curiosity killed the cat.",
-        "difficulty": 0,
-        "definition": "Being too curious can lead to trouble or danger.",
-        "examples": [
-          "You keep asking too many questions about that secret project; remember, curiosity killed the cat.",
-          "I wanted to know what was in the locked box, but then I thought, curiosity killed the cat."
-        ],
-        "translations": {
-          "de": "Neugier ist der Katze Tod.",
-          "fr": "La curiosité est un vilain défaut."
-        }
-      },
-      {
         "id": 939,
         "idiom": "As busy as a bee.",
         "difficulty": 0,
@@ -13303,19 +11582,6 @@
         }
       },
       {
-        "id": 941,
-        "idiom": "Rain cats and dogs.",
-        "difficulty": 0,
-        "definition": "To rain very heavily.",
-        "examples": [
-          "Don't forget your umbrella; it's raining cats and dogs out there!"
-        ],
-        "translations": {
-          "de": "Es regnet Bindfäden.",
-          "fr": "Il pleut des cordes."
-        }
-      },
-      {
         "id": 942,
         "idiom": "A drop in the ocean.",
         "difficulty": 0,
@@ -13326,20 +11592,6 @@
         "translations": {
           "de": "Ein Tropfen auf den heißen Stein.",
           "fr": "Une goutte d'eau dans l'océan."
-        }
-      },
-      {
-        "id": 943,
-        "idiom": "A fish out of water",
-        "difficulty": 0,
-        "definition": "Feeling uncomfortable or out of place in a particular situation.",
-        "examples": [
-          "At the formal dinner, with all the etiquette, I felt like a fish out of water.",
-          "Moving to a new country, he felt like a fish out of water at first."
-        ],
-        "translations": {
-          "de": "Wie ein Fisch auf dem Trockenen",
-          "fr": "Comme un poisson hors de l'eau"
         }
       },
       {
@@ -13552,20 +11804,6 @@
         }
       },
       {
-        "id": 959,
-        "idiom": "Have a whale of a time",
-        "difficulty": 0,
-        "definition": "To have a very enjoyable time.",
-        "examples": [
-          "We had a whale of a time at the party last night!",
-          "They had a whale of a time on their vacation to the beach."
-        ],
-        "translations": {
-          "de": "Eine Riesengaudi haben",
-          "fr": "Passer un moment formidable"
-        }
-      },
-      {
         "id": 960,
         "idiom": "Open a can of worms",
         "difficulty": 0,
@@ -13577,20 +11815,6 @@
         "translations": {
           "de": "Ein Wespennest aufwühlen",
           "fr": "Ouvrir la boîte de Pandore"
-        }
-      },
-      {
-        "id": 961,
-        "idiom": "Smell a rat",
-        "difficulty": 0,
-        "definition": "To suspect that something is wrong or that someone is being dishonest.",
-        "examples": [
-          "When he suddenly dropped the offer, I started to smell a rat.",
-          "I smell a rat; his story doesn't add up."
-        ],
-        "translations": {
-          "de": "Lunte riechen",
-          "fr": "Avoir la puce à l'oreille"
         }
       },
       {
@@ -13649,34 +11873,6 @@
         }
       },
       {
-        "id": 966,
-        "idiom": "A busy bee",
-        "difficulty": 0,
-        "definition": "Someone who is very active and busy.",
-        "examples": [
-          "My daughter is always a busy bee, working on her art projects.",
-          "Ever since she started her new job, she's been a busy bee, always moving from one task to another."
-        ],
-        "translations": {
-          "de": "Eine fleißige Biene",
-          "fr": "Une abeille affairée"
-        }
-      },
-      {
-        "id": 967,
-        "idiom": "Wild goose chase.",
-        "difficulty": 0,
-        "definition": "A foolish and hopeless pursuit of something unattainable or pointless.",
-        "examples": [
-          "Searching for that rare vintage toy online turned out to be a wild goose chase.",
-          "The detective realized he was on a wild goose chase after following a false lead for hours."
-        ],
-        "translations": {
-          "de": "Eine wilde Gänsejagd / Sinnlose Suche.",
-          "fr": "Une course folle / Une chasse à l'oie sauvage."
-        }
-      },
-      {
         "id": 968,
         "idiom": "Get one's ducks in a row.",
         "difficulty": 0,
@@ -13705,20 +11901,6 @@
         }
       },
       {
-        "id": 970,
-        "idiom": "A whale of a time",
-        "difficulty": 0,
-        "definition": "To have a very enjoyable or exciting time.",
-        "examples": [
-          "We had a whale of a time at the amusement park.",
-          "They had a whale of a time on their honeymoon."
-        ],
-        "translations": {
-          "de": "Eine Riesengaudi haben",
-          "fr": "Passer un excellent moment"
-        }
-      },
-      {
         "id": 971,
         "idiom": "Crocodile tears",
         "difficulty": 0,
@@ -13744,48 +11926,6 @@
         "translations": {
           "de": "Ein Überflieger / Ein Streber (positiv)",
           "fr": "Un bourreau de travail / Un élève modèle"
-        }
-      },
-      {
-        "id": 973,
-        "idiom": "Have a frog in your throat",
-        "difficulty": 0,
-        "definition": "To have a sore throat or hoarseness that makes it difficult to speak clearly.",
-        "examples": [
-          "Excuse me, I seem to have a frog in my throat today.",
-          "The singer cleared her throat, saying she had a frog in her throat."
-        ],
-        "translations": {
-          "de": "Einen Frosch im Hals haben",
-          "fr": "Avoir un chat dans la gorge"
-        }
-      },
-      {
-        "id": 974,
-        "idiom": "Go on a wild goose chase",
-        "difficulty": 0,
-        "definition": "A foolish and useless search for something.",
-        "examples": [
-          "We spent all morning on a wild goose chase looking for that obscure document.",
-          "Trying to find a specific antique in all these shops felt like a wild goose chase."
-        ],
-        "translations": {
-          "de": "Eine vergebliche Suche",
-          "fr": "Courir après des chimères"
-        }
-      },
-      {
-        "id": 975,
-        "idiom": "Fish out of water",
-        "difficulty": 0,
-        "definition": "Someone who is uncomfortable or out of place in a particular situation.",
-        "examples": [
-          "As a country boy in the big city, he felt like a fish out of water.",
-          "I felt like a fish out of water at the formal dinner party."
-        ],
-        "translations": {
-          "de": "Wie ein Fisch auf dem Trockenen",
-          "fr": "Comme un poisson hors de l'eau"
         }
       },
       {
@@ -13854,20 +11994,6 @@
         "translations": {
           "de": "Eine stürmische Beziehung",
           "fr": "Une relation orageuse"
-        }
-      },
-      {
-        "id": 981,
-        "idiom": "Like a fish out of water.",
-        "difficulty": 0,
-        "definition": "Feeling uncomfortable, awkward, or out of place in an unfamiliar or unsuitable environment.",
-        "examples": [
-          "At the formal party, I felt like a fish out of water in my casual clothes.",
-          "Moving to a big city after growing up in a small town, she initially felt like a fish out of water."
-        ],
-        "translations": {
-          "de": "Wie ein Fisch auf dem Trockenen.",
-          "fr": "Comme un poisson hors de l'eau."
         }
       },
       {
