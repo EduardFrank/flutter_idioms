@@ -3928,20 +3928,6 @@
         }
       },
       {
-        "id": 305,
-        "idiom": "Run out of time",
-        "difficulty": 0,
-        "definition": "To no longer have time available to complete something.",
-        "examples": [
-          "We're running out of time to finish the project before the deadline.",
-          "I ran out of time to answer all the questions on the exam."
-        ],
-        "translations": {
-          "de": "Die Zeit läuft ab",
-          "fr": "Manquer de temps"
-        }
-      },
-      {
         "id": 307,
         "idiom": "The early bird catches the worm",
         "difficulty": 0,
@@ -9793,20 +9779,6 @@
         "translations": {
           "de": "Den Dreh raushaben",
           "fr": "Prendre le coup de main"
-        }
-      },
-      {
-        "id": 766,
-        "idiom": "Keep someone in the loop",
-        "difficulty": 0,
-        "definition": "To keep someone informed about what is happening or progressing.",
-        "examples": [
-          "Please keep me in the loop regarding the project's development.",
-          "We'll make sure to keep you in the loop as decisions are made."
-        ],
-        "translations": {
-          "de": "Jemanden auf dem Laufenden halten",
-          "fr": "Tenir quelqu'un au courant"
         }
       },
       {
