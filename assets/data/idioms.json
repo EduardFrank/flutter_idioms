@@ -3873,32 +3873,6 @@
     "section": "Time Idioms",
     "idioms": [
       {
-        "id": 296,
-        "idiom": "In the nick of time",
-        "difficulty": 0,
-        "definition": "Just at the last possible moment; barely on time.",
-        "examples": [
-          "The ambulance arrived in the nick of time to save the accident victim."
-        ],
-        "translations": {
-          "de": "im letzten Augenblick",
-          "fr": "juste à temps"
-        }
-      },
-      {
-        "id": 298,
-        "idiom": "Kill time",
-        "difficulty": 0,
-        "definition": "To do something to pass the time while waiting for something else.",
-        "examples": [
-          "I had an hour to kill before my flight, so I read a book."
-        ],
-        "translations": {
-          "de": "die Zeit totschlagen",
-          "fr": "tuer le temps"
-        }
-      },
-      {
         "id": 299,
         "idiom": "Once in a blue moon",
         "difficulty": 0,
@@ -3909,20 +3883,6 @@
         "translations": {
           "de": "alle Jubeljahre einmal",
           "fr": "tous les trente-six du mois"
-        }
-      },
-      {
-        "id": 300,
-        "idiom": "Beat the clock",
-        "difficulty": 0,
-        "definition": "To finish something before a deadline or a specific time.",
-        "examples": [
-          "We had to work quickly to beat the clock and submit the report on time.",
-          "The team worked tirelessly to beat the clock and launch the product early."
-        ],
-        "translations": {
-          "de": "Die Zeit schlagen",
-          "fr": "Gagner du temps"
         }
       },
       {
@@ -4052,20 +4012,6 @@
         }
       },
       {
-        "id": 312,
-        "idiom": "Kill two birds with one stone",
-        "difficulty": 0,
-        "definition": "To achieve two things at once with a single action.",
-        "examples": [
-          "By cycling to work, I kill two birds with one stone: I get exercise and save money on fuel.",
-          "Visiting my aunt and running errands in the same trip allowed me to kill two birds with one stone."
-        ],
-        "translations": {
-          "de": "Zwei Fliegen mit einer Klappe schlagen",
-          "fr": "Faire d'une pierre deux coups"
-        }
-      },
-      {
         "id": 313,
         "idiom": "Time flies when you're having fun",
         "difficulty": 0,
@@ -4116,34 +4062,6 @@
         "translations": {
           "de": "Zeit gewinnen",
           "fr": "Gagner du temps"
-        }
-      },
-      {
-        "id": 318,
-        "idiom": "Beat the clock.",
-        "difficulty": 0,
-        "definition": "To finish something before a deadline or within a set time limit.",
-        "examples": [
-          "They worked all night to beat the clock and submit the report on time.",
-          "Can we beat the clock and finish this before lunch?"
-        ],
-        "translations": {
-          "de": "Die Zeit schlagen.",
-          "fr": "Finir dans les temps."
-        }
-      },
-      {
-        "id": 319,
-        "idiom": "Kill time.",
-        "difficulty": 0,
-        "definition": "To do something to pass the time while waiting for something else.",
-        "examples": [
-          "We had an hour to kill before our flight, so we went to the coffee shop.",
-          "I was just killing time reading a magazine until my appointment."
-        ],
-        "translations": {
-          "de": "Die Zeit totschlagen.",
-          "fr": "Tuer le temps."
         }
       },
       {
@@ -4539,20 +4457,6 @@
         }
       },
       {
-        "id": 354,
-        "idiom": "A race against time.",
-        "difficulty": 0,
-        "definition": "A situation where one must hurry to finish something before a deadline or before a negative consequence occurs.",
-        "examples": [
-          "The rescue team was in a race against time to find the missing hikers.",
-          "Completing the project by Friday is a race against time for our department."
-        ],
-        "translations": {
-          "de": "Ein Wettlauf gegen die Zeit",
-          "fr": "Une course contre la montre"
-        }
-      },
-      {
         "id": 355,
         "idiom": "Make hay while the sun shines",
         "difficulty": 0,
@@ -4578,34 +4482,6 @@
         "translations": {
           "de": "Hinter der Zeit, altmodisch",
           "fr": "Dépassé, en retard sur son temps"
-        }
-      },
-      {
-        "id": 357,
-        "idiom": "Race against time",
-        "difficulty": 0,
-        "definition": "To be in a great hurry to do something before a particular time.",
-        "examples": [
-          "Scientists are racing against time to find a cure for the disease.",
-          "The rescue team was in a race against time to find the missing hikers."
-        ],
-        "translations": {
-          "de": "Ein Wettlauf gegen die Zeit",
-          "fr": "Faire une course contre la montre"
-        }
-      },
-      {
-        "id": 358,
-        "idiom": "Ahead of time.",
-        "difficulty": 0,
-        "definition": "Before the scheduled, expected, or necessary time.",
-        "examples": [
-          "They finished the project ahead of time, much to everyone's surprise.",
-          "If you book your tickets ahead of time, you might get a discount."
-        ],
-        "translations": {
-          "de": "Im Voraus / Vorzeitig.",
-          "fr": "En avance."
         }
       },
       {
@@ -4773,20 +4649,6 @@
         "translations": {
           "de": "Bis tief in die Nacht arbeiten / Die Nächte durcharbeiten.",
           "fr": "Travailler tard dans la nuit / Veiller tard."
-        }
-      },
-      {
-        "id": 374,
-        "idiom": "Ship has sailed",
-        "difficulty": 0,
-        "definition": "It's too late; an opportunity has passed.",
-        "examples": [
-          "I wanted to apply for that job, but the deadline was yesterday – the ship has sailed.",
-          "You should have invested years ago; for that company, the ship has sailed."
-        ],
-        "translations": {
-          "de": "Der Zug ist abgefahren",
-          "fr": "Le train est passé / L'occasion est perdue"
         }
       },
       {
@@ -7001,34 +6863,6 @@
         }
       },
       {
-        "id": 541,
-        "idiom": "Be in hot water",
-        "difficulty": 0,
-        "definition": "To be in trouble or in a difficult situation.",
-        "examples": [
-          "He's in hot water with his boss for missing the deadline.",
-          "If you don't return that book, you'll be in hot water with the library."
-        ],
-        "translations": {
-          "de": "In Schwierigkeiten stecken / Ärger haben",
-          "fr": "Être dans de beaux draps / Avoir des ennuis"
-        }
-      },
-      {
-        "id": 542,
-        "idiom": "Bark up the wrong tree",
-        "difficulty": 0,
-        "definition": "To make a wrong choice or pursue a mistaken course of action; to accuse the wrong person.",
-        "examples": [
-          "If you think I'm the one who broke the vase, you're barking up the wrong tree.",
-          "She's barking up the wrong tree if she expects to get rich quickly from that scheme."
-        ],
-        "translations": {
-          "de": "Auf dem Holzweg sein / Die falsche Spur verfolgen",
-          "fr": "Faire fausse route / Se tromper de cible"
-        }
-      },
-      {
         "id": 543,
         "idiom": "Hit a brick wall",
         "difficulty": 0,
@@ -8428,7 +8262,7 @@
       },
       {
         "id": 647,
-        "idiom": "Have your heart on your sleeve",
+        "idiom": "to have your heart on your sleeve",
         "difficulty": 0,
         "definition": "To openly show your emotions and feelings rather than hiding them.",
         "examples": [
@@ -8835,20 +8669,6 @@
         "translations": {
           "de": "In den sauren Apfel beißen",
           "fr": "Mordre sur sa chique"
-        }
-      },
-      {
-        "id": 675,
-        "idiom": "Get your ducks in a row",
-        "difficulty": 0,
-        "definition": "To get everything organized and prepared.",
-        "examples": [
-          "Before we launch the new product, we need to get our ducks in a row.",
-          "She spent the weekend getting her ducks in a row for the upcoming trip."
-        ],
-        "translations": {
-          "de": "Alles in trockenen Tüchern haben",
-          "fr": "Mettre de l'ordre dans ses affaires"
         }
       },
       {
@@ -10315,20 +10135,6 @@
         }
       },
       {
-        "id": 800,
-        "idiom": "Have a heavy heart",
-        "difficulty": 1,
-        "definition": "To feel sad or sorrowful.",
-        "examples": [
-          "She left her hometown with a heavy heart, knowing she wouldn't return for a long time.",
-          "It was with a heavy heart that he said goodbye to his old friend."
-        ],
-        "translations": {
-          "de": "Ein schweres Herz haben",
-          "fr": "Avoir le cœur lourd"
-        }
-      },
-      {
         "id": 801,
         "idiom": "Over the moon",
         "difficulty": 0,
@@ -10427,20 +10233,6 @@
         }
       },
       {
-        "id": 813,
-        "idiom": "Keep a stiff upper lip",
-        "difficulty": 0,
-        "definition": "To be brave and not show emotion in a difficult situation.",
-        "examples": [
-          "Despite the bad news, he kept a stiff upper lip.",
-          "The British are often stereotyped for keeping a stiff upper lip."
-        ],
-        "translations": {
-          "de": "Haltung bewahren / Keine Gefühle zeigen",
-          "fr": "Garder son sang-froid"
-        }
-      },
-      {
         "id": 816,
         "idiom": "Cry one's eyes out",
         "difficulty": 0,
@@ -10480,20 +10272,6 @@
         }
       },
       {
-        "id": 819,
-        "idiom": "Wear your heart on your sleeve",
-        "difficulty": 0,
-        "definition": "To openly show your emotions and feelings rather than hiding them.",
-        "examples": [
-          "She wears her heart on her sleeve, so you always know how she's feeling.",
-          "He tends to wear his heart on his sleeve, which can sometimes make him vulnerable."
-        ],
-        "translations": {
-          "de": "Sein Herz auf der Zunge tragen, seine Gefühle offen zeigen.",
-          "fr": "Montrer ouvertement ses émotions, ne pas cacher ses sentiments."
-        }
-      },
-      {
         "id": 820,
         "idiom": "Down in the dumps",
         "difficulty": 0,
@@ -10509,7 +10287,7 @@
       },
       {
         "id": 821,
-        "idiom": "Have a heavy heart.",
+        "idiom": "to have a heavy heart.",
         "difficulty": 0,
         "definition": "To feel sad, sorrowful, or grieved.",
         "examples": [
@@ -10533,20 +10311,6 @@
         "translations": {
           "de": "Haltung bewahren / Die Fassung bewahren.",
           "fr": "Garder son sang-froid."
-        }
-      },
-      {
-        "id": 823,
-        "idiom": "Wear your heart on your sleeve.",
-        "difficulty": 0,
-        "definition": "To openly display your emotions and feelings.",
-        "examples": [
-          "He always wears his heart on his sleeve, so you always know how he feels.",
-          "It's easy to read her; she wears her heart on her sleeve."
-        ],
-        "translations": {
-          "de": "Sein Herz auf der Zunge tragen.",
-          "fr": "Ne pas cacher ses sentiments."
         }
       },
       {
@@ -10699,34 +10463,6 @@
         "translations": {
           "de": "Sich zusammenreißen",
           "fr": "Se ressaisir"
-        }
-      },
-      {
-        "id": 858,
-        "idiom": "Wear one's heart on one's sleeve",
-        "difficulty": 0,
-        "definition": "To openly show one's emotions and feelings.",
-        "examples": [
-          "He always wears his heart on his sleeve, so you know exactly how he's feeling.",
-          "She's not one to wear her heart on her sleeve; she keeps her feelings to herself."
-        ],
-        "translations": {
-          "de": "Das Herz auf der Zunge tragen / Seine Gefühle offen zeigen",
-          "fr": "Avoir le cœur sur la main / Ne pas cacher ses sentiments"
-        }
-      },
-      {
-        "id": 859,
-        "idiom": "To have a heavy heart",
-        "difficulty": 0,
-        "definition": "To feel sad or sorrowful.",
-        "examples": [
-          "With a heavy heart, he announced the company would be closing its doors.",
-          "She left her hometown with a heavy heart, knowing she wouldn't return for a long time."
-        ],
-        "translations": {
-          "de": "Schweren Herzens",
-          "fr": "Avoir le cœur lourd"
         }
       },
       {
@@ -11095,32 +10831,6 @@
         }
       },
       {
-        "id": 899,
-        "idiom": "Barking up the wrong tree",
-        "difficulty": 0,
-        "definition": "To be pursuing a mistaken course of action or making a wrong assumption.",
-        "examples": [
-          "If you think I stole your pen, you're barking up the wrong tree; I haven't seen it."
-        ],
-        "translations": {
-          "de": "auf dem Holzweg sein",
-          "fr": "faire fausse route"
-        }
-      },
-      {
-        "id": 900,
-        "idiom": "Cry over spilled milk",
-        "difficulty": 0,
-        "definition": "To worry or complain about something that has already happened and cannot be changed.",
-        "examples": [
-          "There's no use crying over spilled milk; we just need to find a new solution now."
-        ],
-        "translations": {
-          "de": "vergangenen Dingen nachtrauern",
-          "fr": "pleurer sur le lait renversé"
-        }
-      },
-      {
         "id": 901,
         "idiom": "To rain cats and dogs",
         "difficulty": 0,
@@ -11232,34 +10942,6 @@
         }
       },
       {
-        "id": 909,
-        "idiom": "Cry wolf",
-        "difficulty": 0,
-        "definition": "To ask for help when you don't really need it, with the result that people don't believe you when you actually do need help.",
-        "examples": [
-          "If you cry wolf too often, people won't believe you when there's a real emergency.",
-          "He's always crying wolf about minor issues, so we ignored him when he said his computer crashed."
-        ],
-        "translations": {
-          "de": "Blindalarm geben, falscher Alarm rufen.",
-          "fr": "Crier au loup."
-        }
-      },
-      {
-        "id": 911,
-        "idiom": "Let sleeping dogs lie",
-        "difficulty": 0,
-        "definition": "To avoid bringing up a past issue or problem that might cause trouble if discussed.",
-        "examples": [
-          "I know you're upset, but it's probably best to let sleeping dogs lie.",
-          "Bringing up old arguments will just make things worse, so let sleeping dogs lie."
-        ],
-        "translations": {
-          "de": "Schlafende Hunde wecken",
-          "fr": "Ne pas réveiller le chat qui dort"
-        }
-      },
-      {
         "id": 912,
         "idiom": "A lone wolf",
         "difficulty": 0,
@@ -11302,34 +10984,6 @@
         }
       },
       {
-        "id": 916,
-        "idiom": "Barking up the wrong tree.",
-        "difficulty": 0,
-        "definition": "To be pursuing a mistaken course of action or making a wrong assumption.",
-        "examples": [
-          "If you think I took your money, you're barking up the wrong tree.",
-          "The police were barking up the wrong tree by interrogating the wrong suspect."
-        ],
-        "translations": {
-          "de": "Auf dem Holzweg sein.",
-          "fr": "Faire fausse route."
-        }
-      },
-      {
-        "id": 917,
-        "idiom": "Dark horse.",
-        "difficulty": 0,
-        "definition": "A person whose abilities or talents are little known, but who surprisingly succeeds.",
-        "examples": [
-          "No one expected him to win the election; he was a real dark horse.",
-          "She's a dark horse in the competition, quietly doing well."
-        ],
-        "translations": {
-          "de": "Ein Außenseiter / Ein unbeschriebenes Blatt.",
-          "fr": "Un outsider."
-        }
-      },
-      {
         "id": 918,
         "idiom": "Let sleeping dogs lie.",
         "difficulty": 0,
@@ -11341,20 +10995,6 @@
         "translations": {
           "de": "Schlafende Hunde wecken.",
           "fr": "Ne pas réveiller le chat qui dort."
-        }
-      },
-      {
-        "id": 919,
-        "idiom": "Cry over spilled milk.",
-        "difficulty": 0,
-        "definition": "To regret or grieve over something that has already happened and cannot be changed.",
-        "examples": [
-          "Don't cry over spilled milk; you can't change what happened.",
-          "It's pointless to cry over spilled milk; just focus on moving forward."
-        ],
-        "translations": {
-          "de": "Heulen wegen verschütteter Milch.",
-          "fr": "Pleurer sur le lait renversé."
         }
       },
       {
@@ -11442,20 +11082,6 @@
         }
       },
       {
-        "id": 927,
-        "idiom": "Cry wolf.",
-        "difficulty": 0,
-        "definition": "To give false alarms; to call for help when it's not actually needed, leading others to disbelieve you when you genuinely need help.",
-        "examples": [
-          "He cried wolf so many times that no one believed him when he was really in danger.",
-          "Don't cry wolf unless there's a real emergency."
-        ],
-        "translations": {
-          "de": "Falscher Alarm schlagen / Wolf rufen.",
-          "fr": "Crier au loup."
-        }
-      },
-      {
         "id": 928,
         "idiom": "A little bird told me",
         "difficulty": 0,
@@ -11467,20 +11093,6 @@
         "translations": {
           "de": "Ein Vöglein hat es mir gezwitschert",
           "fr": "Mon petit doigt m'a dit"
-        }
-      },
-      {
-        "id": 929,
-        "idiom": "Dark horse",
-        "difficulty": 0,
-        "definition": "A candidate or competitor about whom little is known but who unexpectedly wins or succeeds.",
-        "examples": [
-          "No one expected him to win the election; he was a real dark horse candidate.",
-          "She was the dark horse of the competition, surprising everyone with her unexpected talent."
-        ],
-        "translations": {
-          "de": "Ein Außenseiter",
-          "fr": "Un outsider"
         }
       },
       {
@@ -11509,20 +11121,6 @@
         "translations": {
           "de": "ein Wermutstropfen",
           "fr": "un grain de sable"
-        }
-      },
-      {
-        "id": 933,
-        "idiom": "Every dog has its day.",
-        "difficulty": 0,
-        "definition": "Everyone gets a chance to succeed or be lucky at some point.",
-        "examples": [
-          "Don't worry about this setback; every dog has its day.",
-          "He's been struggling, but I'm sure every dog has its day and he'll eventually find success."
-        ],
-        "translations": {
-          "de": "Jeder Hund hat seinen Tag/Jeder kommt mal dran.",
-          "fr": "À chacun son tour/Chacun son jour de gloire."
         }
       },
       {
@@ -11665,19 +11263,6 @@
         }
       },
       {
-        "id": 949,
-        "idiom": "In hot water",
-        "difficulty": 0,
-        "definition": "In trouble or difficulty.",
-        "examples": [
-          "After breaking the vase, the child was in hot water with his parents."
-        ],
-        "translations": {
-          "de": "In Schwierigkeiten stecken",
-          "fr": "Dans de beaux draps"
-        }
-      },
-      {
         "id": 950,
         "idiom": "To have a frog in one's throat",
         "difficulty": 0,
@@ -11745,20 +11330,6 @@
         "translations": {
           "de": "Ein Fass ohne Boden öffnen / Eine Büchse der Pandora öffnen",
           "fr": "Ouvrir une boîte de Pandore / Créer une multitude de problèmes"
-        }
-      },
-      {
-        "id": 955,
-        "idiom": "A wolf in sheep's clothing",
-        "difficulty": 0,
-        "definition": "A person who appears friendly or harmless but is actually dangerous or malicious.",
-        "examples": [
-          "Be careful around him; he seems nice, but he's a wolf in sheep's clothing.",
-          "The new competitor appeared supportive but turned out to be a wolf in sheep's clothing, stealing our ideas."
-        ],
-        "translations": {
-          "de": "Ein Wolf im Schafspelz.",
-          "fr": "Un loup déguisé en agneau."
         }
       },
       {
@@ -11845,20 +11416,6 @@
         }
       },
       {
-        "id": 964,
-        "idiom": "Get out of the woods",
-        "difficulty": 0,
-        "definition": "To be out of danger or difficulty.",
-        "examples": [
-          "The patient is still recovering, but the doctors say he's finally out of the woods.",
-          "Our company isn't completely out of the woods yet, but the worst of the crisis is over."
-        ],
-        "translations": {
-          "de": "Aus dem Schneider sein / Über den Berg sein",
-          "fr": "Être tiré d'affaire"
-        }
-      },
-      {
         "id": 965,
         "idiom": "A cold day in hell",
         "difficulty": 0,
@@ -11870,20 +11427,6 @@
         "translations": {
           "de": "Wenn Ostern und Weihnachten auf einen Tag fallen / Niemals",
           "fr": "Quand les poules auront des dents"
-        }
-      },
-      {
-        "id": 968,
-        "idiom": "Get one's ducks in a row.",
-        "difficulty": 0,
-        "definition": "To organize one's affairs, tasks, or plans in a proper and orderly manner.",
-        "examples": [
-          "Before starting the new project, we need to get our ducks in a row.",
-          "She spent the weekend getting her ducks in a row for the upcoming business trip."
-        ],
-        "translations": {
-          "de": "Alles in trockenen Tüchern haben / Die Dinge in Ordnung bringen.",
-          "fr": "Mettre de l'ordre dans ses affaires / Organiser ses choses."
         }
       },
       {
@@ -11953,20 +11496,6 @@
         "translations": {
           "de": "In Schwierigkeiten sein / In der Patsche sitzen",
           "fr": "Être dans de beaux draps"
-        }
-      },
-      {
-        "id": 978,
-        "idiom": "Get one's ducks in a row",
-        "difficulty": 0,
-        "definition": "To get one's affairs in order; to organize things properly.",
-        "examples": [
-          "Before we launch the new product, we need to get our ducks in a row.",
-          "She spent the morning getting her ducks in a row for the upcoming trip."
-        ],
-        "translations": {
-          "de": "Alles in Ordnung bringen",
-          "fr": "Mettre de l'ordre dans ses affaires"
         }
       },
       {
